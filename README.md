@@ -24,7 +24,7 @@ Submissions will be taken from the team registration spreadsheet via your teams 
 
 Your repository should include the following .gitignore file in the root directory of the project: https://gitignore.io/api/osx,unity,linux,windows,vscode
 
-# Team Member Roles
+# Team Member Roles (TBD)
 
 Each team member must take on one main role and one sub-role. You will create the gameplay systems or complete the design tasks for your roles as well as provide the requested per-role documentation. Each team member must document the gameplay systems and software design patterns they used for their portion of the project.
 
