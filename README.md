@@ -47,7 +47,7 @@ In this role, you are responsible for the user interface elements of the game. T
 
 This role is responsible for implementing movement within your game. You will have the choice of managing movement by directly translating objects in your game or leveraging Unity's physics system. It is your task to establish and document the basic conventions of movement in your game world (e.g. how gravity works, friction coefficients, animation curve value conventions, etc.). While you are responsible for documentation and making sure all objects in the game observe your conventions, other team members can implement objects and conventions that use your conventions.
 
-### Animation and Visuals (Xinhe Wang, XuanZhen Wang)
+### Animation and Visuals (Xinhe Wang, XuanZhen Lao)
 
 As the team's master of visuals, you are responsible for implementing the basic animation scripts used by objects in your game. You are also tasked with setting the visual style and are the primary person responsible for finding the art assets to use in your game. You will document the animation systems used, a guide to the visual style of your game, and to document the sources and licenses of the art assets used in your game. 
 
