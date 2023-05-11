@@ -36,7 +36,7 @@ The template is stored in GitHub which requires basic konwledge with GitHub
 - For Windows: 
 - Go to the desired directory for the project you want to store and enter
 ```
-    git clone [https://github.com/SchedGo/sample-college-integration-dotnet-csharp.git](https://github.com/Jesse1211/ECS-189L.git)
+    git clone https://github.com/Jesse1211/ECS-189L.git
 ```
 - Please see the instruction (Jump to github personal access token) below if the clone requires GitHub personal access token (or the token expired).
 - If it's the first time use Github, the Terminal will require you to enter a username and password, which are the username in Github and personal access token. 
