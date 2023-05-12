@@ -82,7 +82,7 @@ You are responsible for designing and embedding the story of your game into the 
 
 You are responsible for creating a press kit for your game that includes screenshots and a 1-minute trailer. You should document the choices you made in the press kit and the goals of your trailer in the design document.
 
-### Game Feel
+### Game Feel (LiangHang Wu)
 
 In this role, you are responsible for using what we learned in class about game feel to enhance your game's playability. You will document what you added to and how you tweaked your game to improve its game feel.
 
