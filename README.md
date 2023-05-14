@@ -71,7 +71,7 @@ https://learn.microsoft.com/en-us/visualstudio/version-control/git-clone-reposit
 #### Clone a GitHub repo and sign in
 - Open Visual Studio
 - Click ``Git`` and ``Clone Repository...`` from menu bar
-- Copy `https://github.com/SchedGo/sample-college-integration-dotnet-csharp.git` into the URL input
+- Copy `https://github.com/Jesse1211/ECS-189L.git` into the URL input
 - It will prompt a window for entering a GitHub username and password. The password must be identical to the generated access token saved. 
 
 #### Update GitHub token
