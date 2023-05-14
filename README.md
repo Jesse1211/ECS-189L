@@ -19,6 +19,15 @@ ECS 189L Group Project:
 - Add ```rigid2D``` to ```Game Objects```, and specific logic to let the player moves by mouse, communicate to NPCs, and collect items. 
 - Add ```Bag``` feature to store all items collected, this is for compound feature in the future. 
 
+
+#### Front-End
+##### Week 1
+- Design main character and multiple NPCs with Walking & Standing behavior.
+- Design 2 scenes' backgrounds as described in Back-End Week 1. 
+
+##### Week 2
+- Add more behaviors to characters
+
 ## GitHub
 
 The template is stored in GitHub which requires basic konwledge with GitHub
