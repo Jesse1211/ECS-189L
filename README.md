@@ -3,7 +3,7 @@ ECS 189L Group Project:
 #### Information:
 [Gameplay Programming Project Groups Spreadsheet](https://docs.google.com/spreadsheets/d/1OUz9atsn2HAFm9Wa97dMX5Q5Pg5Whuir-C6jLmuWleM/edit#gid=0).
 
-[Game Project Initial Plan](https://github.com/Jesse1211/ECS-189L/blob/main/InitPlan.md).
+[Game Project Initial Plan](https://github.com/Jesse1211/ECS-189L/blob/main/InitPlan.md). [Our proposal](https://docs.google.com/document/d/1zwsrNZwCNlq_0A4nlsWs84ZFz7g-bWmE88cKXGfa9Pk/edit#)
 
 [Game Project Progress report](https://github.com/Jesse1211/ECS-189L/blob/main/ProgressReport.md).
 
