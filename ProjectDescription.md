@@ -74,7 +74,7 @@ You are responsible for defining the game's sound style, procuring audio assets,
 
 As the gameplay tester, you are responsible for having 10 non-team members playtest your game. You fill out the Observation and Playtester Comments form for each of your playtesters and describe the results in the design document (after you share the results with your team, of course!). For each playtester, fill out an [Observations and Playtester Comments form](https://docs.google.com/document/d/1oW7AulzjpEocDmMikRL0S0PKxlRrOxsEEP7KB-nGg-A/edit?usp=sharing).
 
-### Narrative Design ()
+### Narrative Design (Xinhe Wang/)
 
 You are responsible for designing and embedding the story of your game into the gameplay experience. While your team may collective decide on the story, you will make it present in the game. You will document how the narrative is present in the game via assets, gameplay systems, and gameplay.
 
