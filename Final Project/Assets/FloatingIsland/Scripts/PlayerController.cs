@@ -14,6 +14,10 @@ namespace ClearSky
         bool isJumping = false;
         private bool alive = true;
 
+        public GameObject bolt;
+        public float timeBetweenAttacks;
+        private float nextAttackTime;
+        public Transform shotPoint;
 
         // Start is called before the first frame update
         void Start()
@@ -91,14 +95,30 @@ namespace ClearSky
         }
         void Attack()
         {
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.J) && Time.time > nextAttackTime)
+            {  
+                anim.SetTrigger("attack");
+                nextAttackTime = Time.time + timeBetweenAttacks;
+            }
+
+            if (Input.GetKeyDown(KeyCode.K) && Time.time > nextAttackTime)
             {
                 anim.SetTrigger("attack");
+                Quaternion boltRotation = Quaternion.identity;
+                if (direction < 0)
+                {
+                    // Player is facing left
+                    boltRotation = Quaternion.Euler(0f, 180f, 0f);
+                }
+
+                Instantiate(bolt, shotPoint.position, boltRotation);
+                nextAttackTime = Time.time + timeBetweenAttacks;
             }
+
         }
         void Hurt()
         {
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.U))
             {
                 anim.SetTrigger("hurt");
                 if (direction == 1)
