@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Captain.Command
+namespace Project
 {
     public class MoveLeft : ScriptableObject, IPlayerCommand
     {

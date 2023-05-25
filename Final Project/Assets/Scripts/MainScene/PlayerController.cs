@@ -2,22 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Captain.Command
+namespace Project
 {
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
 
         private IPlayerCommand jump;
         private IPlayerCommand right;
         private IPlayerCommand left;
         public int score;
-
-        //public Animator animator;
-        //public Transform transform;
-
-        //public float runSpeed = 40f;
-        //float currentSpeed = 0f;
-        //bool attack = false;
+        private float currentSpeed = 0f;
+        private Vector3 movementDirection;
 
         void Start()
         {
@@ -68,6 +63,8 @@ namespace Captain.Command
 
             var animator = this.gameObject.GetComponent<Animator>();
             animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x / 5.0f));
+
+            movementDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -79,5 +76,10 @@ namespace Captain.Command
             }
         }
 
+        public Vector3 GetMovementDirection()
+            => this.movementDirection;
+
+        public float GetCurrentSpeed()
+            => this.currentSpeed;
     }
 }
