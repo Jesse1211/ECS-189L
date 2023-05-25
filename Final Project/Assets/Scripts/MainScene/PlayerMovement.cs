@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Animator animator;
+    public Transform transform;
 
     public float runSpeed = 40f;
     float currentSpeed = 0f;
@@ -17,6 +18,14 @@ public class PlayerMovement : MonoBehaviour
         currentSpeed = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(currentSpeed));
+
+        if (Input.GetButtonDown("S"))
+        {
+            animator.SetBool("backDodge", false);
+            transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
+        }
+
+        animator.SetBool("backDodge", false);
 
         if (Input.GetButtonDown("Jump"))
         {
