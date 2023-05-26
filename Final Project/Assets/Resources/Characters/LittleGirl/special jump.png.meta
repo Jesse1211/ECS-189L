@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: special jump_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 256
+        width: 41
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de9c7bd8782d4b9dbaa2037e8ddf8b6
+      internalID: -788624347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special jump_9
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 118
+        width: 41
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4871007afdc4a1283fec877dcd3380
+      internalID: 275204993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special jump_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 7
+        width: 41
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ae0a5ca55554d529fdc4b99480f7ff
+      internalID: -809254538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +179,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      special jump_0: 606494512
+      special jump_1: 2048818638
+      special jump_10: 1287498806
+      special jump_11: -809254538
+      special jump_2: -1890034868
+      special jump_3: -64462246
+      special jump_4: -788624347
+      special jump_5: 1518560739
+      special jump_6: 607894055
+      special jump_7: 360174798
+      special jump_8: 1357619729
+      special jump_9: 275204993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
