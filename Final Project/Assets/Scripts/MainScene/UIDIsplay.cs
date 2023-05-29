@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UiDisplay : MonoBehaviour
+namespace Project
 {
-    private int score = 5;
-    public Text healthText;
-
-    void Update()
+    public class UiDisplay : MonoBehaviour
     {
-        healthText.text = "Health: " + score;
+        public Text healthText;
+        public GameObject prefab;
+        private static PlayerController playerController;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        private void Start()
         {
-            score++;
+            playerController = prefab.GetComponent<PlayerController>();
+        }
+
+        void Update()
+        {
+            healthText.text = "Health: " + playerController.score;
         }
     }
+
 }
