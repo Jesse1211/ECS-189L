@@ -3,26 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MeterScript : MonoBehaviour
+namespace Project
 {
-    public Slider slider;
-    public Gradient gradient;
-    public Image fill;
-
-    public void SetMaxHealth(float health)
+    public class MeterScript : MonoBehaviour
     {
-        slider.maxValue = health;
-        slider.value = health;
+        public GameObject prefab;
+        private static PlayerController playerController;
 
-        fill.color = gradient.Evaluate (1f) ;
+        public Slider slider;
+        public Gradient gradient;
+        public Image fill;
 
-    }
+        private void Start()
+        {
+            playerController = prefab.GetComponent<PlayerController>();
+            SetMaxHealth(10); //sets your meter's fill to maximum from the start
+        }
 
-    public void SetHealth(float health)
-    {
-        slider.value = health;
-        fill.color = gradient.Evaluate(slider.normalizedValue);
+        void FixedUpdate()
+        {
+            SetHealth(playerController.score); //links your variable to the meter's fill
+        }
 
+        public void SetMaxHealth(float health)
+        {
+            slider.maxValue = health;
+            slider.value = health;
+
+            fill.color = gradient.Evaluate(1f);
+
+        }
+
+        public void SetHealth(float health)
+        {
+            slider.value = health;
+            fill.color = gradient.Evaluate(slider.normalizedValue);
+        }
     }
 
 }
