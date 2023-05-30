@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,7 +105,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bheavy attack_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 520
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969a07c3377c3ed4f87abdadf3632863
+      internalID: -101364526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 468
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a4b74d4a975b640a39d391cea56124
+      internalID: 1607939313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 416
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef24a285abc7d04699e209b7a50dab9
+      internalID: -451425494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 364
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20da59cacffd0ec4295dafca68220094
+      internalID: -1060064886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c290690200ab71e4fbd9e47a02286458
+      internalID: 1922914487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859243d1f64f4d845a7852eae05acc7f
+      internalID: 1905995192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63f257517ef96643a85a49b08839619
+      internalID: 2074078453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 156
+        width: 85
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80786162720ac14fbf1816282321590
+      internalID: 887447942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 104
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c66f9cadfd8a014fbc3decf6d05adb2
+      internalID: -471144181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_15
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 52
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7759f66b578866c4aae64a1639c8a136
+      internalID: -1325416113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bheavy attack_18
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afd3e920186750449aef53c16c62e78
+      internalID: 944686174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +347,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bheavy attack_0: -101364526
+      bheavy attack_1: 1607939313
+      bheavy attack_10: 2074078453
+      bheavy attack_11: 586569745
+      bheavy attack_12: 887447942
+      bheavy attack_13: -471144181
+      bheavy attack_14: -1038846364
+      bheavy attack_15: -1325416113
+      bheavy attack_16: 206342700
+      bheavy attack_17: 969164065
+      bheavy attack_18: 944686174
+      bheavy attack_19: -1638692138
+      bheavy attack_2: -451425494
+      bheavy attack_20: 254032017
+      bheavy attack_3: -1060064886
+      bheavy attack_4: -1664725728
+      bheavy attack_5: 1845586709
+      bheavy attack_6: 1922914487
+      bheavy attack_7: -669215193
+      bheavy attack_8: 1905995192
+      bheavy attack_9: 259869344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

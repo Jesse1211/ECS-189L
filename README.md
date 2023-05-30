@@ -77,4 +77,3 @@ https://learn.microsoft.com/en-us/visualstudio/version-control/git-clone-reposit
 #### Update GitHub token
 - Press ``Command-Space``, enter ``Keychain Access`` and press Enter
 - Search ``GitHub``keyword and update the password in the corresponding result
-
