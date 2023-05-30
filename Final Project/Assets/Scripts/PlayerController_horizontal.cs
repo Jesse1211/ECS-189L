@@ -12,6 +12,8 @@ public class PlayerController_horizontal : MonoBehaviour
     private float Acceleration = 0.03f;
     private float MaxSpeed = 6.5f;
     private bool IsOnGround = true;
+    public Vector2 minPosition;
+    public Vector2 maxPosition;
     void Start()
     {
         PlayerRigid = GetComponent<Rigidbody2D>();
@@ -68,7 +70,7 @@ public class PlayerController_horizontal : MonoBehaviour
         }
         Vector2 moveDir = new Vector2(horizontal * CurrentSpeed, PlayerRigid.velocity.y);
         PlayerRigid.velocity = moveDir;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -9f, 9f), Mathf.Clamp(transform.position.y, -3.62f, 10f), transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPosition.x, maxPosition.x),transform.position.y, transform.position.z);
 
     }
 
