@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,7 +105,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pistol whip attacks_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 180
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a036e50529fc146be05761f7fde6fa
+      internalID: 784427223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol whip attacks_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 144
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc63417b064785848b167a9f7bc64166
+      internalID: 1110955870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol whip attacks_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 108
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3274db9a0a8aac24f90314335d8e6417
+      internalID: -1523772031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol whip attacks_6
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 72
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1d52d07a5c3ce41ad649b8f1c4b7d8
+      internalID: 1767102762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol whip attacks_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 36
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58013fb11c9c7f14a9c07b4ba8743e2f
+      internalID: 915736280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistol whip attacks_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d934bab4b35b94ead675b95179e24b
+      internalID: -1455292632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +242,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pistol whip attacks_0: 784427223
+      pistol whip attacks_1: 643812161
+      pistol whip attacks_10: -1455292632
+      pistol whip attacks_11: 1827788792
+      pistol whip attacks_2: 1110955870
+      pistol whip attacks_3: -177430202
+      pistol whip attacks_4: -1523772031
+      pistol whip attacks_5: -352031627
+      pistol whip attacks_6: 1767102762
+      pistol whip attacks_7: -1546745029
+      pistol whip attacks_8: 915736280
+      pistol whip attacks_9: -259349393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

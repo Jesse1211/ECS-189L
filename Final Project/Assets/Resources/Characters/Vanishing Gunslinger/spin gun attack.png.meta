@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,7 +105,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spin gun attack_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 216
+        width: 58
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b846f56205e87894290d612260ad9c70
+      internalID: -140747573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spin gun attack_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 180
+        width: 50
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19eb5cfa153f9849bc1b956c6b066dd
+      internalID: 1584670327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spin gun attack_3
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 144
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dd86e68a1b0424697e0bae5f97c9ab
+      internalID: -1647759536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spin gun attack_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 108
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14fd7813717c364aa87fec504d5e8cc
+      internalID: -1241685409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spin gun attack_7
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 71
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3044f628e5e19894295b11d3748dacd6
+      internalID: -1064369012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spin gun attack_9
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 36
+        width: 49
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9414b2e31d6e74d4cbc005506795379a
+      internalID: -1759750530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spin gun attack_12
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0035087f7211bdf40816c8fe067d531e
+      internalID: 508396383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +263,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spin gun attack_0: -140747573
+      spin gun attack_1: 1584670327
+      spin gun attack_10: 1480605317
+      spin gun attack_11: 261259459
+      spin gun attack_12: 508396383
+      spin gun attack_13: -41569247
+      spin gun attack_14: -455678033
+      spin gun attack_2: 541269200
+      spin gun attack_3: -1647759536
+      spin gun attack_4: -758362721
+      spin gun attack_5: -1241685409
+      spin gun attack_6: 2109770098
+      spin gun attack_7: -1064369012
+      spin gun attack_8: 434226416
+      spin gun attack_9: -1759750530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
