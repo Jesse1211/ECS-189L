@@ -5,24 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class ToNextScene : MonoBehaviour
 {
-    void Start()
+    public Animator transition;
+
+    public float transitionTime = 1f;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        // Debug.Log(collision.GetType().ToString());
+        // Debug.Log(collision.gameObject.tag);
         
-    }
-
-    void Update()
-    {
-     
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log(collision.GetType().ToString());
-        Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.CompareTag("Player")
-            && collision.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        // if (collision.gameObject.CompareTag("Player")
+        //     && collision.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        // {
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+        // }
+        if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+            Debug.Log("switch scene");
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+            StartCoroutine(SwitchScene(SceneManager.GetActiveScene().buildIndex + 1));
         }
+
+
+    }
+
+    IEnumerator SwitchScene(int scene)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(scene);
     }
 }
