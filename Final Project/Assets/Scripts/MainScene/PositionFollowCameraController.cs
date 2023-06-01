@@ -18,7 +18,7 @@ namespace Project
         [SerializeField] private Vector2 bottomRight = new Vector2(25f, -25f);
         private Camera managedCamera;
         private LineRenderer cameraLineRenderer;
-        private PlayerController playerController;
+        private PlayerControllerData playerController;
 
         [SerializeField] private float followSpeedFactor = 0.05f;
         [SerializeField] private float leashDistance = 50.0f;
@@ -32,7 +32,7 @@ namespace Project
         {
             managedCamera = gameObject.GetComponent<Camera>();
             cameraLineRenderer = gameObject.GetComponent<LineRenderer>();
-            playerController = this.Target.GetComponent<PlayerController>();
+            playerController = this.Target.GetComponent<PlayerControllerData>();
         }
 
         void LateUpdate()

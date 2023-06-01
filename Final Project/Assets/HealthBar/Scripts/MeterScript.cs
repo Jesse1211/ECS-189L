@@ -8,7 +8,7 @@ namespace Project
     public class MeterScript : MonoBehaviour
     {
         public GameObject prefab;
-        private static PlayerController playerController;
+        private static PlayerControllerData playerController;
 
         public Slider slider;
         public Gradient gradient;
@@ -16,7 +16,7 @@ namespace Project
 
         private void Start()
         {
-            playerController = prefab.GetComponent<PlayerController>();
+            playerController = prefab.GetComponent<PlayerControllerData>();
             SetMaxHealth(10); //sets your meter's fill to maximum from the start
         }
 

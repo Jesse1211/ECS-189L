@@ -9,11 +9,11 @@ namespace Project
     {
         public Text healthText;
         public GameObject prefab;
-        private static PlayerController playerController;
+        private static PlayerControllerData playerController;
 
         private void Start()
         {
-            playerController = prefab.GetComponent<PlayerController>();
+            playerController = prefab.GetComponent<PlayerControllerData>();
         }
 
         void Update()
