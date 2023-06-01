@@ -35,16 +35,44 @@ namespace Project
             moving();
             jump();
 
+            // set Fall
             if (PlayerRigid.velocity.y < 0 && !onGround)
             {
-                UnityEngine.Debug.Log(1);
-                animator.SetBool("isFall", true);
+                animator.SetBool("IsFall", true);
             }
             else if (PlayerRigid.velocity.y == 0 || onGround)
             {
-                UnityEngine.Debug.Log(2);
-                animator.SetBool("isFall", false);
+                animator.SetBool("IsFall", false);
             }
+
+            //animator.SetFloat("Health", currentSpeed);
+
+            // set Run
+            animator.SetFloat("Speed", currentSpeed);
+
+            //// set Transition
+            //if (Input.GetKeyDown(KeyCode.M))
+            //    animator.SetTrigger("transition");
+            //else
+            //    animator.ResetTrigger("transition");
+
+            // set Dodge
+            if (Input.GetKeyDown(KeyCode.S))
+                animator.SetTrigger("Dodge");
+            else if (Input.GetKeyUp(KeyCode.S))
+                animator.ResetTrigger("Dodge");
+
+            //// set Stab
+            //if (Input.GetKey(KeyCode.N))
+            //    animator.SetTrigger("stab");
+            //else
+            //    animator.ResetTrigger("stab");
+
+            //// set Gunattack
+            //if (Input.GetKey(KeyCode.N))
+            //    animator.SetTrigger("gunattack");
+            //else
+            //    animator.ResetTrigger("gunattack");
 
         }
         void jump()
