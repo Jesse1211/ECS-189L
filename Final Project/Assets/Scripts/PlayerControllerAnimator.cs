@@ -48,36 +48,73 @@ namespace Project
             //animator.SetFloat("Health", currentSpeed);
 
             // set Run
-            animator.SetFloat("Speed", currentSpeed);
+            //animator.SetFloat("Speed", currentSpeed);
 
-            //// set Transition
-            //if (Input.GetKeyDown(KeyCode.M))
-            //    animator.SetTrigger("transition");
-            //else
-            //    animator.ResetTrigger("transition");
+            // set Transition
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                animator.SetTrigger("transitionEnter");
+                animator.ResetTrigger("transitionExit");
+            }
+            else if (Input.GetKeyUp(KeyCode.M))
+            {
+                animator.ResetTrigger("transitionEnter");
+                animator.SetTrigger("transitionExit");
+            }
 
             // set Dodge
             if (Input.GetKeyDown(KeyCode.S))
-                animator.SetTrigger("Dodge");
+            { 
+                animator.SetTrigger("DodgeEnter");
+                animator.ResetTrigger("DodgeExit");
+            }
             else if (Input.GetKeyUp(KeyCode.S))
-                animator.ResetTrigger("Dodge");
+            {
+                animator.ResetTrigger("DodgeEnter");
+                animator.SetTrigger("DodgeExit");
+            }
 
-            //// set Stab
-            //if (Input.GetKey(KeyCode.N))
-            //    animator.SetTrigger("stab");
-            //else
-            //    animator.ResetTrigger("stab");
+            // set Stab
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                animator.SetTrigger("StabEnter");
+                animator.ResetTrigger("StabExit");
+            }
+            else if (Input.GetKeyUp(KeyCode.N))
+            {
+                animator.ResetTrigger("StabEnter");
+                animator.SetTrigger("StabExit");
+            }
 
-            //// set Gunattack
-            //if (Input.GetKey(KeyCode.N))
-            //    animator.SetTrigger("gunattack");
-            //else
-            //    animator.ResetTrigger("gunattack");
-
+            // set Gunattack
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                animator.SetTrigger("GunattackEnter");
+                animator.ResetTrigger("GunattackExit");
+            }
+            else if (Input.GetKeyUp(KeyCode.B))
+            {
+                animator.ResetTrigger("GunattackEnter");
+                animator.SetTrigger("GunattackExit");
+            }
         }
         void jump()
         {
-            PlayerRigid.velocity = (Input.GetKey(KeyCode.Space) && onGround) ? Vector2.up * 15f : PlayerRigid.velocity;
+            if (Input.GetKey(KeyCode.Space) && onGround)
+            {
+                PlayerRigid.velocity = Vector2.up * 15f;
+            }
+
+            if (PlayerRigid.velocity.y > 0 && !onGround)
+            {
+                animator.SetTrigger("JumpEnter");
+                animator.ResetTrigger("JumpExit");
+            }
+            else if (PlayerRigid.velocity.y <= 0)
+            {
+                animator.ResetTrigger("JumpEnter");
+                animator.SetTrigger("JumpExit");
+            }
         }
 
         /// <summary>
