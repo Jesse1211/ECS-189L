@@ -15,16 +15,13 @@ public class PlayerController_horizontal : MonoBehaviour
     void Start()
     {
         PlayerRigid = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
         run();
         jump();
-
     }
     void jump() 
     {
