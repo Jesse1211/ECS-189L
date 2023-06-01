@@ -32132,7 +32132,7 @@ PlayableDirector:
   - key: {fileID: -1498572870807034979, guid: 7f22c13f351dad6458d14acb82588f9f, type: 2}
     value: {fileID: 0}
   - key: {fileID: -3835954120045018695, guid: 7f22c13f351dad6458d14acb82588f9f, type: 2}
-    value: {fileID: 1063848693}
+    value: {fileID: 0}
   - key: {fileID: 5539707652913929453, guid: 7f22c13f351dad6458d14acb82588f9f, type: 2}
     value: {fileID: 75840990}
   - key: {fileID: 2004992712219091052, guid: 7f22c13f351dad6458d14acb82588f9f, type: 2}
@@ -40071,6 +40071,10 @@ PrefabInstance:
     - target: {fileID: 4827236770805489763, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
       propertyPath: m_Name
       value: LittleGirl
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044351386868664185, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.454
       objectReference: {fileID: 0}
     - target: {fileID: 5740849631023626696, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
       propertyPath: m_RootOrder
