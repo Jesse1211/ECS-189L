@@ -9,6 +9,7 @@ public class NPC : MonoBehaviour
     public Text dialogText;
     public string[] dialog;
     private int index;
+    private bool first_time_in = true;
 
     public float wordSpeed;
     public bool playerIsClose;
@@ -17,8 +18,12 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
-        if (playerIsClose)
+        // have to add some other conditions.
+        // can revise this if needed.
+        if (first_time_in && playerIsClose)
         {
+            first_time_in = false;
+
             if (dialogPanel.activeInHierarchy)
             {
                 emptyText();
@@ -26,25 +31,26 @@ public class NPC : MonoBehaviour
             else
             {
                 dialogPanel.SetActive(true);
-                StartCoroutine("Typing");
+                StartCoroutine(Typing());
             }
         }
 
         if (dialogText.text == dialog[index])
         {
+            UnityEngine.Debug.Log(1122);
             button.SetActive(true);
         }
     }
 
     public void NextLine()
     {
-        dialogPanel.SetActive(false);
+        button.SetActive(false);
 
         if (index < dialog.Length - 1)
         {
             index++;
             dialogText.text = "";
-            StartCoroutine("Typing");
+            StartCoroutine(Typing());
         }
         else
         {
@@ -52,7 +58,7 @@ public class NPC : MonoBehaviour
         }
     }
 
-    IEnumerable Typing()
+    IEnumerator Typing()
     {
         foreach(char letter in dialog[index].ToCharArray())
         {
@@ -85,6 +91,6 @@ public class NPC : MonoBehaviour
     {
         dialogText.text = "";
         index = 0;
-        dialogPanel.SetActive(false);
+        dialogPanel.SetActive(false); 
     }
 }
