@@ -169,27 +169,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: jump_0
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 256
-        width: 17
-        height: 8
-      alignment: 9
-      pivot: {x: 0.75, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 391ee531076054c739b71493421c89d3
-      internalID: -1069372549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -206,6 +185,7 @@ TextureImporter:
       jump_2: -527850245
       jump_3: -1919517532
       jump_4: -1902969995
+      jump_5: 795912110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
