@@ -18,7 +18,7 @@ public class CameraMoving : MonoBehaviour
         var targetPosition = new Vector3(player.position.x, player.position.y + 2f, transform.position.z);
         var distance = Vector3.Distance(targetPosition, transform.position);
 
-        if (distance > 0.1f)
+        if (distance > 1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
         }
