@@ -23,6 +23,13 @@ namespace Project
         public Vector2 maxPosition;
         private Animator animator;
 
+        // climbing
+        bool isTouchingFront;
+        bool wallSliding;
+        public Transform fontcheck;
+        public float wallSlidingSpeed;
+        public float checkRadius;
+
         void Start()
         {
             PlayerRigid = GetComponent<Rigidbody2D>();
@@ -97,6 +104,9 @@ namespace Project
                 animator.ResetTrigger("GunattackEnter");
                 animator.SetTrigger("GunattackExit");
             }
+
+            isTouchingFront = Physics2D.OverlapCircle(frontcheck.position, checkRadius, WhatIsGround)
+
         }
         void jump()
         {
