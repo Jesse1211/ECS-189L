@@ -16,10 +16,13 @@ public class GirlController : MonoBehaviour
     public LayerMask whatIsGround;
     public float jumpForce;
 
+    public int health;
+    public int damage;
+
     // Vector3 movement;
     // private int direction = 1;
     // bool isJumping = false;
-    // private bool alive = true;
+    private bool alive = true;
 
     public GameObject bolt;
     public float timeBetweenAttacks;
@@ -35,9 +38,12 @@ public class GirlController : MonoBehaviour
 
     private void Update()
     {
-        Run();
-        Jump();
-        Attack();
+        if(alive)
+        {
+            Run();
+            Jump();
+            Attack();
+        }
     }
 
     void Run()
@@ -135,6 +141,37 @@ public class GirlController : MonoBehaviour
     {
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         facingRight = !facingRight;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if(alive)
+        {
+            health -= damage;
+            Debug.Log(health);
+            if(health <= 0.1f)
+            {
+                anim.SetTrigger("die");
+                alive = false;
+            }
+            else
+            {
+                anim.SetTrigger("isHit");
+                if (facingRight)
+                {
+                    rb.velocity = new Vector3(-2f, 2f, 0f);
+                }
+                else
+                {
+                    rb.velocity = new Vector3(2f, 2f, 0f);
+                }
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
     }
 }
 
