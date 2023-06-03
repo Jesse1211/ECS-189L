@@ -29,6 +29,12 @@ public class GirlController : MonoBehaviour
     private float nextAttackTime;
     public Transform shotPoint;
 
+    public float attackRange;
+    public Transform attackPoint;
+    public LayerMask enemyLayer;
+
+    public GameObject blood;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,7 +101,11 @@ public class GirlController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.J))
             {  
-                //transform.localScale = new Vector3(-direction * 1.7f, 1.7f, 1.7f);
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+                foreach (Collider2D col in enemiesToDamage)
+                {
+                     col.GetComponent<Enemy>().TakeDamage(damage);
+                }
                 anim.SetTrigger("stab");
                 nextAttackTime = Time.time + timeBetweenAttacks;
             }
@@ -148,10 +158,11 @@ public class GirlController : MonoBehaviour
         if(alive)
         {
             health -= damage;
-            Debug.Log(health);
+            Debug.Log("LittleGirl's health: " + health);
             if(health <= 0.1f)
             {
                 anim.SetTrigger("die");
+                rb.velocity = Vector2.zero;
                 alive = false;
             }
             else
@@ -166,7 +177,14 @@ public class GirlController : MonoBehaviour
                     rb.velocity = new Vector3(2f, 2f, 0f);
                 }
             }
+            Instantiate(blood, transform.position, Quaternion.identity);
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

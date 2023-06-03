@@ -21,10 +21,10 @@ public class Bolt : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // if (collision.tag == "Enemy")
-        // {
-        //     collision.GetComponent<Enemy>().TakeDamage(damage);
-        // }
+        if (collision.tag == "Enemy")
+        {
+            collision.GetComponent<Enemy>().TakeDamage(damage);
+        }
         Destroy(gameObject);
         Instantiate(boltHit, transform.position, transform.rotation);
     }
