@@ -1,0 +1,1374 @@
+fileFormatVersion: 2
+guid: a58a2c19482901a4880c99295d81446f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7335388293733538395
+    second: The Shadow of Storms Sprite Sheet_0
+  - first:
+      213: -6591760076380728620
+    second: The Shadow of Storms Sprite Sheet_2
+  - first:
+      213: 2442603672402653517
+    second: The Shadow of Storms Sprite Sheet_3
+  - first:
+      213: 6180387349908406584
+    second: The Shadow of Storms Sprite Sheet_4
+  - first:
+      213: -1397548038604127215
+    second: The Shadow of Storms Sprite Sheet_5
+  - first:
+      213: 9136524393807419484
+    second: The Shadow of Storms Sprite Sheet_6
+  - first:
+      213: -2788199170991814630
+    second: The Shadow of Storms Sprite Sheet_7
+  - first:
+      213: 6011561689926245639
+    second: The Shadow of Storms Sprite Sheet_8
+  - first:
+      213: 2590360661248906565
+    second: The Shadow of Storms Sprite Sheet_9
+  - first:
+      213: 6017865690096658807
+    second: The Shadow of Storms Sprite Sheet_10
+  - first:
+      213: -2165556211924942580
+    second: The Shadow of Storms Sprite Sheet_11
+  - first:
+      213: 2288908344602775741
+    second: The Shadow of Storms Sprite Sheet_12
+  - first:
+      213: 3915322111286283072
+    second: The Shadow of Storms Sprite Sheet_13
+  - first:
+      213: -8652814491445482829
+    second: The Shadow of Storms Sprite Sheet_14
+  - first:
+      213: 443758511160589146
+    second: The Shadow of Storms Sprite Sheet_15
+  - first:
+      213: -2623365279656057543
+    second: The Shadow of Storms Sprite Sheet_16
+  - first:
+      213: 6271993787487530015
+    second: The Shadow of Storms Sprite Sheet_17
+  - first:
+      213: 692036409401855223
+    second: The Shadow of Storms Sprite Sheet_18
+  - first:
+      213: 158126952592249508
+    second: The Shadow of Storms Sprite Sheet_19
+  - first:
+      213: 6232732037089726961
+    second: The Shadow of Storms Sprite Sheet_20
+  - first:
+      213: -976045105334146986
+    second: The Shadow of Storms Sprite Sheet_21
+  - first:
+      213: 7248860616238370096
+    second: The Shadow of Storms Sprite Sheet_22
+  - first:
+      213: 7734146456911407812
+    second: The Shadow of Storms Sprite Sheet_23
+  - first:
+      213: -828570721067826506
+    second: The Shadow of Storms Sprite Sheet_24
+  - first:
+      213: 4971609452425721018
+    second: The Shadow of Storms Sprite Sheet_25
+  - first:
+      213: -2636747883907391103
+    second: The Shadow of Storms Sprite Sheet_26
+  - first:
+      213: -316174368650286076
+    second: The Shadow of Storms Sprite Sheet_27
+  - first:
+      213: -2457633502540772292
+    second: The Shadow of Storms Sprite Sheet_28
+  - first:
+      213: -8583086553639812203
+    second: The Shadow of Storms Sprite Sheet_29
+  - first:
+      213: -3342693862616488423
+    second: The Shadow of Storms Sprite Sheet_30
+  - first:
+      213: 3511046946588878759
+    second: The Shadow of Storms Sprite Sheet_31
+  - first:
+      213: -3083487814382676750
+    second: The Shadow of Storms Sprite Sheet_32
+  - first:
+      213: -4714094244500612916
+    second: The Shadow of Storms Sprite Sheet_33
+  - first:
+      213: -2608733686053809405
+    second: The Shadow of Storms Sprite Sheet_34
+  - first:
+      213: 8849132391221820908
+    second: The Shadow of Storms Sprite Sheet_35
+  - first:
+      213: -3876599363075911062
+    second: The Shadow of Storms Sprite Sheet_36
+  - first:
+      213: 3406762956459836605
+    second: The Shadow of Storms Sprite Sheet_37
+  - first:
+      213: 6656087237300811574
+    second: The Shadow of Storms Sprite Sheet_38
+  - first:
+      213: 1153383758029062592
+    second: The Shadow of Storms Sprite Sheet_39
+  - first:
+      213: 1890146344757830125
+    second: The Shadow of Storms Sprite Sheet_40
+  - first:
+      213: -2197065784991792614
+    second: The Shadow of Storms Sprite Sheet_41
+  - first:
+      213: 6252217967147072052
+    second: The Shadow of Storms Sprite Sheet_42
+  - first:
+      213: -3095346630155121995
+    second: The Shadow of Storms Sprite Sheet_43
+  - first:
+      213: 5399871645750371609
+    second: The Shadow of Storms Sprite Sheet_44
+  - first:
+      213: 1552352753844193062
+    second: The Shadow of Storms Sprite Sheet_45
+  - first:
+      213: 2490330316974487357
+    second: The Shadow of Storms Sprite Sheet_46
+  - first:
+      213: -1745982360477107208
+    second: The Shadow of Storms Sprite Sheet_47
+  - first:
+      213: -8286906616361082556
+    second: The Shadow of Storms Sprite Sheet_48
+  - first:
+      213: 6663798292175452273
+    second: The Shadow of Storms Sprite Sheet_49
+  - first:
+      213: -7480425743567237800
+    second: The Shadow of Storms Sprite Sheet_50
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 455
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5247e1637733a90800000000000000
+      internalID: -7335388293733538395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d299ba922d5584a0800000000000000
+      internalID: -6591760076380728620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41ff9c391fd5e120800000000000000
+      internalID: 2442603672402653517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831cb95bc8525c550800000000000000
+      internalID: 6180387349908406584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1140572a679ea9ce0800000000000000
+      internalID: -1397548038604127215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58159e57847bce70800000000000000
+      internalID: 9136524393807419484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a188ef160a35e49d0800000000000000
+      internalID: -2788199170991814630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d9661a18b5d6350800000000000000
+      internalID: 6011561689926245639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54513ed0c4fc2f320800000000000000
+      internalID: 2590360661248906565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779e83c06f0c38350800000000000000
+      internalID: 6017865690096658807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01c21f491662f1e0800000000000000
+      internalID: -2165556211924942580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0d9732306d3cf10800000000000000
+      internalID: 2288908344602775741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b837847b4065630800000000000000
+      internalID: 3915322111286283072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba2a0a80170be780800000000000000
+      internalID: -8652814491445482829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b78c7c30c882600800000000000000
+      internalID: 443758511160589146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935e1066d2fe79bd0800000000000000
+      internalID: -2623365279656057543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ca6a88e199a0750800000000000000
+      internalID: 6271993787487530015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcc802a27b9a9900800000000000000
+      internalID: 692036409401855223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a21da620a7c13200800000000000000
+      internalID: 158126952592249508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f11eeae3cc1f7650800000000000000
+      internalID: 6232732037089726961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658acc3e5246472f0800000000000000
+      internalID: -976045105334146986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d05390350299460800000000000000
+      internalID: 7248860616238370096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 364
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4caec0da935355b60800000000000000
+      internalID: 7734146456911407812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b28673b1535084f0800000000000000
+      internalID: -828570721067826506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab43fcdc474bef440800000000000000
+      internalID: 4971609452425721018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181ef6905c3686bd0800000000000000
+      internalID: -2636747883907391103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c248d3619bc9bf0800000000000000
+      internalID: -316174368650286076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c45fcb95bb4edd0800000000000000
+      internalID: -2457633502540772292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5930edd2140c2e880800000000000000
+      internalID: -8583086553639812203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916addd64ad5c91d0800000000000000
+      internalID: -3342693862616488423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a76629789eb9b030800000000000000
+      internalID: 3511046946588878759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4997a7b204535d0800000000000000
+      internalID: -3083487814382676750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8d3dec24c249eb0800000000000000
+      internalID: -4714094244500612916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 273
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303da21c88aebcbd0800000000000000
+      internalID: -2608733686053809405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 182
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedfd2d660f6eca70800000000000000
+      internalID: 8849132391221820908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 182
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62da5b1b6d833ac0800000000000000
+      internalID: -3876599363075911062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 182
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db48fbdebd0474f20800000000000000
+      internalID: 3406762956459836605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 182
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637735da31c2f5c50800000000000000
+      internalID: 6656087237300811574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 182
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c10703ca64a10010800000000000000
+      internalID: 1153383758029062592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 182
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de12bcc06162b3a10800000000000000
+      internalID: 1890146344757830125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 182
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1246612f447281e0800000000000000
+      internalID: -2197065784991792614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 182
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43abd1e8d1754c650800000000000000
+      internalID: 6252217967147072052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 91
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bac6e4c3ae1b05d0800000000000000
+      internalID: -3095346630155121995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 91
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915a7ade6a230fa40800000000000000
+      internalID: 5399871645750371609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6278bfada901b8510800000000000000
+      internalID: 1552352753844193062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 0
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3776ac9a3e6f8220800000000000000
+      internalID: 2490330316974487357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbf9a33b4605c7e0800000000000000
+      internalID: -1745982360477107208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 0
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441a6fc965efefc80800000000000000
+      internalID: -8286906616361082556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 0
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178f8fb8d319a7c50800000000000000
+      internalID: 6663798292175452273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Shadow of Storms Sprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 0
+        width: 137
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dccf15b60303890800000000000000
+      internalID: -7480425743567237800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      The Shadow of Storms Sprite Sheet_0: -7335388293733538395
+      The Shadow of Storms Sprite Sheet_10: 6017865690096658807
+      The Shadow of Storms Sprite Sheet_11: -2165556211924942580
+      The Shadow of Storms Sprite Sheet_12: 2288908344602775741
+      The Shadow of Storms Sprite Sheet_13: 3915322111286283072
+      The Shadow of Storms Sprite Sheet_14: -8652814491445482829
+      The Shadow of Storms Sprite Sheet_15: 443758511160589146
+      The Shadow of Storms Sprite Sheet_16: -2623365279656057543
+      The Shadow of Storms Sprite Sheet_17: 6271993787487530015
+      The Shadow of Storms Sprite Sheet_18: 692036409401855223
+      The Shadow of Storms Sprite Sheet_19: 158126952592249508
+      The Shadow of Storms Sprite Sheet_2: -6591760076380728620
+      The Shadow of Storms Sprite Sheet_20: 6232732037089726961
+      The Shadow of Storms Sprite Sheet_21: -976045105334146986
+      The Shadow of Storms Sprite Sheet_22: 7248860616238370096
+      The Shadow of Storms Sprite Sheet_23: 7734146456911407812
+      The Shadow of Storms Sprite Sheet_24: -828570721067826506
+      The Shadow of Storms Sprite Sheet_25: 4971609452425721018
+      The Shadow of Storms Sprite Sheet_26: -2636747883907391103
+      The Shadow of Storms Sprite Sheet_27: -316174368650286076
+      The Shadow of Storms Sprite Sheet_28: -2457633502540772292
+      The Shadow of Storms Sprite Sheet_29: -8583086553639812203
+      The Shadow of Storms Sprite Sheet_3: 2442603672402653517
+      The Shadow of Storms Sprite Sheet_30: -3342693862616488423
+      The Shadow of Storms Sprite Sheet_31: 3511046946588878759
+      The Shadow of Storms Sprite Sheet_32: -3083487814382676750
+      The Shadow of Storms Sprite Sheet_33: -4714094244500612916
+      The Shadow of Storms Sprite Sheet_34: -2608733686053809405
+      The Shadow of Storms Sprite Sheet_35: 8849132391221820908
+      The Shadow of Storms Sprite Sheet_36: -3876599363075911062
+      The Shadow of Storms Sprite Sheet_37: 3406762956459836605
+      The Shadow of Storms Sprite Sheet_38: 6656087237300811574
+      The Shadow of Storms Sprite Sheet_39: 1153383758029062592
+      The Shadow of Storms Sprite Sheet_4: 6180387349908406584
+      The Shadow of Storms Sprite Sheet_40: 1890146344757830125
+      The Shadow of Storms Sprite Sheet_41: -2197065784991792614
+      The Shadow of Storms Sprite Sheet_42: 6252217967147072052
+      The Shadow of Storms Sprite Sheet_43: -3095346630155121995
+      The Shadow of Storms Sprite Sheet_44: 5399871645750371609
+      The Shadow of Storms Sprite Sheet_45: 1552352753844193062
+      The Shadow of Storms Sprite Sheet_46: 2490330316974487357
+      The Shadow of Storms Sprite Sheet_47: -1745982360477107208
+      The Shadow of Storms Sprite Sheet_48: -8286906616361082556
+      The Shadow of Storms Sprite Sheet_49: 6663798292175452273
+      The Shadow of Storms Sprite Sheet_5: -1397548038604127215
+      The Shadow of Storms Sprite Sheet_50: -7480425743567237800
+      The Shadow of Storms Sprite Sheet_6: 9136524393807419484
+      The Shadow of Storms Sprite Sheet_7: -2788199170991814630
+      The Shadow of Storms Sprite Sheet_8: 6011561689926245639
+      The Shadow of Storms Sprite Sheet_9: 2590360661248906565
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
