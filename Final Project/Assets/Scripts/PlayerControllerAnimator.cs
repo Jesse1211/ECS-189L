@@ -24,11 +24,14 @@ namespace Project
         private Animator animator;
 
         // climbing
-        bool isTouchingFront;
-        bool wallSliding;
+        bool isTouchingWall;
+        bool isWallSliding;
         public Transform fontcheck;
         public float wallSlidingSpeed;
-        public float checkRadius;
+        public bool wallJumping;
+        public float xWallForce;
+        public float yWallForce;
+        public float wallJumpTime;
 
         void Start()
         {
@@ -41,71 +44,26 @@ namespace Project
         {
             moving();
             jump();
+            updateAnimator();
 
-            // set Fall
-            if (PlayerRigid.velocity.y < 0 && !onGround)
+            isWallSliding = ((isTouchingWall is true) && (!onGround) && Input.GetAxisRaw("Horizontal") != 0) ? true : false;
+
+            if (isWallSliding)
             {
-                animator.SetBool("IsFall", true);
-            }
-            else if (PlayerRigid.velocity.y == 0 || onGround)
-            {
-                animator.SetBool("IsFall", false);
+                PlayerRigid.velocity = new Vector2(PlayerRigid.velocity.x, Mathf.Clamp(PlayerRigid.velocity.y, -wallSlidingSpeed, float.MaxValue));
             }
 
-            //animator.SetFloat("Health", currentSpeed);
-
-            // set Run
-            //animator.SetFloat("Speed", currentSpeed);
-
-            // set Transition
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.Space) && isWallSliding)
             {
-                animator.SetTrigger("transitionEnter");
-                animator.ResetTrigger("transitionExit");
-            }
-            else if (Input.GetKeyUp(KeyCode.M))
-            {
-                animator.ResetTrigger("transitionEnter");
-                animator.SetTrigger("transitionExit");
+                wallJumping = true;
+                Invoke("setWallJumpingToFalse", wallJumpTime);
             }
 
-            // set Dodge
-            if (Input.GetKeyDown(KeyCode.S))
-            { 
-                animator.SetTrigger("DodgeEnter");
-                animator.ResetTrigger("DodgeExit");
-            }
-            else if (Input.GetKeyUp(KeyCode.S))
+            if (wallJumping)
             {
-                animator.ResetTrigger("DodgeEnter");
-                animator.SetTrigger("DodgeExit");
+                PlayerRigid.velocity = new Vector2(xWallForce * -Input.GetAxisRaw("Horizontal"), yWallForce);
             }
 
-            // set Stab
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                animator.SetTrigger("StabEnter");
-                animator.ResetTrigger("StabExit");
-            }
-            else if (Input.GetKeyUp(KeyCode.N))
-            {
-                animator.ResetTrigger("StabEnter");
-                animator.SetTrigger("StabExit");
-            }
-
-            // set Gunattack
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                animator.SetTrigger("GunattackEnter");
-                animator.ResetTrigger("GunattackExit");
-            }
-            else if (Input.GetKeyUp(KeyCode.B))
-            {
-                animator.ResetTrigger("GunattackEnter");
-                animator.SetTrigger("GunattackExit");
-            }
-
-            isTouchingFront = Physics2D.OverlapCircle(frontcheck.position, checkRadius, WhatIsGround)
 
         }
         void jump()
@@ -160,6 +118,11 @@ namespace Project
             {
                 onGround = true;
             }
+
+            if (collision.collider.tag == "Wall")
+            {
+                isTouchingWall = true;
+            }
         }
 
         void OnCollisionExit2D(Collision2D collision)
@@ -168,6 +131,84 @@ namespace Project
             {
                 onGround = false;
             }
+
+            if (collision.collider.tag == "Wall")
+            {
+                isTouchingWall = false;
+            }
+        }
+
+        void updateAnimator()
+        {
+
+            // set Fall
+            if (PlayerRigid.velocity.y < 0 && !onGround)
+            {
+                animator.SetBool("IsFall", true);
+            }
+            else if (PlayerRigid.velocity.y == 0 || onGround)
+            {
+                animator.SetBool("IsFall", false);
+            }
+
+            //animator.SetFloat("Health", currentSpeed);
+
+            // set Run
+            //animator.SetFloat("Speed", currentSpeed);
+
+            // set Transition
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                animator.SetTrigger("transitionEnter");
+                animator.ResetTrigger("transitionExit");
+            }
+            else if (Input.GetKeyUp(KeyCode.M))
+            {
+                animator.ResetTrigger("transitionEnter");
+                animator.SetTrigger("transitionExit");
+            }
+
+            // set Dodge
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                animator.SetTrigger("DodgeEnter");
+                animator.ResetTrigger("DodgeExit");
+            }
+            else if (Input.GetKeyUp(KeyCode.S))
+            {
+                animator.ResetTrigger("DodgeEnter");
+                animator.SetTrigger("DodgeExit");
+            }
+
+            // set Stab
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                animator.SetTrigger("StabEnter");
+                animator.ResetTrigger("StabExit");
+            }
+            else if (Input.GetKeyUp(KeyCode.N))
+            {
+                animator.ResetTrigger("StabEnter");
+                animator.SetTrigger("StabExit");
+            }
+
+            // set Gunattack
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                animator.SetTrigger("GunattackEnter");
+                animator.ResetTrigger("GunattackExit");
+            }
+            else if (Input.GetKeyUp(KeyCode.B))
+            {
+                animator.ResetTrigger("GunattackEnter");
+                animator.SetTrigger("GunattackExit");
+            }
+
+        }
+
+        void setWallJumpingToFalse()
+        {
+            wallJumping = false;
         }
     }
 }
