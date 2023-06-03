@@ -51,48 +51,48 @@ namespace Project
             //animator.SetFloat("Speed", currentSpeed);
 
             // set Transition
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.U))
             {
                 animator.SetTrigger("transitionEnter");
                 animator.ResetTrigger("transitionExit");
             }
-            else if (Input.GetKeyUp(KeyCode.M))
+            else if (Input.GetKeyUp(KeyCode.U))
             {
                 animator.ResetTrigger("transitionEnter");
                 animator.SetTrigger("transitionExit");
             }
 
             // set Dodge
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.L))
             { 
                 animator.SetTrigger("DodgeEnter");
                 animator.ResetTrigger("DodgeExit");
             }
-            else if (Input.GetKeyUp(KeyCode.S))
+            else if (Input.GetKeyUp(KeyCode.L))
             {
                 animator.ResetTrigger("DodgeEnter");
                 animator.SetTrigger("DodgeExit");
             }
 
             // set Stab
-            if (Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.J))
             {
                 animator.SetTrigger("StabEnter");
                 animator.ResetTrigger("StabExit");
             }
-            else if (Input.GetKeyUp(KeyCode.N))
+            else if (Input.GetKeyUp(KeyCode.J))
             {
                 animator.ResetTrigger("StabEnter");
                 animator.SetTrigger("StabExit");
             }
 
             // set Gunattack
-            if (Input.GetKeyDown(KeyCode.B))
+            if (Input.GetKeyDown(KeyCode.K))
             {
                 animator.SetTrigger("GunattackEnter");
                 animator.ResetTrigger("GunattackExit");
             }
-            else if (Input.GetKeyUp(KeyCode.B))
+            else if (Input.GetKeyUp(KeyCode.K))
             {
                 animator.ResetTrigger("GunattackEnter");
                 animator.SetTrigger("GunattackExit");
@@ -100,7 +100,7 @@ namespace Project
         }
         void jump()
         {
-            if (Input.GetKey(KeyCode.Space) && onGround)
+            if (Input.GetKey(KeyCode.W) && onGround)
             {
                 PlayerRigid.velocity = Vector2.up * 15f;
             }
