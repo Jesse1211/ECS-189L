@@ -12,9 +12,11 @@ namespace Project
         public int score;
         public float health;
         [SerializeField] private PlayerControllerAnimator PlayerControllerAnimator;
+        public bool collected;
 
         void Awake()
         {
+            collected = false;
             health = 100;
         }
 
@@ -31,6 +33,12 @@ namespace Project
             {
                 Destroy(collision.gameObject);
                 this.score++;
+            }
+
+            if (collision.gameObject.tag == "PickUp1")
+            {
+                Destroy(collision.gameObject);
+                collected = true;
             }
         }
 

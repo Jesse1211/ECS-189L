@@ -9,6 +9,9 @@ TagManager:
   - Wall
   - DeathWater
   - DeathSwamp
+  - BloodTreeFire
+  - BloodTreeDead
+  - PickUp1
   layers:
   - Default
   - TransparentFX
