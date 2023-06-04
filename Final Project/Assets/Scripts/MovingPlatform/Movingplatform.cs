@@ -20,15 +20,10 @@ public class MovingPlatform : MonoBehaviour
 
         if (Vector2.Distance(transform.position, points[index].position) < 0.2f)
         {
-            index++;
-            if (index == points.Length)
-            {
-                index = 0;
-            }
+            index = (index + 1) % 2;
         }
 
-        transform.position = Vector2. MoveTowards(transform.position, points[index].position, speed * Time.deltaTime);
-        
+        transform.position = Vector3.Lerp(transform.position, points[index].position, speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
