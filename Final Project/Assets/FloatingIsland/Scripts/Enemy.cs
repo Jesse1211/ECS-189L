@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
 
     private float timeBetweenAttacks = 2f;
     private float nextAttackTime;
+    private bool alive = true;
 
     private void Start()
     {
@@ -35,46 +36,49 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
-        
-        if(transform.position == patrolPoints[currentPointIndex].position)
+        if(alive)
         {
-            transform.rotation = patrolPoints[currentPointIndex].rotation;
-            anim.SetBool("isRun", false);
-            if (waitTime <= 0)
+            transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+        
+            if(transform.position == patrolPoints[currentPointIndex].position)
             {
-                if (currentPointIndex + 1 < patrolPoints.Length)
+                transform.rotation = patrolPoints[currentPointIndex].rotation;
+                anim.SetBool("isRun", false);
+                if (waitTime <= 0)
                 {
-                    currentPointIndex++;
+                    if (currentPointIndex + 1 < patrolPoints.Length)
+                    {
+                        currentPointIndex++;
+                    }
+                    else
+                    {
+                        currentPointIndex = 0;
+                    }
+                    waitTime = startWaitTime;
                 }
                 else
                 {
-                    currentPointIndex = 0;
+                    waitTime -= Time.deltaTime;
                 }
-                waitTime = startWaitTime;
             }
             else
             {
-                waitTime -= Time.deltaTime;
+                anim.SetBool("isRun", true);
             }
-        }
-        else
-        {
-            anim.SetBool("isRun", true);
-        }
 
-        foundPlayer = Physics2D.OverlapCircle(playerCheck.position, checkRaduis, playerLayer);
+            foundPlayer = Physics2D.OverlapCircle(playerCheck.position, checkRaduis, playerLayer);
 
-        if (foundPlayer && Time.time > nextAttackTime)
-        {
-            anim.SetTrigger("attack");
-            nextAttackTime = Time.time + timeBetweenAttacks;
-
-            Collider2D playerToDamage = Physics2D.OverlapCircle(playerCheck.position, checkRaduis, playerLayer);
-            if (playerToDamage != null)
+            if (foundPlayer && Time.time > nextAttackTime)
             {
-                Debug.Log("Demon hits player!");
-                playerToDamage.GetComponent<GirlController>().TakeDamage(damage);
+                anim.SetTrigger("attack");
+                nextAttackTime = Time.time + timeBetweenAttacks;
+
+                Collider2D playerToDamage = Physics2D.OverlapCircle(playerCheck.position, checkRaduis, playerLayer);
+                if (playerToDamage != null)
+                {
+                    Debug.Log("Demon hits player!");
+                    playerToDamage.GetComponent<GirlController>().TakeDamage(damage);
+                }
             }
         }
     }
@@ -89,15 +93,20 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        Debug.Log("Enemy's health: " + health);
-        if(health <= 0.1f)
+        if(alive)
         {
-            anim.SetTrigger("die");
-            Destroy(gameObject, 1f);
-        }
+            health -= damage;
+            Debug.Log("Enemy's health: " + health);
+            if(health <= 0.1f)
+            {
+                anim.SetTrigger("die");
+                alive = false;
+                Destroy(gameObject, 1f);
+                return;
+            }
 
-        anim.SetTrigger("isHit");
-        Instantiate(blood, transform.position, Quaternion.identity);
+            anim.SetTrigger("isHit");
+            Instantiate(blood, transform.position, Quaternion.identity);
+        }
     }
 }
