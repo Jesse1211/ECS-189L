@@ -10,11 +10,12 @@ namespace Project
     public class PlayerControllerData : MonoBehaviour
     {
         public int score;
+        public float health;
         [SerializeField] private PlayerControllerAnimator PlayerControllerAnimator;
 
-        void Start()
+        void Awake()
         {
-
+            health = 100;
         }
 
         void Update()
