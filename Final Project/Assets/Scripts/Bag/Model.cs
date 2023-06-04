@@ -6,8 +6,8 @@ public class Items
 {
     public int Id;
     public string Name;
-    public string? Description;
     public Types? type;
+    public GameObject prefab;
 
     public enum Types
     {
