@@ -5,7 +5,11 @@ using UnityEngine.EventSystems;
 
 namespace Project
 {
-    public class ItemSlot : MonoBehaviour, IPointerClickHandler
+    /// <summary>
+    /// Error: remove item error
+    /// HINT: BagDataLoader.UpdateBagItem has logic error for bagItems destory and instantiation
+    /// </summary>
+    public class BagItemSlot : MonoBehaviour, IPointerClickHandler
     {
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -18,7 +22,8 @@ namespace Project
             var child = this.transform.GetChild(0).gameObject;
             if (child)
             {
-                DataLoader.RemoveBagItems(this.transform);
+                //BagDataLoader.RemoveBagItems(this.transform);
+                BagDataLoader.AddWeapon(child);
                 Destroy(this.transform.GetChild(0).gameObject);
             }
         }

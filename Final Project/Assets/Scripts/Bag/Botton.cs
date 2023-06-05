@@ -7,14 +7,16 @@ namespace Project
     public class Button : MonoBehaviour
     {
         public GameObject button;
-        public GameObject pannel;
+        public GameObject Pannel;
 
         private bool isClose;
 
         private void Awake()
         {
             isClose = true;
-            pannel.GetComponent<DataLoader>().UpdateBagItem();
+
+            Pannel.GetComponent<BagDataLoader>().UpdateBagItem();
+            Pannel.GetComponent<BagDataLoader>().UpdateWeaponList();
         }
 
         public void UpdateActive()
@@ -23,11 +25,11 @@ namespace Project
 
             if (isClose is false)
             {
-                pannel.GetComponent<DataLoader>().UpdateBagItem();
+                Pannel.GetComponent<BagDataLoader>().UpdateBagItem();
+                Pannel.GetComponent<BagDataLoader>().UpdateWeaponList();
             }
 
-            pannel.SetActive(isClose);
-
+            Pannel.SetActive(isClose);
         }
     }
 
