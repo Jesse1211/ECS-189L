@@ -2,20 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+namespace Project
 {
-    public GameObject button;
-    
-    private bool isClose;
-
-    private void Awake()
+    public class Button : MonoBehaviour
     {
-        isClose = false;
+        public GameObject button;
+        public GameObject pannel;
+
+        private bool isClose;
+
+        private void Awake()
+        {
+            isClose = true;
+            pannel.GetComponent<DataLoader>().UpdateBagItem();
+        }
+
+        public void UpdateActive()
+        {
+            isClose = (isClose) ? false : true;
+
+            if (isClose is false)
+            {
+                pannel.GetComponent<DataLoader>().UpdateBagItem();
+            }
+
+            pannel.SetActive(isClose);
+
+        }
     }
 
-    private void updateActive()
-    {
-        isClose = (isClose) ? false : true;
-        gameObject.SetActive(isClose);
-    }
 }

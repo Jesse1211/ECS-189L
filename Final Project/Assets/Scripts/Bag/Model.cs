@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Items
 {
-    public int Id;
-    public string Name;
+    public int? Id;
+    public string? Name;
     public Types? type;
+    public Transform parent;
     public GameObject prefab;
 
     public enum Types
