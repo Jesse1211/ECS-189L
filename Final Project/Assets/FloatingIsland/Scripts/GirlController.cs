@@ -158,7 +158,7 @@ public class GirlController : MonoBehaviour
         if(alive)
         {
             health -= damage;
-            Debug.Log("LittleGirl's health: " + health);
+            // Debug.Log("LittleGirl's health: " + health);
             if(health <= 0.1f)
             {
                 anim.SetTrigger("die");

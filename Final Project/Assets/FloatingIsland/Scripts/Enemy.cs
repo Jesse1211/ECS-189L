@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour
                 Collider2D playerToDamage = Physics2D.OverlapCircle(playerCheck.position, checkRaduis, playerLayer);
                 if (playerToDamage != null)
                 {
-                    Debug.Log("Demon hits player!");
+                    // Debug.Log("Demon hits player!");
                     playerToDamage.GetComponent<GirlController>().TakeDamage(damage);
                 }
             }
@@ -96,7 +96,7 @@ public class Enemy : MonoBehaviour
         if(alive)
         {
             health -= damage;
-            Debug.Log("Enemy's health: " + health);
+            // Debug.Log("Enemy's health: " + health);
             if(health <= 0.1f)
             {
                 anim.SetTrigger("die");

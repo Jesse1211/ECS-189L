@@ -13,11 +13,11 @@ namespace Project
 
         private void Awake()
         {
-            isClose = false;
-            Pannel.SetActive(isClose);
-
             Pannel.GetComponent<BagDataLoader>().UpdateBagItem();
             Pannel.GetComponent<BagDataLoader>().UpdateWeaponList();
+            
+            isClose = false;
+            Pannel.SetActive(isClose);
         }
 
         public void UpdateActive()

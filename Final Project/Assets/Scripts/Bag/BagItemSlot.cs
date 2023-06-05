@@ -19,12 +19,19 @@ namespace Project
 
         public void useItem()
         {
-            var child = this.transform.GetChild(0).gameObject;
-            if (child)
+            var childCount = this.transform.childCount;
+            //Debug.Log("child Count for SLOT: " + childCount);
+            if (childCount > 0)
             {
-                //BagDataLoader.RemoveBagItems(this.transform);
-                BagDataLoader.AddWeapon(child);
-                //Destroy(this.transform.GetChild(0).gameObject);
+                var child = this.transform.GetChild(0).gameObject;
+                //Debug.Log("child for SLOT: " + child + "   WHAT IS THIS: " + this.transform);
+
+                Item item = new Item();
+                item.prefab = child;
+                BagDataLoader.AddWeapon(item);
+                BagDataLoader.RemoveBagItems(this.transform);
+
+                Destroy(this.transform.GetChild(0).gameObject);            
             }
         }
     }

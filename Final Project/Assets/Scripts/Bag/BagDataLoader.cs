@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using UnityEngine;
 using static UnityEditor.Progress;
+using UnityEngine.UI;
 
 
 namespace Project
@@ -20,8 +21,9 @@ namespace Project
         public GameObject Prefab; // for test case usage
 
         private GameObject[] itemSlots;
+        private GameObject[] weaponSlots;
 
-        private List<GameObject> weaponSlots = new List<GameObject>();
+        // private List<GameObject> weaponSlots = new List<GameObject>();
 
 
         //public TextAsset itemData;
@@ -33,15 +35,16 @@ namespace Project
             GetData();
 
             itemSlots = GameObject.FindGameObjectsWithTag("ItemSlot");
-
-            foreach (var index in Enumerable.Range(0, GameObject.FindGameObjectWithTag("WeaponSlot").transform.childCount))
-            {
-                weaponSlots.Add(GameObject.FindGameObjectWithTag("WeaponSlot").transform.GetChild(index).gameObject);
-            }
+            weaponSlots = GameObject.FindGameObjectsWithTag("WeaponSlot");
+            // foreach (var index in Enumerable.Range(0, GameObject.FindGameObjectWithTag("WeaponSlot").transform.childCount))
+            // {
+            //     weaponSlots.Add(GameObject.FindGameObjectWithTag("WeaponSlot").transform.GetChild(index).gameObject);
+            // }
         }
 
         void Update()
         {
+
         }
 
         /// <summary>
@@ -100,14 +103,32 @@ namespace Project
 
         public void UpdateWeaponList()
         {
+            Debug.Log("!!!!WEAPON counttts:  " + weapons.Count);
+            // Debug.Log("weaponSlots COUNT: " + weaponSlots.Length);
+            // if (weaponSlots.Length > 0)
+            // {
+            //     foreach (var weaponSlot in weaponSlots)
+            //     {
+            //         Debug.Log("weaponSlot:" + weaponSlot);
+            //     }
+            // }
             if (weapons.Count > 0)
             {
                 int index = 0;
+                
+                // Debug.Log("weaponSlots COUNT: " + weaponSlots.Length.ToString());
+
                 foreach (var weaponSlot in weaponSlots)
                 {
                     if (weaponSlot.transform.childCount > 0)
                     {
-                        Destroy(weaponSlot.transform.GetChild(0).gameObject);
+                        Debug.Log("what is the weaponSlot : " + weaponSlot);
+                        Debug.Log("what is the child : " + weaponSlot.transform.GetChild(0));
+                        GameObject childObject = weaponSlot.transform.GetChild(0).gameObject;
+                        if (childObject != null)
+                        {
+                            Destroy(childObject);
+                        }
                     }
 
                     if ((weapons.Count <= index) || (weapons[index] is null) || (weapons[index].prefab is null))
@@ -115,13 +136,24 @@ namespace Project
                         continue;
                     }
 
+                    weapons[index].parent = weaponSlot.transform;
+                    // Debug.Log("Prefab: " + weapons[index].prefab);
+
                     GameObject gameObject = Instantiate(weapons[index].prefab);
 
-                    weapons[index++].parent = weaponSlot.transform;
+                    Debug.Log("WHAT IS : gameObject" + gameObject);
 
                     gameObject.transform.SetParent(weaponSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
+
+                    Image imageComponent = gameObject.GetComponent<Image>();
+                    if (imageComponent != null)
+                    {
+                        imageComponent.enabled = true;
+                    }
+
+                    index++;
                 }
             }
         }
@@ -129,12 +161,13 @@ namespace Project
         public static void AddBagItems(Item item)
         {
             bagItems.Add(item);
+            dataLoader.UpdateBagItem();
         }
 
         public static void RemoveBagItems(Transform itemSlot)
         {
             bagItems.Remove(bagItems.Where(x => x.parent == itemSlot).First());
-            bagItems.Add(new Item { });
+            dataLoader.UpdateBagItem();
         }
 
 
@@ -143,17 +176,22 @@ namespace Project
             var weapon = weapons.Where(x => x.prefab == gameObject).First();
             weapons.Remove(weapon);
             BagDataLoader.AddBagItems(weapon);
+            dataLoader.UpdateWeaponList();
         }
 
-        public static void AddWeapon(GameObject gameObject)
+        public static void AddWeapon(Item item)
         {
-            weapons.Add(new Item() { prefab = gameObject });
+            weapons.Add(item);
+            Debug.Log("WHAT IS WEAPONS SIZE:  " + weapons.Count);
 
             if (weapons.Count > size)
             {
                 BagDataLoader.AddBagItems(weapons[0]);
                 weapons.RemoveAt(0);
+                Debug.Log("WEAPONS SIZE after remove:  " + weapons.Count);
             }
+
+            dataLoader.UpdateWeaponList();
         }
     }
 
