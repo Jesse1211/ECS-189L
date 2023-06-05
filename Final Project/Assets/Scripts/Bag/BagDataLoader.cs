@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 
 namespace Project
@@ -74,23 +75,23 @@ namespace Project
             if (bagItems.Count > 0)
             {
                 int index = 0;
-                foreach (var item in bagItems)
+                foreach (var itemSlot in itemSlots)
                 {
-                    if (itemSlots[index].transform.childCount > 0)
+                    if (itemSlot.transform.childCount > 0)
                     {
-                        Destroy(itemSlots[index].transform.GetChild(0).gameObject);
+                        Destroy(itemSlot.transform.GetChild(0).gameObject);
                     }
 
-                    if ((item is null) || (item.prefab is null))
+                    if ((bagItems.Count <= index) || (bagItems[index] is null) || (bagItems[index].prefab is null))
                     {
                         continue;
                     }
 
-                    GameObject gameObject = Instantiate(item.prefab);
+                    GameObject gameObject = Instantiate(bagItems[index].prefab);
 
-                    item.parent = itemSlots[index].transform;
+                    bagItems[index++].parent = itemSlot.transform;
 
-                    gameObject.transform.SetParent(itemSlots[index++].transform);
+                    gameObject.transform.SetParent(itemSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
                 }
@@ -102,28 +103,23 @@ namespace Project
             if (weapons.Count > 0)
             {
                 int index = 0;
-                foreach (var weapon in weapons) // 遍历list
+                foreach (var weaponSlot in weaponSlots)
                 {
-                    if (weaponSlots[index].transform.childCount > 0) // 如果有child, 那就要删掉
+                    if (weaponSlot.transform.childCount > 0)
                     {
-                        Destroy(weaponSlots[index].transform.GetChild(0).gameObject);
+                        Destroy(weaponSlot.transform.GetChild(0).gameObject);
                     }
 
-                    if ((weapon is null) || (weapon.prefab is null)) // 如果空的 那就不需要Instantiate
+                    if ((weapons.Count <= index) || (weapons[index] is null) || (weapons[index].prefab is null))
                     {
                         continue;
                     }
 
-                    // Instantiate prefab : 生成
-                    GameObject gameObject = Instantiate(weapon.prefab);
+                    GameObject gameObject = Instantiate(weapons[index].prefab);
 
-                    // 更新list中的现在的element的data : 保存信息
-                    weapon.parent = weaponSlots[index++].transform;
+                    weapons[index++].parent = weaponSlot.transform;
 
-                    // 把刚Instantiate好的prefab 放到指定位置 -> parent的位置 : 放置在合适的位置
-                    gameObject.transform.SetParent(weapon.parent);
-
-                    // 设置prefab的大小, 位置 : 改变大小, position
+                    gameObject.transform.SetParent(weaponSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
                 }

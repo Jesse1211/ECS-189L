@@ -24,7 +24,7 @@ namespace Project
             {
                 //BagDataLoader.RemoveBagItems(this.transform);
                 BagDataLoader.AddWeapon(child);
-                Destroy(this.transform.GetChild(0).gameObject);
+                //Destroy(this.transform.GetChild(0).gameObject);
             }
         }
     }
@@ -34,4 +34,9 @@ namespace Project
  * 点击bag pannel里的武器: 就可以加到characterPannel里面
  * characterPannel遵循的是Queue FIFO
  * 如果Queue满了, 那就把最开始加进去的移动到bag pannel中
+ * 
+ * 
+ * Destry分情况: 
+ *          使用了, 就会destory
+ * 面板之间移动: 不需要destroy, 只需要换他的位置
  */
