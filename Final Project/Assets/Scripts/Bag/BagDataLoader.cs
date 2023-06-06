@@ -16,15 +16,11 @@ namespace Project
         public static List<Item> bagItems = new List<Item>();
 
         public static List<Item> weapons = new List<Item>();
-        private static int size = 4;
 
         public GameObject Prefab; // for test case usage
 
         private GameObject[] itemSlots;
         private GameObject[] weaponSlots;
-
-        // private List<GameObject> weaponSlots = new List<GameObject>();
-
 
         //public TextAsset itemData;
 
@@ -36,15 +32,11 @@ namespace Project
 
             itemSlots = GameObject.FindGameObjectsWithTag("ItemSlot");
             weaponSlots = GameObject.FindGameObjectsWithTag("WeaponSlot");
-            // foreach (var index in Enumerable.Range(0, GameObject.FindGameObjectWithTag("WeaponSlot").transform.childCount))
-            // {
-            //     weaponSlots.Add(GameObject.FindGameObjectWithTag("WeaponSlot").transform.GetChild(index).gameObject);
-            // }
         }
 
         void Update()
         {
-
+            Debug.Log("item:" + bagItems.Count() + "---" + "weapon:" + weapons.Count());
         }
 
         /// <summary>
@@ -60,11 +52,11 @@ namespace Project
             //    string[] itemData = item.Split(',');
             //    bagItems.Add(new Items() { Id = Convert.ToInt32(itemData[0]), Name = itemData[1] });
             //}
-            bagItems.Add(new Item() { prefab = Prefab });
-            bagItems.Add(new Item() { prefab = Prefab });
-            bagItems.Add(new Item() { prefab = Prefab });
-            bagItems.Add(new Item() { prefab = Prefab });
-            bagItems.Add(new Item() { prefab = Prefab });
+            bagItems.Add(new Item() { Id = 1, prefab = Prefab });
+            bagItems.Add(new Item() { Id = 1, prefab = Prefab });
+            bagItems.Add(new Item() { Id = 1, prefab = Prefab });
+            bagItems.Add(new Item() { Id = 1, prefab = Prefab });
+            bagItems.Add(new Item() { Id = 1, prefab = Prefab });
 
             weapons.Add(new Item() { prefab = Prefab });
 
@@ -97,61 +89,41 @@ namespace Project
                     gameObject.transform.SetParent(itemSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
+
+                    gameObject.GetComponent<Image>().enabled = true;
                 }
             }
         }
 
         public void UpdateWeaponList()
         {
-            Debug.Log("!!!!WEAPON counttts:  " + weapons.Count);
-            // Debug.Log("weaponSlots COUNT: " + weaponSlots.Length);
-            // if (weaponSlots.Length > 0)
-            // {
-            //     foreach (var weaponSlot in weaponSlots)
-            //     {
-            //         Debug.Log("weaponSlot:" + weaponSlot);
-            //     }
-            // }
             if (weapons.Count > 0)
             {
                 int index = 0;
-                
-                // Debug.Log("weaponSlots COUNT: " + weaponSlots.Length.ToString());
 
                 foreach (var weaponSlot in weaponSlots)
                 {
                     if (weaponSlot.transform.childCount > 0)
                     {
-                        Debug.Log("what is the weaponSlot : " + weaponSlot);
-                        Debug.Log("what is the child : " + weaponSlot.transform.GetChild(0));
-                        GameObject childObject = weaponSlot.transform.GetChild(0).gameObject;
-                        if (childObject != null)
+                        if (weaponSlot.transform.childCount > 0)
                         {
-                            Destroy(childObject);
+                            Destroy(weaponSlot.transform.GetChild(0).gameObject);
                         }
                     }
 
-                    if ((weapons.Count <= index) || (weapons[index] is null) || (weapons[index].prefab is null))
+                    if ((weapons.Count <= index) || (weapons[index] is null) || (weapons[index].prefab is null) || (weapons[index].prefab.gameObject is null))
                     {
                         continue;
                     }
 
                     weapons[index].parent = weaponSlot.transform;
-                    // Debug.Log("Prefab: " + weapons[index].prefab);
 
                     GameObject gameObject = Instantiate(weapons[index].prefab);
-
-                    Debug.Log("WHAT IS : gameObject" + gameObject);
-
                     gameObject.transform.SetParent(weaponSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
 
-                    Image imageComponent = gameObject.GetComponent<Image>();
-                    if (imageComponent != null)
-                    {
-                        imageComponent.enabled = true;
-                    }
+                    gameObject.GetComponent<Image>().enabled = true;
 
                     index++;
                 }
@@ -161,37 +133,32 @@ namespace Project
         public static void AddBagItems(Item item)
         {
             bagItems.Add(item);
-            dataLoader.UpdateBagItem();
         }
 
-        public static void RemoveBagItems(Transform itemSlot)
+        public static void RemoveBagItems(Item item)
         {
-            bagItems.Remove(bagItems.Where(x => x.parent == itemSlot).First());
-            dataLoader.UpdateBagItem();
+            var removeItem = bagItems.Where(x => x.Id == item.Id).First();
+            bagItems.Remove(removeItem);
         }
 
-
-        public static void RemoveWeapon(GameObject gameObject)
+        public static void RemoveWeapon(Item item)
         {
-            var weapon = weapons.Where(x => x.prefab == gameObject).First();
+            var weapon = weapons.Where(x => x.Id == item.Id).First();
             weapons.Remove(weapon);
-            BagDataLoader.AddBagItems(weapon);
-            dataLoader.UpdateWeaponList();
+            AddBagItems(weapon);
         }
 
         public static void AddWeapon(Item item)
         {
+            RemoveBagItems(item);
+
             weapons.Add(item);
-            Debug.Log("WHAT IS WEAPONS SIZE:  " + weapons.Count);
 
-            if (weapons.Count > size)
+            if (weapons.Count > 4)
             {
-                BagDataLoader.AddBagItems(weapons[0]);
-                weapons.RemoveAt(0);
-                Debug.Log("WEAPONS SIZE after remove:  " + weapons.Count);
+                AddBagItems(weapons.First());
+                weapons.Remove(weapons.First());
             }
-
-            dataLoader.UpdateWeaponList();
         }
     }
 

@@ -6,8 +6,7 @@ using UnityEngine.EventSystems;
 namespace Project
 {
     /// <summary>
-    /// Error: remove item error
-    /// HINT: BagDataLoader.UpdateBagItem has logic error for bagItems destory and instantiation
+    /// Right click to utilize the item
     /// </summary>
     public class BagItemSlot : MonoBehaviour, IPointerClickHandler
     {
@@ -20,18 +19,18 @@ namespace Project
         public void useItem()
         {
             var childCount = this.transform.childCount;
-            //Debug.Log("child Count for SLOT: " + childCount);
             if (childCount > 0)
             {
                 var child = this.transform.GetChild(0).gameObject;
-                //Debug.Log("child for SLOT: " + child + "   WHAT IS THIS: " + this.transform);
 
-                Item item = new Item();
-                item.prefab = child;
-                BagDataLoader.AddWeapon(item);
-                BagDataLoader.RemoveBagItems(this.transform);
-
-                Destroy(this.transform.GetChild(0).gameObject);            
+                Item item = new Item()
+                {
+                    Id = 1,
+                    prefab = child
+                };
+                
+                BagDataLoader.AddBagItems(item);
+                //Destroy(this.transform.GetChild(0).gameObject);
             }
         }
     }

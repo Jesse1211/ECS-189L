@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Item
 {
-    public int? Id;
+    public int Id;
     public string? Name;
     public Types? type;
     public Transform parent;

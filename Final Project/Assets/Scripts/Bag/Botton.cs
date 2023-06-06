@@ -4,33 +4,36 @@ using UnityEngine;
 
 namespace Project
 {
+    /// <summary>
+    /// Open & Close panels
+    /// </summary>
     public class Button : MonoBehaviour
     {
         public GameObject button;
-        public GameObject Pannel;
+        public GameObject Panel;
 
-        private bool isClose;
+        private bool isOpen;
 
-        private void Awake()
+        private void Start()
         {
-            Pannel.GetComponent<BagDataLoader>().UpdateBagItem();
-            Pannel.GetComponent<BagDataLoader>().UpdateWeaponList();
+            Panel.GetComponent<BagDataLoader>().UpdateBagItem();
+            Panel.GetComponent<BagDataLoader>().UpdateWeaponList();
             
-            isClose = false;
-            Pannel.SetActive(isClose);
+            isOpen = false;
+            Panel.SetActive(isOpen);
         }
 
         public void UpdateActive()
         {
-            isClose = (isClose) ? false : true;
+            isOpen = (isOpen) ? false : true;
 
-            if (isClose is false)
+            if (isOpen is true)
             {
-                Pannel.GetComponent<BagDataLoader>().UpdateBagItem();
-                Pannel.GetComponent<BagDataLoader>().UpdateWeaponList();
+                Panel.GetComponent<BagDataLoader>().UpdateBagItem();
+                Panel.GetComponent<BagDataLoader>().UpdateWeaponList();
             }
 
-            Pannel.SetActive(isClose);
+            Panel.SetActive(isOpen);
         }
     }
 
