@@ -44,3 +44,8 @@ namespace Project
  *          - 从bagItems里面提取到item 是为了拿到prefab
  *          - 点击互动: bag 和 weapon 之间的关联: 调整item的location / parent
  */
+
+ /*
+ * 背包1: 武器 右键武器: 回到物品栏      : 从weapon删除, 加到bagList
+ * 背包2: 所有物品 右键物品: 去武器栏     : 从bagList删除, 加到weapon
+ */

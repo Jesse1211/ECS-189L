@@ -34,7 +34,15 @@ public class BagManager : MonoBehaviour
 
             Debug.Log(dataLoader == null);
 
-            dataLoader.RemoveBagItems(item, false);
+            if(parent.CompareTag("ItemSlot"))
+            {
+                dataLoader.RemoveBagItems(item, false);
+            }
+
+            if(parent.CompareTag("WeaponSlot"))
+            {
+                dataLoader.RemoveWeapon(item);
+            }
         }
     }
 
@@ -50,6 +58,6 @@ public class BagManager : MonoBehaviour
         dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
         dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
         
-        dataLoader.AddWeapon(new Item() { prefab = Instantiate(Prefab) });
+        dataLoader.AddWeapon(new Item() { Id = 1, prefab = Instantiate(Prefab) });
     }
 }

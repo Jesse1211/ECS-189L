@@ -40,6 +40,7 @@ namespace Project
                 }
                 else
                 {
+                    Debug.Log("Slot number: " + itemSlot.gameObject);
                     GameObject gameObject = bagItems.Last().prefab;
                     bagItems.Last().parent = itemSlot.transform; // update property
 
@@ -47,6 +48,7 @@ namespace Project
                     gameObject.transform.SetParent(itemSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
+                    break;
                 }
             }
         }
@@ -73,7 +75,12 @@ namespace Project
         // todo: 把这个物品后面的东西都向前移动一个格子
         public void RemoveWeapon(Item item)
         {
-            weapons.Remove(weapons.Where(x => x.Id == item.Id).First());
+            if (weapons.Count() > 0) 
+            {
+                Debug.Log(weapons.Count());
+                weapons.Remove(weapons.Where(x => x.Id == item.Id).First());
+                AddBagItems(item);
+            }
         }
 
         public void AddWeapon(Item item)
@@ -103,6 +110,7 @@ namespace Project
                     gameObject.transform.SetParent(itemSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
+                    break;
                 }
             }
             
