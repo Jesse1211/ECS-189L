@@ -10,28 +10,17 @@ namespace Project
     /// </summary>
     public class BagItemSlot : MonoBehaviour, IPointerClickHandler
     {
+        public GameObject Bag;
+        private BagManager BagManager;
+        private void Start()
+        {
+            BagManager = Bag.GetComponent<BagManager>();
+        }
+
         public void OnPointerClick(PointerEventData eventData)
         {
             if (eventData.button == PointerEventData.InputButton.Right)
-                useItem();
-        }
-
-        public void useItem()
-        {
-            var childCount = this.transform.childCount;
-            if (childCount > 0)
-            {
-                var child = this.transform.GetChild(0).gameObject;
-
-                Item item = new Item()
-                {
-                    Id = 1,
-                    prefab = child
-                };
-                
-                BagDataLoader.AddBagItems(item);
-                //Destroy(this.transform.GetChild(0).gameObject);
-            }
+                BagManager.useItem(this.transform);
         }
     }
 }
@@ -45,4 +34,13 @@ namespace Project
  * Destry分情况: 
  *          使用了, 就会destory
  * 面板之间移动: 不需要destroy, 只需要换他的位置
+ */
+
+/*
+ * 1: player捡起GO (GO: 已经Instantiate了)
+ * 2: 怎么体现他捡到了: 
+ *          - 装到bagItem 从playerController
+ * 3: 背包显示: 
+ *          - 从bagItems里面提取到item 是为了拿到prefab
+ *          - 点击互动: bag 和 weapon 之间的关联: 调整item的location / parent
  */

@@ -16,9 +16,6 @@ namespace Project
 
         private void Start()
         {
-            Panel.GetComponent<BagDataLoader>().UpdateBagItem();
-            Panel.GetComponent<BagDataLoader>().UpdateWeaponList();
-            
             isOpen = false;
             Panel.SetActive(isOpen);
         }
@@ -26,13 +23,6 @@ namespace Project
         public void UpdateActive()
         {
             isOpen = (isOpen) ? false : true;
-
-            if (isOpen is true)
-            {
-                Panel.GetComponent<BagDataLoader>().UpdateBagItem();
-                Panel.GetComponent<BagDataLoader>().UpdateWeaponList();
-            }
-
             Panel.SetActive(isOpen);
         }
     }
