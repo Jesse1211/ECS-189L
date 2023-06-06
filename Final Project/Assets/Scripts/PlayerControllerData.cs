@@ -31,6 +31,8 @@ namespace Project
         {
             if (collision.gameObject.tag == "PickUp")
             {
+                //collision.gameObject.SetActive(false);
+                //BagDataLoader.AddBagItems(new Item() { Id = collision.gameObject.tag, prefab = collision.gameObject });
                 Destroy(collision.gameObject);
                 this.score++;
             }

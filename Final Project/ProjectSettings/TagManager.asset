@@ -6,7 +6,7 @@ TagManager:
   tags:
   - ground
   - PickUp
-  - Wall
+    - Wall
   - DeathWater
   - DeathSwamp
   - BloodTreeFire
@@ -14,6 +14,9 @@ TagManager:
   - PickUp1
   - RedOrbs
   - WhiteOrbs
+  - Enemy
+  - ItemSlot
+  - WeaponSlot
   layers:
   - Default
   - TransparentFX
@@ -23,8 +26,8 @@ TagManager:
   - UI
   - InteractableBuildings
   - Players
-  - 
-  - 
+  - Ground
+  - Enemy
   - 
   - 
   - 

@@ -107,48 +107,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stab_0
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 388
-        width: 57
-        height: 21
-      alignment: 9
-      pivot: {x: 0.8, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 199609cc444974c9f80c2812a14198d0
-      internalID: 1743544152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stab_2
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 291
-        width: 57
-        height: 21
-      alignment: 9
-      pivot: {x: 0.8, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 972c276da014c4b48bc4329f0618e9a2
-      internalID: -1770493953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: stab_4
       rect:
         serializedVersion: 2
@@ -178,7 +136,7 @@ TextureImporter:
         width: 57
         height: 21
       alignment: 9
-      pivot: {x: 0.7, y: 0}
+      pivot: {x: 0.9, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
