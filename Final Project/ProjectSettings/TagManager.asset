@@ -6,6 +6,14 @@ TagManager:
   tags:
   - ground
   - PickUp
+  - Wall
+  - DeathWater
+  - DeathSwamp
+  - BloodTreeFire
+  - BloodTreeDead
+  - PickUp1
+  - RedOrbs
+  - WhiteOrbs
   layers:
   - Default
   - TransparentFX

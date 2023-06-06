@@ -74,11 +74,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,215 +133,227 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Orb GLowing thing_0
+      name: Orb Plant_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 414
+        y: 415
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b789849f9abe79810800000000000000
-      internalID: 1772144093657864315
+      spriteID: 0bfb6d9b212da4332840c40c07ab3f18
+      internalID: 231573992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_1
+      name: Orb Plant_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 368
+        y: 369
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fb4cc2b9c1598290800000000000000
-      internalID: -7887683345632703501
+      spriteID: eeb4d27a3324e419684d6caffcf291e5
+      internalID: 1109815028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_2
+      name: Orb Plant_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 322
+        y: 323
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e62ea236322b3280800000000000000
-      internalID: -9062612208979138840
+      spriteID: 9b5927c09b43f460cbac60e3286e4809
+      internalID: -1262422702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_3
+      name: Orb Plant_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 276
+        y: 277
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40c209d43e212ce30800000000000000
-      internalID: 4522197743301569540
+      spriteID: 9a5e089bb4d154ccaa18ae3d4d01d69d
+      internalID: -1109274200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_4
+      name: Orb Plant_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 230
+        y: 231
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1b7044d544358830800000000000000
-      internalID: 4072718912544865051
+      spriteID: adaac0449094f4d82a5533417c28b17e
+      internalID: -1526403554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_5
+      name: Orb Plant_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 184
+        y: 185
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9b3d1e99b38296b0800000000000000
-      internalID: -5291021778962007141
+      spriteID: 136d9a6f14d024026bd7a25d84c90962
+      internalID: 2016921530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_6
+      name: Orb Plant_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 138
+        y: 139
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35eac38e6355cd860800000000000000
-      internalID: 7556007969133735507
+      spriteID: 77423e0c977454a39ac3f6a2fb1b7b19
+      internalID: 1711023032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_7
+      name: Orb Plant_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 92
+        y: 93
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30e25dc2013917fa0800000000000000
-      internalID: -5804696747022930429
+      spriteID: e3993507aaecd4218a7d1724815265cf
+      internalID: -597356740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_8
+      name: Orb Plant_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 46
+        y: 47
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8255cb5ab84cf220800000000000000
-      internalID: 2520969856661410442
+      spriteID: 0c45b8dbc895a424982646bca582f6fc
+      internalID: 510093963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orb GLowing thing_9
+      name: Orb Plant_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1
         width: 77
-        height: 46
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55c7d111b15ebc840800000000000000
-      internalID: 5245538095417097301
+      spriteID: d38c107ab4946464ab64c729b81acdf9
+      internalID: -1470861477
       vertices: []
       indices: 
       edges: []
@@ -357,16 +369,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Orb GLowing thing_0: 1772144093657864315
-      Orb GLowing thing_1: -7887683345632703501
-      Orb GLowing thing_2: -9062612208979138840
-      Orb GLowing thing_3: 4522197743301569540
-      Orb GLowing thing_4: 4072718912544865051
-      Orb GLowing thing_5: -5291021778962007141
-      Orb GLowing thing_6: 7556007969133735507
-      Orb GLowing thing_7: -5804696747022930429
-      Orb GLowing thing_8: 2520969856661410442
-      Orb GLowing thing_9: 5245538095417097301
+      Orb Plant_0: 182264535
+      Orb Plant_1: 231573992
+      Orb Plant_10: -1470861477
+      Orb Plant_2: 1109815028
+      Orb Plant_3: -1262422702
+      Orb Plant_4: -1109274200
+      Orb Plant_5: -1526403554
+      Orb Plant_6: 2016921530
+      Orb Plant_7: 1711023032
+      Orb Plant_8: -597356740
+      Orb Plant_9: 510093963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
