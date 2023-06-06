@@ -10,11 +10,14 @@ namespace Project
     public class PlayerControllerData : MonoBehaviour
     {
         public int score;
+        public float health;
         [SerializeField] private PlayerControllerAnimator PlayerControllerAnimator;
+        public bool collected;
 
-        void Start()
+        void Awake()
         {
-
+            collected = false;
+            health = 100;
         }
 
         void Update()
@@ -32,6 +35,12 @@ namespace Project
                 //BagDataLoader.AddBagItems(new Item() { Id = collision.gameObject.tag, prefab = collision.gameObject });
                 Destroy(collision.gameObject);
                 this.score++;
+            }
+
+            if (collision.gameObject.tag == "PickUp1")
+            {
+                Destroy(collision.gameObject);
+                collected = true;
             }
         }
 
