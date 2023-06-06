@@ -12,6 +12,8 @@ TagManager:
   - BloodTreeFire
   - BloodTreeDead
   - PickUp1
+  - RedOrbs
+  - WhiteOrbs
   layers:
   - Default
   - TransparentFX

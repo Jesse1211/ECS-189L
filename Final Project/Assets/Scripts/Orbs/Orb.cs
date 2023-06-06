@@ -10,6 +10,7 @@ public class OrbController : MonoBehaviour
     public GameObject orbPlant;
     public float timeInterval;
     public float speed = 10f;
+    public float direction;
 
     private float temp;
     private GameObject tempPrefab;
@@ -17,7 +18,7 @@ public class OrbController : MonoBehaviour
 
     private void Awake()
     {
-        destination = new Vector3(orbPlant.transform.position.x, orbPlant.transform.position.y + 10000, 1);
+        destination = new Vector3(orbPlant.transform.position.x, orbPlant.transform.position.y + 10000 * direction, 1);
         temp = timeInterval;
     }
 
@@ -43,20 +44,21 @@ public class OrbController : MonoBehaviour
     {
         var select = Random.Range(0, 2);
         var newPosition = new Vector3(orbPlant.transform.position.x, orbPlant.transform.position.y + 1, orbPlant.transform.position.z);
+        var gameObject = new GameObject();
         if (select is 0)
         {
-            Instantiate(redPrefab, newPosition, Quaternion.identity);
+            gameObject = Instantiate(redPrefab, newPosition, Quaternion.identity);
         }
-        return Instantiate(whitePrefab, newPosition, Quaternion.identity);
+        else
+        {
+            gameObject = Instantiate(whitePrefab, newPosition, Quaternion.identity);    
+        }
+        Destroy(gameObject, 2.0f);
+        return gameObject;
     }
 
     private void Movement(GameObject prefab)
     {
         prefab.transform.position = Vector3.Lerp(prefab.transform.position, destination, Time.deltaTime * speed);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(collision.gameObject);
     }
 }

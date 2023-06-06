@@ -116,29 +116,35 @@ GameObject:
   m_Component:
   - component: {fileID: 237519738259574230}
   - component: {fileID: 1607631142227986162}
+  - component: {fileID: 2024261927816132599}
   m_Layer: 0
-  m_Name: Orb Plant
+  m_Name: Reversed Orb Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &237519738259574230
-Transform:
+--- !u!224 &237519738259574230
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2604998297088197441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.203062, y: -0.25861984, z: 10.010024}
+  m_LocalPosition: {x: 0, y: 0, z: 10.010024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3335383903760537242}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -8.203062, y: -0.25861984}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607631142227986162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,4 +162,18 @@ MonoBehaviour:
   orbPlant: {fileID: 1039219836125121859}
   timeInterval: 5
   speed: 0.001
-  direction: 1
+  direction: -1
+--- !u!114 &2024261927816132599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604998297088197441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce964875ec04f442b60224747e21956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 237519738259574230}
+  degrees: -180
