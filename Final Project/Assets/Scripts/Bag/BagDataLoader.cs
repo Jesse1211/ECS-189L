@@ -47,7 +47,7 @@ namespace Project
                     // 把go放到合适的小格子里 & 设置好size, position
                     gameObject.transform.SetParent(itemSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
-                    gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
+                    gameObject.GetComponent<RectTransform>().localScale = new Vector2(90, 40);
                     break;
                 }
             }
@@ -109,7 +109,7 @@ namespace Project
                     // 把go放到合适的小格子里 & 设置好size, position
                     gameObject.transform.SetParent(itemSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
-                    gameObject.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
+                    gameObject.GetComponent<RectTransform>().localScale = new Vector2(175, 70);
                     break;
                 }
             }

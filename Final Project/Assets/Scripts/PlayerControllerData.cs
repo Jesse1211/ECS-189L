@@ -13,11 +13,14 @@ namespace Project
         public float health;
         [SerializeField] private PlayerControllerAnimator PlayerControllerAnimator;
         public bool collected;
+        public GameObject bag;
+        private BagManager bagManager;
 
         void Awake()
         {
             collected = false;
             health = 100;
+            bagManager = bag.GetComponent<BagManager>();
         }
 
         void Update()
@@ -33,15 +36,14 @@ namespace Project
             {
                 //collision.gameObject.SetActive(false);
                 //BagDataLoader.AddBagItems(new Item() { Id = collision.gameObject.tag, prefab = collision.gameObject });
-                Destroy(collision.gameObject);
-                this.score++;
+                bagManager.GetData(new Item() {Id = 1, prefab = collision.gameObject});
             }
 
-            if (collision.gameObject.tag == "PickUp1")
-            {
-                Destroy(collision.gameObject);
-                collected = true;
-            }
+            // if (collision.gameObject.tag == "PickUp1")
+            // {
+            //     Destroy(collision.gameObject);
+                
+            // }
         }
 
         public Vector3 GetMovementDirection()

@@ -16,7 +16,8 @@ public class BagManager : MonoBehaviour
         dataLoader.itemSlots = GameObject.FindGameObjectsWithTag("ItemSlot");
         dataLoader.weaponSlots = GameObject.FindGameObjectsWithTag("WeaponSlot");
 
-        GetData(); // for test case usage
+
+        // GetData(); // for test case usage
     }
     
     public void useItem(Transform parent)
@@ -50,14 +51,14 @@ public class BagManager : MonoBehaviour
     /// Retrive data from storage, save to bagItems
     /// (Prefab requires having Rect Transform, Canvas Renderer, Image components)
     /// </summary>
-    public void GetData()
+    public void GetData(Item item)
     {
-        dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
-        dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
-        dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
-        dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
-        dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
+        dataLoader.AddBagItems(item);
+        // dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
+        // dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
+        // dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
+        // dataLoader.AddBagItems(new Item() { Id = 1, prefab = Instantiate(Prefab) });
         
-        dataLoader.AddWeapon(new Item() { Id = 1, prefab = Instantiate(Prefab) });
+        // dataLoader.AddWeapon(new Item() { Id = 1, prefab = Instantiate(Prefab) });
     }
 }
