@@ -19,7 +19,6 @@ namespace Project
         void Awake()
         {
             collected = false;
-            health = 100;
             bagManager = bag.GetComponent<BagManager>();
         }
 
@@ -39,17 +38,18 @@ namespace Project
                 bagManager.GetData(new Item() {Id = 1, prefab = collision.gameObject});
             }
 
+
             // if (collision.gameObject.tag == "PickUp1")
             // {
             //     Destroy(collision.gameObject);
-                
+
             // }
         }
 
-        public Vector3 GetMovementDirection()
-            => PlayerControllerAnimator.movementDirection;
+        //public Vector3 GetMovementDirection()
+        //    => PlayerControllerAnimator.movementDirection;
 
-        public float GetCurrentSpeed()
-            => PlayerControllerAnimator.currentSpeed;
+        //public float GetCurrentSpeed()
+        //    => PlayerControllerAnimator.currentSpeed;
     }
 }
