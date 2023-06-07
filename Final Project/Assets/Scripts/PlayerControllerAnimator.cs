@@ -10,19 +10,23 @@ namespace Project
     public class PlayerControllerAnimator : MonoBehaviour
     {
         Rigidbody2D PlayerRigid;
-
         // run animation
         public float currentSpeed = 5.0f;
         private float acceleration = 0.03f;
         private float maxSpeed = 6.5f;
         public Vector3 movementDirection;
-
+        [SerializeField] GameObject HP;
         // fall animation
         private bool onGround = true;
         public Vector2 minPosition;
         public Vector2 maxPosition;
         private Animator animator;
+        private CharacterHP HPscript;
 
+        void Awake()
+        {
+            HPscript = HP.GetComponent<CharacterHP>();
+        }
         void Start()
         {
             PlayerRigid = GetComponent<Rigidbody2D>();
@@ -149,6 +153,10 @@ namespace Project
             if (collision.collider.tag == "ground" || collision.collider.tag == "paltform")
             {
                 onGround = true;
+            }
+            if (collision.collider.tag == "thunder")
+            {
+                HPscript.CollideThunder();
             }
         }
 
