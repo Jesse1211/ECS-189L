@@ -19,14 +19,6 @@ namespace Project
         public GameObject[] itemSlots;
         public GameObject[] weaponSlots;
 
-        //public TextAsset itemData;
-
-        //void Update()
-        //{
-        //    Debug.Log("item:" + dataLoader.bagItems.Count + "---" + "weapon:" + dataLoader.weapons.Count);
-        //}
-
-
         public void AddBagItems(Item item)
         {
             bagItems.Add(item);
@@ -40,11 +32,9 @@ namespace Project
                 }
                 else
                 {
-                    Debug.Log("Slot number: " + itemSlot.gameObject);
                     GameObject gameObject = bagItems.Last().prefab;
-                    bagItems.Last().parent = itemSlot.transform; // update property
+                    bagItems.Last().parent = itemSlot.transform; 
 
-                    // 把go放到合适的小格子里 & 设置好size, position
                     gameObject.transform.SetParent(itemSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(90, 40);
@@ -67,9 +57,6 @@ namespace Project
             {
                 AddWeapon(item);
             }
-
-            Debug.Log("item:" + bagItems.Count() );
-            Debug.Log("weapon:" + weapons.Count());
         }
 
         // todo: 把这个物品后面的东西都向前移动一个格子
@@ -89,12 +76,10 @@ namespace Project
 
             if (weapons.Count > 4)
             {
-                Debug.Log("NO CAN DO");
                 AddBagItems(weapons.First());
                 weapons.Remove(weapons.First());
             }
             
-            // update location
             foreach (var itemSlot in weaponSlots)
             {
                 if (itemSlot.transform.childCount > 0)
@@ -104,9 +89,8 @@ namespace Project
                 else
                 {
                     GameObject gameObject = weapons.Last().prefab;
-                    weapons.Last().parent = itemSlot.transform; // update property
+                    weapons.Last().parent = itemSlot.transform;
 
-                    // 把go放到合适的小格子里 & 设置好size, position
                     gameObject.transform.SetParent(itemSlot.transform);
                     gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     gameObject.GetComponent<RectTransform>().localScale = new Vector2(175, 70);

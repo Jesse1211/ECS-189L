@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +12,13 @@ namespace Project
     {
         public int score;
         public float health;
-        [SerializeField] private PlayerControllerAnimator PlayerControllerAnimator;
         public bool collected;
         public GameObject bag;
+        
+        [NonSerialized] public bool onGround = true;
+        [NonSerialized] public bool isTouchingWall;
         private BagManager bagManager;
-
+        
         void Awake()
         {
             collected = false;
@@ -28,28 +31,39 @@ namespace Project
             //animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x / 5.0f));
         }
 
-        // picking up the green balls and increments scores.
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.tag == "PickUp")
+            if (collision.collider.tag == "ground" || collision.collider.tag == "paltform")
             {
-                //collision.gameObject.SetActive(false);
-                //BagDataLoader.AddBagItems(new Item() { Id = collision.gameObject.tag, prefab = collision.gameObject });
-                bagManager.GetData(new Item() {Id = 1, prefab = collision.gameObject});
+                onGround = true;
             }
 
+            if (collision.collider.tag == "Wall")
+            {
+                isTouchingWall = true;
+            }
 
-            // if (collision.gameObject.tag == "PickUp1")
-            // {
-            //     Destroy(collision.gameObject);
-
-            // }
+            if (collision.gameObject.tag == "PickUp")
+            {
+                bagManager.AddItem(new Item() { Id = 1, prefab = collision.gameObject });
+            }
         }
 
-        //public Vector3 GetMovementDirection()
-        //    => PlayerControllerAnimator.movementDirection;
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.collider.tag == "ground" || collision.collider.tag == "paltform")
+            {
+                onGround = false;
+            }
 
-        //public float GetCurrentSpeed()
-        //    => PlayerControllerAnimator.currentSpeed;
+            if (collision.collider.tag == "Wall")
+            {
+                isTouchingWall = false;
+            }
+        }
+
+
+        public GameObject LaunchWeapon(int index)
+            => bagManager.LaunchWeapon(index);
     }
 }

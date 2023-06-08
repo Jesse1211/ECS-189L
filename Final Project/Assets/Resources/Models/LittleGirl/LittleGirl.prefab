@@ -61,7 +61,7 @@ Transform:
   m_Children:
   - {fileID: 5044351386868664185}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5829137876107218456
 GameObject:
@@ -77,7 +77,6 @@ GameObject:
   - component: {fileID: 1067236267935361165}
   - component: {fileID: 2852682171171965560}
   - component: {fileID: 5649861507680557114}
-  - component: {fileID: 5690203010523412003}
   - component: {fileID: 8811124944005546510}
   m_Layer: 7
   m_Name: player
@@ -284,23 +283,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.053343456, y: 0.17434582}
   m_Size: {x: 0.26752982, y: 0.36106429}
   m_Direction: 0
---- !u!114 &5690203010523412003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5829137876107218456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0dba148476f3584b968387e446c8c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  health: 100
-  PlayerControllerAnimator: {fileID: 8811124944005546510}
-  collected: 0
-  bag: {fileID: 0}
 --- !u!114 &8811124944005546510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acdededd124cd3145bd961d4cb3c3b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  health: 0
+  collected: 0
+  bag: {fileID: 0}
+  playerControllerData: {fileID: 0}
   facingRight: 0
   currentSpeed: 5
   frontcheck: {fileID: 0}

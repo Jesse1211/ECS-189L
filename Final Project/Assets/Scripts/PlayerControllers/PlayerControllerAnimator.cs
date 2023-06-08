@@ -9,23 +9,18 @@ namespace Project
     /// <summary>
     /// keep in tack of player's movement & animator
     /// </summary>
-    public class PlayerControllerAnimator : MonoBehaviour
+    public class PlayerControllerAnimator : PlayerControllerData
     {
         private Rigidbody2D PlayerRigid;
         private Animator animator;
 
-        private float health;
         public bool facingRight;
         // run animation
         public float currentSpeed = 5.0f;
         private float acceleration = 0.03f;
         private float maxSpeed = 6.5f;
 
-        // fall animation
-        private bool onGround = true;
-
         // climbing
-        private bool isTouchingWall;
         private bool isWallSliding;
         public Transform frontcheck;
         private float wallSlidingSpeed = 5;
@@ -55,8 +50,6 @@ namespace Project
         // Update is called once per frame
         void Update()
         {
-            health = this.GetComponent<PlayerControllerData>().health;
-
             if (health > 0)
             {
                 moving();
@@ -82,8 +75,6 @@ namespace Project
                     PlayerRigid.velocity = new Vector2(xWallForce * -Input.GetAxisRaw("Horizontal"), yWallForce);
                 }
             }
-
-            this.GetComponent<PlayerControllerData>().health = health;
         }
 
         void jump()
@@ -144,34 +135,6 @@ namespace Project
             facingRight = !facingRight;
         }
 
-        /// <summary>
-        /// check if on ground
-        /// </summary>
-        void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.collider.tag == "ground" || collision.collider.tag == "paltform")
-            {
-                onGround = true;
-            }
-
-            if (collision.collider.tag == "Wall")
-            {
-                isTouchingWall = true;
-            }
-        }
-
-        void OnCollisionExit2D(Collision2D collision)
-        {
-            if (collision.collider.tag == "ground" || collision.collider.tag == "paltform")
-            {
-                onGround = false;
-            }
-
-            if (collision.collider.tag == "Wall")
-            {
-                isTouchingWall = false;
-            }
-        }
 
         void updateAnimator()
         {
@@ -219,7 +182,13 @@ namespace Project
                     {
                         boltRotation = Quaternion.Euler(0f, 180f, 0f);
                     }
-                    Instantiate(bolt, shotPoint.position, boltRotation);
+
+                    //var weapon = GameObject.FindWithTag("Bolt1");
+                    var weapon = GameObject.Find("Bolt1");
+                    Debug.Log(weapon == null);
+                    //var weapon = LaunchWeapon(0);
+
+                    Instantiate(weapon, shotPoint.position, boltRotation);
                 }
                 else if (Input.GetKeyDown(KeyCode.L))
                 {
