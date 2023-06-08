@@ -5,8 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
-  - PickUp
-    - Wall
+  - PickUp - Wall
   - DeathWater
   - DeathSwamp
   - BloodTreeFire
@@ -17,6 +16,8 @@ TagManager:
   - Enemy
   - ItemSlot
   - WeaponSlot
+  - PickUp
+  - Bolt1
   layers:
   - Default
   - TransparentFX
