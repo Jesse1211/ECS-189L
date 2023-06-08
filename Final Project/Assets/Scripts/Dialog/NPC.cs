@@ -37,7 +37,6 @@ public class NPC : MonoBehaviour
 
         if (dialogText.text == dialog[index])
         {
-            UnityEngine.Debug.Log(1122);
             button.SetActive(true);
         }
     }

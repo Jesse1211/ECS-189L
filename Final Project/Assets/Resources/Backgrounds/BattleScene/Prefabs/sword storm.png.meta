@@ -1,0 +1,1061 @@
+fileFormatVersion: 2
+guid: c51ad6cd81d4d8f48a5200412b4d9821
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7477767605098388579
+    second: sword storm_0
+  - first:
+      213: 1748066418937671521
+    second: sword storm_1
+  - first:
+      213: -5094480439466357918
+    second: sword storm_2
+  - first:
+      213: 477752711962564231
+    second: sword storm_3
+  - first:
+      213: 2510083320540116146
+    second: sword storm_4
+  - first:
+      213: 3191537492325054444
+    second: sword storm_5
+  - first:
+      213: 8181879060747477175
+    second: sword storm_6
+  - first:
+      213: 5970095214024667596
+    second: sword storm_7
+  - first:
+      213: -3650242107494419227
+    second: sword storm_8
+  - first:
+      213: 7708415500910575733
+    second: sword storm_9
+  - first:
+      213: -6699542063996887813
+    second: sword storm_10
+  - first:
+      213: -6545022565234629040
+    second: sword storm_11
+  - first:
+      213: -4249965101794202061
+    second: sword storm_12
+  - first:
+      213: 8792491819062886959
+    second: sword storm_13
+  - first:
+      213: 3701231466436889589
+    second: sword storm_14
+  - first:
+      213: 1117489276099267603
+    second: sword storm_15
+  - first:
+      213: -5575783846841548624
+    second: sword storm_16
+  - first:
+      213: 4904941518237410562
+    second: sword storm_17
+  - first:
+      213: 654867035454359522
+    second: sword storm_18
+  - first:
+      213: 1720973463070707688
+    second: sword storm_19
+  - first:
+      213: 3722904146404765972
+    second: sword storm_20
+  - first:
+      213: 1922200490392463354
+    second: sword storm_21
+  - first:
+      213: -8935567166926369316
+    second: sword storm_22
+  - first:
+      213: 6570834481261677928
+    second: sword storm_23
+  - first:
+      213: 7839459866164677331
+    second: sword storm_24
+  - first:
+      213: 8364134263138173250
+    second: sword storm_25
+  - first:
+      213: 5558363867048586227
+    second: sword storm_26
+  - first:
+      213: 3370267650174400894
+    second: sword storm_27
+  - first:
+      213: -7253550747559375778
+    second: sword storm_28
+  - first:
+      213: -6023507799230722005
+    second: sword storm_29
+  - first:
+      213: -5505844499741369533
+    second: sword storm_30
+  - first:
+      213: 4256406190682673342
+    second: sword storm_31
+  - first:
+      213: -7477001524357902490
+    second: sword storm_32
+  - first:
+      213: -2379742374507111999
+    second: sword storm_33
+  - first:
+      213: 6919154970982945381
+    second: sword storm_34
+  - first:
+      213: -4056377995610174712
+    second: sword storm_35
+  - first:
+      213: -3585365615621332701
+    second: sword storm_36
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sword storm_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 235
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93ef296bf1a93890800000000000000
+      internalID: -7477767605098388579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 235
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fa1987521624810800000000000000
+      internalID: 1748066418937671521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 235
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b8e623805cc49b0800000000000000
+      internalID: -5094480439466357918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_3
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 235
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786120f6f8151a600800000000000000
+      internalID: 477752711962564231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b43d652b7b95d220800000000000000
+      internalID: 2510083320540116146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_5
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 188
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce73065907e9a4c20800000000000000
+      internalID: 3191537492325054444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_6
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 188
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b06f0308afdb8170800000000000000
+      internalID: 8181879060747477175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_7
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 188
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1333b57f90ad250800000000000000
+      internalID: 5970095214024667596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_8
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 188
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e43f9e942cb75dc0800000000000000
+      internalID: -3650242107494419227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_9
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 188
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570c3e0ae0bc9fa60800000000000000
+      internalID: 7708415500910575733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 141
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc9dad0df17603a0800000000000000
+      internalID: -6699542063996887813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_11
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 141
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056264867a86b25a0800000000000000
+      internalID: -6545022565234629040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_12
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 141
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33eefb7d1471505c0800000000000000
+      internalID: -4249965101794202061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 141
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2285cd89b4350a70800000000000000
+      internalID: 8792491819062886959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_14
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 141
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb0874a86a6d5330800000000000000
+      internalID: 3701231466436889589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_15
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 141
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c843e639e128f00800000000000000
+      internalID: 1117489276099267603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b006a01226de92b0800000000000000
+      internalID: -5575783846841548624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_17
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2052b96c25ad11440800000000000000
+      internalID: 4904941518237410562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_18
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7ce5f591e861900800000000000000
+      internalID: 654867035454359522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_19
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef043e1f3022e710800000000000000
+      internalID: 1720973463070707688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_20
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411f84ba8996aa330800000000000000
+      internalID: 3722904146404765972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_21
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7ace869270daa10800000000000000
+      internalID: 1922200490392463354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_22
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddc5bc110d7ef380800000000000000
+      internalID: -8935567166926369316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_23
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d8d7d952b403b50800000000000000
+      internalID: 6570834481261677928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_24
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 94
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da4da9863b5bcc60800000000000000
+      internalID: 7839459866164677331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24146081ccf531470800000000000000
+      internalID: 8364134263138173250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_26
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 47
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb2cc3dc76432d40800000000000000
+      internalID: 5558363867048586227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79b2a6429895ce20800000000000000
+      internalID: 3370267650174400894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_28
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c447ba606365b90800000000000000
+      internalID: -7253550747559375778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_29
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20de0d0293386ca0800000000000000
+      internalID: -6023507799230722005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_30
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b9064499f4793b0800000000000000
+      internalID: -5505844499741369533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_31
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb01a6701eac11b30800000000000000
+      internalID: 4256406190682673342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_32
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fc79b7aba5c3890800000000000000
+      internalID: -7477001524357902490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_33
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c91f863be479fed0800000000000000
+      internalID: -2379742374507111999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_34
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562115f69c6c50060800000000000000
+      internalID: 6919154970982945381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_35
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bc1f064b9d4b7c0800000000000000
+      internalID: -4056377995610174712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword storm_36
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 0
+        width: 134
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321adfaf7f83e3ec0800000000000000
+      internalID: -3585365615621332701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sword storm_0: -7477767605098388579
+      sword storm_1: 1748066418937671521
+      sword storm_10: -6699542063996887813
+      sword storm_11: -6545022565234629040
+      sword storm_12: -4249965101794202061
+      sword storm_13: 8792491819062886959
+      sword storm_14: 3701231466436889589
+      sword storm_15: 1117489276099267603
+      sword storm_16: -5575783846841548624
+      sword storm_17: 4904941518237410562
+      sword storm_18: 654867035454359522
+      sword storm_19: 1720973463070707688
+      sword storm_2: -5094480439466357918
+      sword storm_20: 3722904146404765972
+      sword storm_21: 1922200490392463354
+      sword storm_22: -8935567166926369316
+      sword storm_23: 6570834481261677928
+      sword storm_24: 7839459866164677331
+      sword storm_25: 8364134263138173250
+      sword storm_26: 5558363867048586227
+      sword storm_27: 3370267650174400894
+      sword storm_28: -7253550747559375778
+      sword storm_29: -6023507799230722005
+      sword storm_3: 477752711962564231
+      sword storm_30: -5505844499741369533
+      sword storm_31: 4256406190682673342
+      sword storm_32: -7477001524357902490
+      sword storm_33: -2379742374507111999
+      sword storm_34: 6919154970982945381
+      sword storm_35: -4056377995610174712
+      sword storm_36: -3585365615621332701
+      sword storm_4: 2510083320540116146
+      sword storm_5: 3191537492325054444
+      sword storm_6: 8181879060747477175
+      sword storm_7: 5970095214024667596
+      sword storm_8: -3650242107494419227
+      sword storm_9: 7708415500910575733
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
