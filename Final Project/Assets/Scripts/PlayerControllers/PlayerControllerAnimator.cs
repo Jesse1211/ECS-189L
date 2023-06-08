@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Unity.Collections.AllocatorManager;
 using UnityEngine.UIElements;
+using System;
 
 namespace Project
 {
@@ -39,6 +40,7 @@ namespace Project
         public Transform attackPoint;
         public LayerMask enemyLayer;
         public GameObject blood;
+        public BagManager bagManager;
 
         void Start()
         {
@@ -47,9 +49,16 @@ namespace Project
             facingRight = true;
         }
 
-        // Update is called once per frame
         void Update()
         {
+            //var animator = this.gameObject.GetComponent<Animator>();
+            //animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x / 5.0f));
+            if (isTouchingDeathSwamp)
+            {
+                health -= 0.001f;
+            }
+
+
             if (health > 0)
             {
                 moving();
@@ -187,6 +196,7 @@ namespace Project
                     var weapon = GameObject.Find("Bolt1");
                     Debug.Log(weapon == null);
                     //var weapon = LaunchWeapon(0);
+                    //weapon = bagManager.LaunchWeapon(0);
 
                     Instantiate(weapon, shotPoint.position, boltRotation);
                 }

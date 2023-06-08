@@ -13065,7 +13065,7 @@ GameObject:
   - component: {fileID: 519420135}
   m_Layer: 0
   m_Name: Death swamp (3)
-  m_TagString: DeathSwamp
+  m_TagString: DieSlowly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13097,7 +13097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3910ddfb0a74a41b5ffd8063280391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouchingSwamp: 0
 --- !u!61 &519420136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15236,7 +15235,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 37
+      m_TileSpriteIndex: 92
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15246,7 +15245,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 8
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 91
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15546,7 +15545,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 90
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15556,7 +15555,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 17
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 89
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15566,7 +15565,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 18
-      m_TileSpriteIndex: 18
+      m_TileSpriteIndex: 88
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15946,7 +15945,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 36
-      m_TileSpriteIndex: 36
+      m_TileSpriteIndex: 87
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16196,7 +16195,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 32
-      m_TileSpriteIndex: 32
+      m_TileSpriteIndex: 86
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16206,7 +16205,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 33
-      m_TileSpriteIndex: 33
+      m_TileSpriteIndex: 85
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16226,7 +16225,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 15
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 84
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16236,7 +16235,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 14
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 83
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16735,10 +16734,10 @@ Tilemap:
     m_Data: {fileID: -3710622407580731071, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -3655351638316935635, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 2089377983255202740, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1120166492662394809, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 6258247321571341606, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
   - m_RefCount: 2
@@ -16751,14 +16750,14 @@ Tilemap:
     m_Data: {fileID: 4273073981362783511, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 2705286077677426414, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 6274816254227674006, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -353036844267518165, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 8614133940437131556, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1356025749879128373, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -7831515307254572097, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
   - m_RefCount: 2
@@ -16785,18 +16784,18 @@ Tilemap:
     m_Data: {fileID: 3926513391743868869, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -2310717045957916418, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 8384509367195109224, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -2764983705980225283, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 6
     m_Data: {fileID: -5891813418322391796, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 8702795442041928684, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -3259005907716999568, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 7200244796236661303, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -6661257527822616390, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
   - m_RefCount: 2
@@ -16887,26 +16886,26 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 2089377983255202740, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1120166492662394809, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -2764983705980225283, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 8384509367195109224, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -3259005907716999568, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1356025749879128373, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 8614133940437131556, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 6274816254227674006, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -353036844267518165, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 7200244796236661303, guid: 1f427416314c2b04c850852d2f1bdbe4, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 179
     m_Data:
@@ -17010,7 +17009,7 @@ GameObject:
   - component: {fileID: 1167540568}
   m_Layer: 0
   m_Name: Death swamp (1)
-  m_TagString: DeathSwamp
+  m_TagString: DieSlowly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17042,7 +17041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3910ddfb0a74a41b5ffd8063280391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouchingSwamp: 0
 --- !u!61 &1167540569
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118053,7 +118051,7 @@ GameObject:
   - component: {fileID: 1190266391}
   m_Layer: 0
   m_Name: Death water
-  m_TagString: DeathWater
+  m_TagString: DieImmediately
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121672,7 +121670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb02c6ba4ce247ed92cbd068bc10e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouchingWater: 0
 --- !u!1 &1202854710
 GameObject:
   m_ObjectHideFlags: 0
@@ -121689,7 +121686,7 @@ GameObject:
   - component: {fileID: 1202854712}
   m_Layer: 0
   m_Name: Death swamp (2)
-  m_TagString: DeathSwamp
+  m_TagString: DieSlowly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121721,7 +121718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3910ddfb0a74a41b5ffd8063280391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouchingSwamp: 0
 --- !u!61 &1202854713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122095,17 +122091,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: LittleGirl
       objectReference: {fileID: 0}
+    - target: {fileID: 5044351386868664185, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044351386868664185, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5740849631023626696, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5740849631023626696, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.145
+      value: 53.3
       objectReference: {fileID: 0}
     - target: {fileID: 5740849631023626696, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45546
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 5740849631023626696, guid: a8c3bd6e91b8c44cf97c79ccfa1beb81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -122683,6 +122687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Climbable Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9043480761468166545, guid: ac640d5d0de1fe8469d994e6312d3f3e, type: 3}
+      propertyPath: m_TagString
+      value: ClimbableWall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -123078,9 +123086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2387024689fe24c328901b6607c851dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1505385461}
-  water: {fileID: 1190266382}
-  swamp: {fileID: 2135676904}
 --- !u!1001 &1933592202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123437,6 +123442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Climbable Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9043480761468166545, guid: ac640d5d0de1fe8469d994e6312d3f3e, type: 3}
+      propertyPath: m_TagString
+      value: ClimbableWall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -123676,7 +123685,7 @@ GameObject:
   - component: {fileID: 2135676910}
   m_Layer: 0
   m_Name: Death swamp
-  m_TagString: DeathSwamp
+  m_TagString: DieSlowly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124328,7 +124337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3910ddfb0a74a41b5ffd8063280391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouchingSwamp: 0
 --- !u!50 &2135676911
 Rigidbody2D:
   serializedVersion: 4
@@ -124492,6 +124500,10 @@ PrefabInstance:
     - target: {fileID: 9043480761468166545, guid: ac640d5d0de1fe8469d994e6312d3f3e, type: 3}
       propertyPath: m_Name
       value: Climbable Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043480761468166545, guid: ac640d5d0de1fe8469d994e6312d3f3e, type: 3}
+      propertyPath: m_TagString
+      value: ClimbableWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

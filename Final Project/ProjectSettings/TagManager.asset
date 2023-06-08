@@ -5,19 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
-  - PickUp - Wall
-  - DeathWater
-  - DeathSwamp
   - BloodTreeFire
   - BloodTreeDead
-  - PickUp1
   - RedOrbs
   - WhiteOrbs
   - Enemy
   - ItemSlot
   - WeaponSlot
   - PickUp
-  - Bolt1
+  - DieImmediately
+  - DieSlowly
+  - PickUp1
+  - ClimbableWall
   layers:
   - Default
   - TransparentFX

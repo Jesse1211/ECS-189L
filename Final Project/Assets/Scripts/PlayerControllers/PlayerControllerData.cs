@@ -18,27 +18,24 @@ namespace Project
         [NonSerialized] public bool onGround = true;
         [NonSerialized] public bool isTouchingWall;
         private BagManager bagManager;
-        
+        public bool isTouchingDeathSwamp;
+
         void Awake()
         {
+            isTouchingDeathSwamp = false;
+            health = 100f;
             collected = false;
             bagManager = bag.GetComponent<BagManager>();
         }
 
-        void Update()
-        {
-            //var animator = this.gameObject.GetComponent<Animator>();
-            //animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x / 5.0f));
-        }
-
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.tag == "ground" || collision.collider.tag == "paltform")
+            if (collision.collider.tag == "ground" || collision.collider.tag == "paltform" || collision.collider.tag == "DieSlowly")
             {
                 onGround = true;
             }
 
-            if (collision.collider.tag == "Wall")
+            if (collision.collider.tag == "ClimbableWall")
             {
                 isTouchingWall = true;
             }
@@ -46,6 +43,17 @@ namespace Project
             if (collision.gameObject.tag == "PickUp")
             {
                 bagManager.AddItem(new Item() { Id = 1, prefab = collision.gameObject });
+            }
+
+
+            // In battle scene:
+            if (collision.gameObject.tag == "DieImmediately") 
+            {
+                health = 0;
+            }
+            if (collision.gameObject.tag == "DieSlowly")
+            {
+                isTouchingDeathSwamp = true;
             }
         }
 
@@ -60,8 +68,12 @@ namespace Project
             {
                 isTouchingWall = false;
             }
-        }
 
+            if (collision.gameObject.tag == "DieSlowly")
+            {
+                isTouchingDeathSwamp = false;
+            }
+        }
 
         public GameObject LaunchWeapon(int index)
             => bagManager.LaunchWeapon(index);
