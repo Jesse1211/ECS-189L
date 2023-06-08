@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Project;
 using UnityEngine;
 
 
@@ -77,7 +78,7 @@ public class Enemy : MonoBehaviour
                 if (playerToDamage != null)
                 {
                     // Debug.Log("Demon hits player!");
-                    playerToDamage.GetComponent<GirlController>().TakeDamage(damage);
+                    playerToDamage.GetComponent<PlayerControllerAnimator>().TakeDamage(damage);
                 }
             }
         }

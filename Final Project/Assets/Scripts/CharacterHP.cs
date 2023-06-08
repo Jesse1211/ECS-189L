@@ -28,7 +28,7 @@ public class CharacterHP : MonoBehaviour
     {
 
        // HP.value -= Time.deltaTime;
-        print(HP.value);
+        //print(HP.value);
         if (HP.value <= 0)
         {
 
