@@ -40,7 +40,6 @@ namespace Project
         public Transform attackPoint;
         public LayerMask enemyLayer;
         public GameObject blood;
-        public BagManager bagManager;
 
         void Start()
         {
@@ -277,24 +276,28 @@ namespace Project
             {
                 boltRotation = Quaternion.Euler(0f, 180f, 0f);
             }
-            var weaponObject = Instantiate(weapon, shotPoint.position, boltRotation);
-            weaponObject.transform.localScale = new Vector2(0.5f,0.5f);
 
-            weaponObject.AddComponent<Test>();
-            weaponObject.GetComponent<Test>().transform = weaponObject.transform;
-            weaponObject.GetComponent<Test>().degrees = -45;
-            weaponObject.AddComponent<Bolt>();
-            weaponObject.GetComponent<Bolt>().speed = 8;
-            weaponObject.GetComponent<Bolt>().damage = 1;
-            weaponObject.GetComponent<Bolt>().lifeTime = 3;
-            weaponObject.GetComponent<Bolt>().tag = "weapon";
-            weaponObject.GetComponent<Bolt>().boltHit = GameObject.Find("BoltHit");
-            if (!facingRight)
+            if (weapon != null)
             {
-                weaponObject.GetComponent<Test>().degrees = 135;
+                var weaponObject = Instantiate(weapon, shotPoint.position, boltRotation);
+                weaponObject.transform.localScale = new Vector2(0.5f, 0.5f);
+
+                weaponObject.AddComponent<Test>();
+                weaponObject.GetComponent<Test>().transform = weaponObject.transform;
+                weaponObject.GetComponent<Test>().degrees = -45;
+                weaponObject.AddComponent<Bolt>();
+                weaponObject.GetComponent<Bolt>().speed = 8;
+                weaponObject.GetComponent<Bolt>().damage = 1;
+                weaponObject.GetComponent<Bolt>().lifeTime = 3;
+                weaponObject.GetComponent<Bolt>().boltHit = GameObject.Find("BoltHit");
+
+                if (!facingRight)
+                {
+                    weaponObject.GetComponent<Test>().degrees = 135;
+                }
+                weaponObject.AddComponent<Rigidbody2D>();
+                weaponObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             }
-            weaponObject.AddComponent<Rigidbody2D>();
-            weaponObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         }
 
     }

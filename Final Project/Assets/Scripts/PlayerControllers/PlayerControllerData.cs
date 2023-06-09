@@ -17,7 +17,7 @@ namespace Project
         
         [NonSerialized] public bool onGround = true;
         [NonSerialized] public bool isTouchingWall;
-        private BagManager bagManager;
+        [NonSerialized] public BagManager bagManager;
         public bool isTouchingDeathSwamp;
 
         void Awake()
@@ -40,7 +40,7 @@ namespace Project
                 isTouchingWall = true;
             }
 
-            if (collision.gameObject.tag == "PickUp")
+            if ((collision.gameObject.tag == "Weapon") || (collision.gameObject.tag == "Food"))
             {
                 bagManager.AddItem(new Item() { Id = 1, prefab = collision.gameObject });
             }

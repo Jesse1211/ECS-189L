@@ -18,6 +18,7 @@ namespace Project
         public List<Item> weapons = new List<Item>();
         public GameObject[] itemSlots;
         public GameObject[] weaponSlots;
+        public GameObject player;
 
         public void AddBagItems(Item item)
         {
@@ -51,6 +52,11 @@ namespace Project
 
             if (isUsed)
             {
+                // funtion 可以加血的
+                if (item.prefab.name == "GreenApplePickup")
+                    player.GetComponent<PlayerControllerAnimator>().health += 10;
+                if (item.prefab.name == "ApplePickup")
+                    player.GetComponent<PlayerControllerAnimator>().health += 1;
                 Destroy(item.prefab);
             }
             else

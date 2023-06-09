@@ -6,12 +6,13 @@ using UnityEngine;
 
 public class BagManager : MonoBehaviour
 {
+    public GameObject player;
     private BagDataLoader dataLoader;
 
     private void Awake()
     {
         dataLoader = new BagDataLoader();
-
+        dataLoader.player = this.player;
         dataLoader.itemSlots = GameObject.FindGameObjectsWithTag("ItemSlot");
         dataLoader.weaponSlots = GameObject.FindGameObjectsWithTag("WeaponSlot");
     }
@@ -31,7 +32,14 @@ public class BagManager : MonoBehaviour
 
             if(parent.CompareTag("ItemSlot"))
             {
-                dataLoader.RemoveBagItems(item, false);
+                if (child.tag == "Weapon")
+                {
+                    dataLoader.RemoveBagItems(item, false);
+                }
+                else
+                {
+                    dataLoader.RemoveBagItems(item, true);
+                }
             }
 
             if(parent.CompareTag("WeaponSlot"))
@@ -55,29 +63,5 @@ public class BagManager : MonoBehaviour
     public void AddItem(Item item)
     {
         dataLoader.AddBagItems(item);
-    }
-
-    public GameObject GetWeapon(int num)
-    {
-        UnityEngine.Debug.Log(1111111);
-        if (num == 1)
-        {
-            return dataLoader.weapons.First().prefab;
-        }
-        else if (num == 2)
-        {
-            return dataLoader.weapons[1].prefab;
-        }
-        else if (num == 3)
-        {
-            return dataLoader.weapons[2].prefab;
-        }
-        else if (num == 4)
-        {
-            return dataLoader.weapons[3].prefab;
-        }
-
-        UnityEngine.Debug.Log(222222);
-        return null;
     }
 }

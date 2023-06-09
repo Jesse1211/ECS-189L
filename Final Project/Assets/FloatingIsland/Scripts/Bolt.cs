@@ -7,7 +7,6 @@ public class Bolt : MonoBehaviour
     public float speed;
     public int damage;
     public float lifeTime;
-    public string tag;
     public GameObject boltHit;
 
     void Start()
@@ -34,6 +33,11 @@ public class Bolt : MonoBehaviour
             collision.GetComponent<Enemy>().TakeDamage(damage);
         }
         Destroy(gameObject);
-        Instantiate(boltHit, transform.position, transform.rotation);
+
+        if (boltHit != null)
+        {
+            Instantiate(boltHit, transform.position, transform.rotation);
+        }
+
     }
 }
