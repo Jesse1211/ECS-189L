@@ -8,6 +8,7 @@ public class ToNextScene : MonoBehaviour
     public Animator transition;
 
     public float transitionTime = 1f;
+    private bool beenToFirstscene = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,7 +24,28 @@ public class ToNextScene : MonoBehaviour
         {
             Debug.Log("switch scene");
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
-            StartCoroutine(SwitchScene(SceneManager.GetActiveScene().buildIndex + 1));
+            // StartCoroutine(SwitchScene(SceneManager.GetActiveScene().buildIndex + 1));
+
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                if (!beenToFirstscene)
+                {
+                    StartCoroutine(SwitchScene(1));
+                    beenToFirstscene = true;
+                }
+                else
+                {
+                    StartCoroutine(SwitchScene(2));
+                }
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                StartCoroutine(SwitchScene(0));
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                StartCoroutine(SwitchScene(0));
+            }
         }
 
 
