@@ -7,6 +7,7 @@ public class Bolt : MonoBehaviour
     public float speed;
     public int damage;
     public float lifeTime;
+    public string tag;
     public GameObject boltHit;
 
     void Start()
@@ -16,7 +17,14 @@ public class Bolt : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        if (tag == "Bolt1")
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(new Vector3() { x = 1, y = 1, z = 0 } * speed * Time.deltaTime);        
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

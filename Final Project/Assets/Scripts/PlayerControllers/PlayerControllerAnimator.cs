@@ -216,16 +216,19 @@ namespace Project
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha1))
                 {
-                    animator.SetTrigger("gunAttack");
-                    Quaternion boltRotation = Quaternion.identity;
-                    var weapon = bagManager.LaunchWeapon(0);
-                    if (!facingRight)
-                    {
-                        boltRotation = Quaternion.Euler(0f, 180f, 0f);
-                    }
-                    weapon.transform.localScale = new Vector2(0.5f,0.5f);
-                    var weaponObject = Instantiate(weapon, shotPoint.position, boltRotation);
-                    // weaponObject.AddComponent<Bolt>();
+                    shootWeapon(0);
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    shootWeapon(1);
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    shootWeapon(2);
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha4))
+                {
+                    shootWeapon(3);
                 }
 
                 nextAttackTime = Time.time + timeBetweenAttacks;
@@ -263,6 +266,35 @@ namespace Project
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        }
+
+        private void shootWeapon(int index)
+        {
+            animator.SetTrigger("gunAttack");
+            Quaternion boltRotation = Quaternion.identity;
+            var weapon = bagManager.LaunchWeapon(index);
+            if (!facingRight)
+            {
+                boltRotation = Quaternion.Euler(0f, 180f, 0f);
+            }
+            var weaponObject = Instantiate(weapon, shotPoint.position, boltRotation);
+            weaponObject.transform.localScale = new Vector2(0.5f,0.5f);
+
+            weaponObject.AddComponent<Test>();
+            weaponObject.GetComponent<Test>().transform = weaponObject.transform;
+            weaponObject.GetComponent<Test>().degrees = -45;
+            weaponObject.AddComponent<Bolt>();
+            weaponObject.GetComponent<Bolt>().speed = 8;
+            weaponObject.GetComponent<Bolt>().damage = 1;
+            weaponObject.GetComponent<Bolt>().lifeTime = 3;
+            weaponObject.GetComponent<Bolt>().tag = "weapon";
+            weaponObject.GetComponent<Bolt>().boltHit = GameObject.Find("BoltHit");
+            if (!facingRight)
+            {
+                weaponObject.GetComponent<Test>().degrees = 135;
+            }
+            weaponObject.AddComponent<Rigidbody2D>();
+            weaponObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         }
 
     }

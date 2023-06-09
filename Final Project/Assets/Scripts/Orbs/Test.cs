@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public RectTransform rectTransform;
+    public Transform transform;
     public float degrees;
 
     private void Start()
     {
         // Get the RectTransform component if not assigned
-        if (rectTransform == null)
-            rectTransform = GetComponent<RectTransform>();
+        if (transform == null)
+            transform = GetComponent<RectTransform>();
 
         // Rotate the RectTransform by 45 degrees
-        rectTransform.rotation = Quaternion.Euler(0f, 0f, degrees);
+        transform.rotation = Quaternion.Euler(0f, 0f, degrees);
     }
 }
