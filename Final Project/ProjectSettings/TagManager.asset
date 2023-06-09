@@ -17,6 +17,10 @@ TagManager:
   - DieSlowly
   - PickUp1
   - ClimbableWall
+  - Wall
+  - Bolt1
+  - Weapon
+  - Food
   layers:
   - Default
   - TransparentFX
