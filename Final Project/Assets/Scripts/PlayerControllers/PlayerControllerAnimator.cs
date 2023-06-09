@@ -191,14 +191,7 @@ namespace Project
                     {
                         boltRotation = Quaternion.Euler(0f, 180f, 0f);
                     }
-
-                    //var weapon = GameObject.FindWithTag("Bolt1");
-                    var weapon = GameObject.Find("Bolt1");
-                    Debug.Log(weapon == null);
-                    //var weapon = LaunchWeapon(0);
-                    //weapon = bagManager.LaunchWeapon(0);
-
-                    Instantiate(weapon, shotPoint.position, boltRotation);
+                    Instantiate(bolt, shotPoint.position, boltRotation);
                 }
                 else if (Input.GetKeyDown(KeyCode.L))
                 {
@@ -220,6 +213,19 @@ namespace Project
                 {
                     animator.SetTrigger("spectialJump");
                     PlayerRigid.velocity = Vector2.up * 1.15f * 11;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    animator.SetTrigger("gunAttack");
+                    Quaternion boltRotation = Quaternion.identity;
+                    var weapon = bagManager.LaunchWeapon(0);
+                    if (!facingRight)
+                    {
+                        boltRotation = Quaternion.Euler(0f, 180f, 0f);
+                    }
+                    weapon.transform.localScale = new Vector2(0.5f,0.5f);
+                    var weaponObject = Instantiate(weapon, shotPoint.position, boltRotation);
+                    // weaponObject.AddComponent<Bolt>();
                 }
 
                 nextAttackTime = Time.time + timeBetweenAttacks;

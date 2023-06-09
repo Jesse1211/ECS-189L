@@ -56,4 +56,28 @@ public class BagManager : MonoBehaviour
     {
         dataLoader.AddBagItems(item);
     }
+
+    public GameObject GetWeapon(int num)
+    {
+        UnityEngine.Debug.Log(1111111);
+        if (num == 1)
+        {
+            return dataLoader.weapons.First().prefab;
+        }
+        else if (num == 2)
+        {
+            return dataLoader.weapons[1].prefab;
+        }
+        else if (num == 3)
+        {
+            return dataLoader.weapons[2].prefab;
+        }
+        else if (num == 4)
+        {
+            return dataLoader.weapons[3].prefab;
+        }
+
+        UnityEngine.Debug.Log(222222);
+        return null;
+    }
 }
