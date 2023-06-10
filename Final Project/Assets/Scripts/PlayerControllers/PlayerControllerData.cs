@@ -42,7 +42,7 @@ namespace Project
                 isTouchingWall = true;
             }
 
-            if (collision.gameObject.tag == "PickUp")
+            if ((collision.gameObject.tag == "Weapon") || (collision.gameObject.tag == "Food"))
             {
                 bagManager.AddItem(new Item() { Id = 1, prefab = collision.gameObject });
             }

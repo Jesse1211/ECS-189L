@@ -77,7 +77,6 @@ public class Enemy : MonoBehaviour
                 Collider2D playerToDamage = Physics2D.OverlapCircle(playerCheck.position, checkRaduis, playerLayer);
                 if (playerToDamage != null)
                 {
-                    // Debug.Log("Demon hits player!");
                     playerToDamage.GetComponent<PlayerControllerAnimator>().TakeDamage(damage);
                 }
             }
