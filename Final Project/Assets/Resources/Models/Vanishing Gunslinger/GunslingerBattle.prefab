@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2824143167916809076}
   - component: {fileID: 1627665623509526915}
   - component: {fileID: -4178622310814135082}
-  - component: {fileID: 5013311781410279600}
+  - component: {fileID: -5607023351257170177}
   m_Layer: 0
   m_Name: GunslingerBattle
   m_TagString: Untagged
@@ -173,7 +173,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.2, y: 0.29}
+    oldSize: {x: 0.4, y: 0.58}
     newSize: {x: 0.55, y: 0.33}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -217,7 +217,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0045037265, y: 0.1396224}
   m_Size: {x: 0.17166781, y: 0.27976286}
   m_Direction: 0
---- !u!114 &5013311781410279600
+--- !u!114 &-5607023351257170177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,9 +226,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 3395969170425496219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60091cad1b91c45b9b0b6263c3f11c41, type: 3}
+  m_Script: {fileID: 11500000, guid: e6fd572bf26017b44824be45d909f932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePower: 6
-  jumpPower: 6
-  timeBetweenAttacks: 1
+  param:
+    hp: 100
+    moveSpeed: 5
+    chaseSpeed: 10
+    idleTime: 2
+    patrolPoints: []
+    chasePoints: []
+    animator: {fileID: 3782725664166123622}
+    target: {fileID: 0}
+    targetLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    attackPoint: {fileID: 0}
+    attackArea: 0

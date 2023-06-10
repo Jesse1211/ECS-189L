@@ -21,6 +21,7 @@ public class IdleState : Istate
     }
     public void OnUpdate() 
     {
+        UnityEngine.Debug.Log(111);
         timer += Time.deltaTime;
 
         if (param.target != null && param.target.position.x >= param.chasePoints[0].position.x
@@ -59,6 +60,7 @@ public class PatrolState : Istate
     }
     public void OnUpdate()
     {
+        UnityEngine.Debug.Log(222);
         manger.Flip(param.patrolPoints[patrolPosition]);
         manger.transform.position = Vector2.MoveTowards(manger.transform.position, param.patrolPoints[patrolPosition].position, param.moveSpeed*Time.deltaTime);
 
@@ -102,6 +104,7 @@ public class ChaseState : Istate
     }
     public void OnUpdate()
     {
+        UnityEngine.Debug.Log(333);
         manger.Flip(param.target);
         
         if (param.target) 
@@ -115,6 +118,10 @@ public class ChaseState : Istate
         if (Physics2D.OverlapCircle(param.attackPoint.position, param.attackArea, param.targetLayer)) 
         {
             manger.TransitionState(StateType.Attack);
+        }
+        if (param.hp == 20)
+        {
+            manger.TransitionState(StateType.Transfering);
         }
 
     }
@@ -142,6 +149,7 @@ public class ReactState : Istate
     }
     public void OnUpdate()
     {
+        UnityEngine.Debug.Log(444);
         info = param.animator.GetCurrentAnimatorStateInfo(0);
 
         if (info.normalizedTime >= .95f) 
@@ -169,7 +177,81 @@ public class AttackState : Istate
 
     public void OnEnter()
     {
-        param.animator.SetTrigger("attack");
+        param.animator.SetTrigger("pistolWhip");
+    }
+    public void OnUpdate()
+    {
+        UnityEngine.Debug.Log(555);
+        info = param.animator.GetCurrentAnimatorStateInfo(0);
+        UnityEngine.Debug.Log(info.normalizedTime);
+
+        if (info.normalizedTime >= .1f)
+        {
+            manger.TransitionState(StateType.Chase);
+        }
+    }
+    public void OnExit()
+    {
+
+    }
+}
+
+public class damagedState : Istate
+{
+    // Start is called before the first frame update
+    private FSM manger;
+    private Parameter param;
+    private AnimatorStateInfo info;  
+    private int previousHp;
+
+    public damagedState(FSM manger)
+    {
+        this.manger = manger;
+        this.param = manger.param;
+    }
+
+    public void OnEnter()
+    {
+        param.animator.SetTrigger("hit");
+        previousHp = param.hp;
+    }
+    public void OnUpdate()
+    {
+        if(param.hp >= 0)
+        {
+            param.hp -= 10.0f;
+            // Debug.Log("Enemy's health: " + health);
+            if(param.hp <= 0.1f)
+            {
+                anim.SetTrigger("die");
+                Destroy(manger, 1f);
+                return;
+            }
+
+            anim.SetTrigger("isHit");
+        }
+    }
+    public void OnExit()
+    {
+
+    }
+}
+
+public class TransferingState : Istate
+{
+    // Start is called before the first frame update
+    private FSM manger;
+    private Parameter param;
+    private AnimatorStateInfo info;
+    public TransferingState(FSM manger)
+    {
+        this.manger = manger;
+        this.param = manger.param;
+    }
+
+    public void OnEnter()
+    {
+        param.animator.SetTrigger("smokeVanish");
     }
     public void OnUpdate()
     {
@@ -177,8 +259,47 @@ public class AttackState : Istate
 
         if (info.normalizedTime >= .95f)
         {
-            manger.TransitionState(StateType.Chase);
+            manger.transform.position = new Vector2(0,0); // Teleport position
+            manger.TransitionState(StateType.Healing);
+        } 
+    }
+    public void OnExit()
+    {
+        
+    }
+}
+
+public class HealingState : Istate
+{
+    // Start is called before the first frame update
+    private FSM manger;
+    private Parameter param;
+    private AnimatorStateInfo info;  
+    private int previousHp;
+
+    public HealingState(FSM manger)
+    {
+        this.manger = manger;
+        this.param = manger.param;
+    }
+
+    public void OnEnter()
+    {
+        param.animator.SetTrigger("idle");
+        previousHp = param.hp;
+    }
+    public void OnUpdate()
+    {
+        // If not been attacked, will heal until hp full
+        if (previousHp >= param.hp) // attack signal
+        {
+            param.hp += 1;
         }
+        else
+        {
+            manger.TransitionState(StateType.Idle);    
+        }
+        previousHp = param.hp;
     }
     public void OnExit()
     {

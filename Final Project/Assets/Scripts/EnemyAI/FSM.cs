@@ -7,7 +7,7 @@ using UnityEngine;
 
 public enum StateType
 {
-    Idle, Patrol, Chase, React, Attack
+    Idle, Patrol, Chase, React, Attack, Transfering, Healing
 }
 
 [Serializable]
@@ -37,6 +37,10 @@ public class FSM : MonoBehaviour
         Enemystates.Add(StateType.Chase, new ChaseState(this));
         Enemystates.Add(StateType.React, new ReactState(this));
         Enemystates.Add(StateType.Attack, new AttackState(this));
+        Enemystates.Add(StateType.Transfering, new TransferingState(this));
+        Enemystates.Add(StateType.Healing, new HealingState(this));
+        Enemystates.Add(StateType.damaged, new damagedState(this));
+        
         TransitionState(StateType.Idle);
         param.animator = GetComponent<Animator>();
     }
