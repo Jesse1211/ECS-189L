@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 409821924421282976}
   - component: {fileID: 5721759745651451161}
   - component: {fileID: 2667084235715241726}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bolt
   m_TagString: Bolt1
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5025797796048622517
 SpriteRenderer:
@@ -196,5 +196,4 @@ MonoBehaviour:
   speed: 8
   damage: 1
   lifeTime: 3
-  tag: Bolt1
   boltHit: {fileID: 975496082850139830, guid: 8a29ac2016f2843f597bba0c48a14d38, type: 3}

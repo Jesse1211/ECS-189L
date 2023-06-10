@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Food
+  - Weapon
+  - WhiteOrbs
+  - Enemy
+  - ground
+  - RedOrbs
+  - WeaponSlot
+  - PickUp
+  - Bolt1
+  - Wall
+  - BloodTreeFire
+  - DieSlowly
+  - DieImmediately
+  - BloodTreeDead
+  - ClimbableWall
+  - PickUp1
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Players
+  - Player
+  - attackArea
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
