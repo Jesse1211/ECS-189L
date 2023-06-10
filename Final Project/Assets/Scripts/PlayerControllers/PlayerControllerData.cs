@@ -17,7 +17,7 @@ namespace Project
         [SerializeField] GameObject HP;
         [NonSerialized] public bool onGround = true;
         [NonSerialized] public bool isTouchingWall;
-        private BagManager bagManager;
+        [NonSerialized] public BagManager bagManager;
         private CharacterHP HPscript;
         public bool isTouchingDeathSwamp;
 

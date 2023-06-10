@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 5740849631023626696}
   m_Layer: 0
   m_Name: LittleGirl
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +299,9 @@ MonoBehaviour:
   health: 0
   collected: 0
   bag: {fileID: 0}
-  playerControllerData: {fileID: 0}
+  HP: {fileID: 0}
+  bagManager: {fileID: 0}
+  isTouchingDeathSwamp: 0
   facingRight: 0
   currentSpeed: 5
   frontcheck: {fileID: 0}
