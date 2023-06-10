@@ -14,10 +14,11 @@ namespace Project
         public float health;
         public bool collected;
         public GameObject bag;
-        
+        [SerializeField] GameObject HP;
         [NonSerialized] public bool onGround = true;
         [NonSerialized] public bool isTouchingWall;
         private BagManager bagManager;
+        private CharacterHP HPscript;
         public bool isTouchingDeathSwamp;
 
         void Awake()
@@ -26,6 +27,7 @@ namespace Project
             health = 100f;
             collected = false;
             bagManager = bag.GetComponent<BagManager>();
+            HPscript = HP.GetComponent<CharacterHP>();
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -47,13 +49,19 @@ namespace Project
 
 
             // In battle scene:
-            if (collision.gameObject.tag == "DieImmediately") 
+            if (collision.gameObject.tag == "DieImmediately")
             {
                 health = 0;
             }
             if (collision.gameObject.tag == "DieSlowly")
             {
                 isTouchingDeathSwamp = true;
+            }
+
+            if (collision.gameObject.tag == "NPC")
+            {
+
+                HPscript.CollideThunder();
             }
         }
 

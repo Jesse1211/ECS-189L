@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5324693783179216450}
   - component: {fileID: 337391280491376709}
   - component: {fileID: 3508772599014895904}
+  - component: {fileID: -1172943223412488841}
   m_Layer: 0
   m_Name: FanBoyDialog
   m_TagString: Untagged
@@ -215,3 +216,24 @@ MonoBehaviour:
   wordSpeed: 0.06
   playerIsClose: 0
   button: {fileID: 0}
+--- !u!95 &-1172943223412488841
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555358557970361140}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67d0a6fc097d7df478a0c66ebb57fb9b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

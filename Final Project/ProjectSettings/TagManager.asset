@@ -17,6 +17,9 @@ TagManager:
   - DieSlowly
   - PickUp1
   - ClimbableWall
+  - Wall
+  - Bolt1
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -28,8 +31,8 @@ TagManager:
   - Players
   - Ground
   - Enemy
-  - 
-  - 
+  - Player
+  - Fanboy
   - 
   - 
   - 

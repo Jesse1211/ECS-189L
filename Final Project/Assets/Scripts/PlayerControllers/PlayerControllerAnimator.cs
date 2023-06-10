@@ -14,7 +14,6 @@ namespace Project
     {
         private Rigidbody2D PlayerRigid;
         private Animator animator;
-
         public bool facingRight;
         // run animation
         public float currentSpeed = 5.0f;
@@ -297,5 +296,6 @@ namespace Project
             weaponObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         }
 
+       
     }
 }
