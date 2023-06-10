@@ -166,8 +166,6 @@ namespace Project
             wallJumping = false;
         }
 
-
-
         void Attack()
         {
             if (Time.time > nextAttackTime)

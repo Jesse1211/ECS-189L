@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1513872114515276284}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: RightPoint
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9175749381639410327}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: LeftPoint
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -71,9 +71,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 580105639188120535}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: MovableBoat
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ Transform:
   - {fileID: 9175749381639410327}
   - {fileID: 1513872114515276284}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3533290414014217419
 PrefabInstance:
@@ -107,6 +107,14 @@ PrefabInstance:
     - target: {fileID: 5035205289749258497, guid: b3ef83513f460fa4194332c7419f7246, type: 3}
       propertyPath: m_Name
       value: Boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035205289749258497, guid: b3ef83513f460fa4194332c7419f7246, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035205289749258497, guid: b3ef83513f460fa4194332c7419f7246, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 7563704352337969628, guid: b3ef83513f460fa4194332c7419f7246, type: 3}
       propertyPath: m_RootOrder
