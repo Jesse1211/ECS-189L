@@ -3,93 +3,104 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour
+namespace Project
 {
-    public GameObject dialogPanel;
-    public Text dialogText;
-    public string[] dialog;
-    private int index;
-    private bool first_time_in = true;
 
-    public float wordSpeed;
-    public bool playerIsClose;
-
-    public GameObject button;
-
-    void Update()
+    public class NPC : MonoBehaviour
     {
-        // have to add some other conditions.
-        // can revise this if needed.
-        if (first_time_in && playerIsClose)
-        {
-            first_time_in = false;
+        public GameObject dialogPanel;
+        public Text dialogText;
+        public string[] dialog;
+        private int index;
+        private bool first_time_in = true;
 
-            if (dialogPanel.activeInHierarchy)
+        public float wordSpeed;
+        public bool playerIsClose;
+
+        public GameObject button;
+
+        void Update()
+        {
+            // have to add some other conditions.
+            // can revise this if needed.
+            if (first_time_in && playerIsClose)
             {
-                emptyText();
+                first_time_in = false;
+
+                if (dialogPanel.activeInHierarchy)
+                {
+                    emptyText();
+                }
+                else
+                {
+                    dialogPanel.SetActive(true);
+                    StartCoroutine(Typing());
+                }
+            }
+
+            if (dialogText.text == dialog[index])
+            {
+                button.SetActive(true);
+            }
+        }
+
+        public void NextLine()
+        {
+            button.SetActive(false);
+
+            if (index < dialog.Length - 1)
+            {
+                index++;
+                dialogText.text = "";
+                StartCoroutine(Typing());
             }
             else
             {
-                dialogPanel.SetActive(true);
-                StartCoroutine(Typing());
+                emptyText();
             }
         }
 
-        if (dialogText.text == dialog[index])
+        IEnumerator Typing()
         {
-            button.SetActive(true);
+            foreach (char letter in dialog[index].ToCharArray())
+            {
+                dialogText.text += letter;
+                yield return new WaitForSeconds(wordSpeed);
+            }
         }
-    }
 
-    public void NextLine()
-    {
-        button.SetActive(false);
-
-        if (index < dialog.Length - 1)
+        IEnumerator Freeze(GameObject gameObject)
         {
-            index++;
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            yield return new WaitForSeconds(1);
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Player")) {
+                playerIsClose = true;
+                StartCoroutine(Freeze(collision.gameObject));
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                playerIsClose = false;
+                emptyText();
+            }
+        }
+
+        /// <summary>
+        /// Reset the texts in the dialog
+        /// </summary>
+        public void emptyText()
+        {
             dialogText.text = "";
-            StartCoroutine(Typing());
+            index = 0;
+            dialogPanel.SetActive(false);
         }
-        else
-        {
-            emptyText();
-        }
-    }
-
-    IEnumerator Typing()
-    {
-        foreach(char letter in dialog[index].ToCharArray())
-        {
-            dialogText.text += letter;
-            yield return new WaitForSeconds(wordSpeed);
-        }
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")){
-            playerIsClose = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            playerIsClose = false;
-            emptyText();
-        }
-    }
-
-    /// <summary>
-    /// Reset the texts in the dialog
-    /// </summary>
-    public void emptyText()
-    {
-        dialogText.text = "";
-        index = 0;
-        dialogPanel.SetActive(false); 
     }
 }
