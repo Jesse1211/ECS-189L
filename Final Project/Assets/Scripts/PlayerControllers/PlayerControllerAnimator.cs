@@ -179,6 +179,7 @@ namespace Project
                     {
                         col.GetComponent<Enemy>().TakeDamage(damage);
                     }
+
                     animator.SetTrigger("stab");
                 }
                 else if (Input.GetKeyDown(KeyCode.K))
