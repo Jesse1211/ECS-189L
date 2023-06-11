@@ -14,7 +14,7 @@ namespace Project
         public float health;
         public bool collected;
         public GameObject bag;
-        [SerializeField] GameObject HP;
+        public GameObject HP;
         [NonSerialized] public bool onGround = true;
         [NonSerialized] public bool isTouchingWall;
         [NonSerialized] public BagManager bagManager;
@@ -36,6 +36,13 @@ namespace Project
             {
                 onGround = true;
             }
+
+            if (collision.collider.tag == "PickUp")
+            {
+                Destroy(collision.gameObject);
+                score++;
+            }
+
 
             if (collision.collider.tag == "ClimbableWall")
             {
