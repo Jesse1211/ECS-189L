@@ -15,7 +15,6 @@ namespace Project
 
         void Start()
         {
-            param = new Parameter();
 
             Enemystates.Add(StateType.Idle, new GunDlingerIdleState(this));
             Enemystates.Add(StateType.Patrol, new GunDlingerPatrolState(this));

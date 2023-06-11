@@ -17,7 +17,6 @@ namespace Project
 
         void Start()
         {
-            param = new Parameter();
 
             Enemystates.Add(StateType.Idle, new IdleState(this));
             Enemystates.Add(StateType.Patrol, new PatrolState(this));

@@ -29,14 +29,15 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
+  - Player
   - Water
   - UI
-  - Player
   - attackArea
   - Background
   - InteractableBuildings
   - Ground
   - Enemy
+  - 
   - 
   - 
   - 
