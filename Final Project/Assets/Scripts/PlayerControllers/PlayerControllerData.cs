@@ -39,6 +39,13 @@ namespace Project
                 onGround = true;
             }
 
+            if (collision.collider.tag == "PickUp")
+            {
+                Destroy(collision.gameObject);
+                score++;
+            }
+
+
             if (collision.collider.tag == "ClimbableWall")
             {
                 isTouchingWall = true;

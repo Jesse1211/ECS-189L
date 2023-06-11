@@ -136,7 +136,7 @@ namespace Project
 
             //movementDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
             PlayerRigid.velocity = new Vector2(horizontal * currentSpeed, PlayerRigid.velocity.y);
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, 1000), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -1000, 1000), transform.position.y, transform.position.z);
         }
 
         void Flip()
@@ -168,8 +168,6 @@ namespace Project
         {
             wallJumping = false;
         }
-
-
 
         void Attack()
         {
