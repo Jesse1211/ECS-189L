@@ -8,7 +8,7 @@ namespace Project
 {
     public enum StateType
     {
-        Idle, Patrol, Chase, React, Attack, Death, IsHit, Teleport, Healing
+        Idle, Patrol, Chase, React, Attack, Death, Hit, Teleport, Healing
     }
 
     [Serializable]
@@ -23,8 +23,12 @@ namespace Project
         public Animator animator;
         public Transform target;
         public LayerMask targetLayer;
+        public LayerMask selfLayer;
         public Transform attackPoint;
         public float attackArea;
+        public bool isFirstPosition;
+        public bool initiate;
+        public Transform[] teleportSpots;
     }
 
     public class FSM : MonoBehaviour
@@ -47,7 +51,7 @@ namespace Project
             Enemystates.Add(StateType.Attack, new AttackState(this));
             Enemystates.Add(StateType.Teleport, new TeleportState(this));
             Enemystates.Add(StateType.Healing, new HealingState(this));
-            Enemystates.Add(StateType.IsHit, new HitState(this));
+            Enemystates.Add(StateType.Hit, new HitState(this));
             Enemystates.Add(StateType.Death, new DeathState(this));
 
             TransitionState(StateType.Idle);
@@ -92,19 +96,19 @@ namespace Project
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
-            {
-                param.target = other.transform;
-                Debug.Log("abcs");
-            }
+            // if (other.CompareTag("Player"))
+            // {
+            //     param.target = other.transform;
+            //     Debug.Log("abcs");
+            // }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
-            {
-                param.target = null;
-            }
+            // if (other.CompareTag("Player"))
+            // {
+            //     param.target = null;
+            // }
         }
         private void OnDrawGizmos()
         {

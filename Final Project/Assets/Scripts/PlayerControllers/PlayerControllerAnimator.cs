@@ -175,10 +175,10 @@ namespace Project
                 if (Input.GetKeyDown(KeyCode.J))
                 {
                     Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
-                    foreach (Collider2D col in enemiesToDamage)
-                    {
-                        col.GetComponent<Enemy>().TakeDamage(damage);
-                    }
+                    // foreach (Collider2D col in enemiesToDamage)
+                    // {
+                    //     col.GetComponent<Enemy>().TakeDamage(damage);
+                    // }
 
                     animator.SetTrigger("stab");
                 }
