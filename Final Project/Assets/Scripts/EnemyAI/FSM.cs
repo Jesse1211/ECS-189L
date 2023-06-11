@@ -98,11 +98,23 @@ namespace Project
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            Debug.Log("TAG = " + other.tag);
             if (other.CompareTag("Player"))
             {
                 param.target = other.transform;
                 param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
                 
+            }
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            Debug.Log("OnCollisionEnter2D = " + collision.gameObject.tag);
+            if (collision.gameObject.tag == "Player")
+            {
+                param.target = collision.transform;
+                param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
+
             }
         }
 

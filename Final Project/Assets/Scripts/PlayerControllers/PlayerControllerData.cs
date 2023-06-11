@@ -30,7 +30,7 @@ namespace Project
             bagManager = bag.GetComponent<BagManager>();
             HPscript = HP.GetComponent<CharacterHP>();
            
-    }
+        }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Unity.Collections.AllocatorManager;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using System;
 
 namespace Project
@@ -55,7 +55,8 @@ namespace Project
             //animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x / 5.0f));
             if (isTouchingDeathSwamp)
             {
-                HP.GetComponent<Slider>().value -= 0.001f;
+                TakeDamage(1);
+                //HP.GetComponent<Slider>().value -= 0.001f;
             }
 
 
@@ -238,6 +239,7 @@ namespace Project
 
         public void TakeDamage(int damage)
         {
+            Debug.Log("taken Dmg");
             if (HP.GetComponent<Slider>().value > 0)
             {
                 HP.GetComponent<Slider>().value -= damage;
@@ -304,3 +306,16 @@ namespace Project
        
     }
 }
+
+
+
+/*
+ * 
+ * 
+ * 小女孩: Player
+ * 
+ * Fanboy: Default
+ *          area: Default
+ *          atttactArea : Player
+ *          follow: Default
+ */
