@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Unity.Collections.AllocatorManager;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using System;
 
 namespace Project
@@ -39,12 +39,14 @@ namespace Project
         public Transform attackPoint;
         public LayerMask enemyLayer;
         public GameObject blood;
+        
 
         void Start()
         {
             PlayerRigid = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             facingRight = true;
+            
         }
 
         void Update()
@@ -53,7 +55,8 @@ namespace Project
             //animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x / 5.0f));
             if (isTouchingDeathSwamp)
             {
-                health -= 0.001f;
+                TakeDamage(1);
+                //HP.GetComponent<Slider>().value -= 0.001f;
             }
 
 
@@ -133,7 +136,7 @@ namespace Project
 
             //movementDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
             PlayerRigid.velocity = new Vector2(horizontal * currentSpeed, PlayerRigid.velocity.y);
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, 1000), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -1000, 1000), transform.position.y, transform.position.z);
         }
 
         void Flip()
@@ -165,8 +168,6 @@ namespace Project
         {
             wallJumping = false;
         }
-
-
 
         void Attack()
         {
@@ -237,10 +238,11 @@ namespace Project
 
         public void TakeDamage(int damage)
         {
-            if (health > 0)
+            Debug.Log("taken Dmg");
+            if (HP.GetComponent<Slider>().value > 0)
             {
-                health -= damage;
-                if (health <= 0.1f)
+                HP.GetComponent<Slider>().value -= damage;
+                if (HP.GetComponent<Slider>().value <= 0.1f)
                 {
                     animator.SetTrigger("die");
                     PlayerRigid.velocity = Vector2.zero;
@@ -288,6 +290,12 @@ namespace Project
                 weaponObject.AddComponent<Bolt>();
                 weaponObject.GetComponent<Bolt>().speed = 8;
                 weaponObject.GetComponent<Bolt>().damage = 1;
+
+                if(weaponObject.tag == "MasterWeapon"){
+                    weaponObject.GetComponent<Bolt>().damage = 50;
+                    weaponObject.GetComponent<Bolt>().speed = 3;
+                }
+
                 weaponObject.GetComponent<Bolt>().lifeTime = 3;
                 weaponObject.GetComponent<Bolt>().boltHit = GameObject.Find("BoltHit");
 
@@ -303,3 +311,16 @@ namespace Project
        
     }
 }
+
+
+
+/*
+ * 
+ * 
+ * 小女孩: Player
+ * 
+ * Fanboy: Default
+ *          area: Default
+ *          atttactArea : Player
+ *          follow: Default
+ */

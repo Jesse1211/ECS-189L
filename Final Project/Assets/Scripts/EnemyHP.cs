@@ -9,7 +9,7 @@ public class EnemyHP : MonoBehaviour
     public GameObject follow;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

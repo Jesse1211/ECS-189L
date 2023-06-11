@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 namespace Project
 {
     /// <summary>
@@ -14,12 +14,13 @@ namespace Project
         public float health;
         public bool collected;
         public GameObject bag;
-        [SerializeField] GameObject HP;
+        public GameObject HP;
         [NonSerialized] public bool onGround = true;
         [NonSerialized] public bool isTouchingWall;
         [NonSerialized] public BagManager bagManager;
         private CharacterHP HPscript;
         public bool isTouchingDeathSwamp;
+        
 
         void Awake()
         {
@@ -28,6 +29,7 @@ namespace Project
             collected = false;
             bagManager = bag.GetComponent<BagManager>();
             HPscript = HP.GetComponent<CharacterHP>();
+           
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -37,12 +39,19 @@ namespace Project
                 onGround = true;
             }
 
+            if (collision.collider.tag == "PickUp")
+            {
+                Destroy(collision.gameObject);
+                score++;
+            }
+
+
             if (collision.collider.tag == "ClimbableWall")
             {
                 isTouchingWall = true;
             }
 
-            if ((collision.gameObject.tag == "Weapon") || (collision.gameObject.tag == "Food"))
+            if ((collision.gameObject.tag == "Weapon") || (collision.gameObject.tag == "Food")  || (collision.gameObject.tag == "MasterWeapon"))
             {
                 bagManager.AddItem(new Item() { Id = 1, prefab = collision.gameObject });
             }
@@ -51,7 +60,7 @@ namespace Project
             // In battle scene:
             if (collision.gameObject.tag == "DieImmediately")
             {
-                health = 0;
+                HP.GetComponent<Slider>().value = 0;
             }
             if (collision.gameObject.tag == "DieSlowly")
             {

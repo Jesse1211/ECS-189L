@@ -32,7 +32,7 @@ public class BagManager : MonoBehaviour
 
             if(parent.CompareTag("ItemSlot"))
             {
-                if (child.tag == "Weapon")
+                if ((child.tag == "Weapon") ||  (child.tag == "MasterWeapon"))
                 {
                     dataLoader.RemoveBagItems(item, false);
                 }

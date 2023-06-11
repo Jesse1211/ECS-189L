@@ -53,7 +53,7 @@ namespace Project {
             {
                      manger.TransitionState(StateType.Patrol);
             }
-
+            
         }
         public void OnExit()
         {
@@ -141,7 +141,7 @@ namespace Project {
                 }
             }
 
-            else
+            else 
             {
                 patrolPosition++;
                 if (patrolPosition >= 4)
@@ -285,7 +285,7 @@ namespace Project {
 
         public void OnEnter()
         {
-            param.animator.SetTrigger("gunAttack");
+            param.animator.SetTrigger("attack");
         }
         public void OnUpdate()
         {
@@ -338,7 +338,7 @@ namespace Project {
                 slider.value -= 10f;
             }
 
-
+            
         }
         public void OnUpdate()
         {
@@ -348,7 +348,7 @@ namespace Project {
             {
                 manger.TransitionState(StateType.Death);
             }
-            if (slider.value > 0 && slider.value <= 30)
+            if (slider.value >= 10 && slider.value <= 30) 
             {
                 manger.TransitionState(StateType.teleport);
             }
@@ -391,7 +391,7 @@ namespace Project {
         }
         public void OnUpdate()
         {
-
+            Debug.Log("acinima");
         }
         public void OnExit()
         {
@@ -415,7 +415,7 @@ namespace Project {
         private Parameter param;
         private AnimatorStateInfo info;
         private Slider slider;
-
+        
         public TeleState(FSM manger)
         {
             this.manger = manger;
@@ -425,8 +425,9 @@ namespace Project {
 
         public void OnEnter()
         {
-            param.animator.SetTrigger("smokeVanish");
+            param.animator.SetTrigger("teleVanish");
             slider.value += 20;
+            
         }
         public void OnUpdate()
         {
@@ -443,7 +444,7 @@ namespace Project {
 
                 }
             }
-            else
+            else 
             {
                 if (info.normalizedTime >= .95f)
                 {
@@ -452,12 +453,12 @@ namespace Project {
                     param.firstTele = true;
                     param.initTele = true;
                 }
-
+                
             }
         }
         public void OnExit()
         {
-
+           
         }
         public GameObject GetHp()
         {
@@ -472,5 +473,5 @@ namespace Project {
 
 
 
-
+   
 }

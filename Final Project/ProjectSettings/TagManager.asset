@@ -4,27 +4,39 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ground
-  - DieSlowly
-  - Enemy
-  - WeaponSlot
-  - ItemSlot
-  - Weapon
   - Food
+  - Weapon
+  - WhiteOrbs
+  - Enemy
+  - ground
+  - RedOrbs
+  - WeaponSlot
+  - PickUp
   - Bolt1
+  - Wall
+  - BloodTreeFire
+  - DieSlowly
+  - DieImmediately
+  - BloodTreeDead
+  - ClimbableWall
+  - PickUp1
+  - ItemSlot
+  - MainWater
+  - Fanboy
+  - MasterWeapon
+  - Deer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Enemy
   - Water
   - UI
   - Player
-  - 
-  - 
-  - 
-  - 
-  - 
+  - attackArea
+  - Background
+  - InteractableBuildings
+  - Ground
+  - Enemy
   - 
   - 
   - 
@@ -46,6 +58,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 469080045
+    locked: 0
+  - name: InteractableBuildings
+    uniqueID: 754252557
+    locked: 0
+  - name: Players
+    uniqueID: 2242598109
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
