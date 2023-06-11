@@ -37,8 +37,8 @@ namespace Project
                 currentState.OnUpdate();
             else
             {
+                this.GetComponent<CapsuleCollider2D>().enabled = false;
                 Enemystates[StateType.Death].OnEnter();
-
             }
         }
 
