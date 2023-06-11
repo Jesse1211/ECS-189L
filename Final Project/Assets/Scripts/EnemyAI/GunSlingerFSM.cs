@@ -1,5 +1,5 @@
 using System;
-using System.Collections;   
+using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEditor.Tilemaps;
@@ -7,38 +7,11 @@ using UnityEngine;
 using UnityEngine.UI;
 namespace Project
 {
-    public enum StateType
-    {
-        Idle, Patrol, Chase, React, Attack, Death, IsHit, teleport
-    }
-
-    [Serializable]
-    public class Parameter
-    {
-        public GameObject hp;
-        public float moveSpeed;
-        public float chaseSpeed;
-        public float idleTime;
-        public Transform[] patrolPoints;
-        public Transform[] chasePoints;
-        public Transform[] telePoints;
-        public Animator animator;
-        public Transform target;
-        public LayerMask targetLayer;
-        public Transform attackPoint;
-        public float attackArea;
-        public bool getHit;
-        public bool firstTele = false;
-        public bool initTele = false;
-    
-
-    }
-    public class FSM : MonoBehaviour
+    public class GunSlingerFSM : MonoBehaviour
     {
         public Parameter param;
         private Istate currentState;
         private Dictionary<StateType, Istate> Enemystates = new Dictionary<StateType, Istate>();
-
 
         void Start()
         {
@@ -57,12 +30,10 @@ namespace Project
         // Update is called once per frame
         void Update()
         {
-            if(param.hp.GetComponent<Slider>().value > 0 )
-                currentState.OnUpdate();
-            else
+            currentState.OnUpdate();
+            if (Input.GetKeyDown(KeyCode.K))
             {
-                Enemystates[StateType.Death].OnEnter();
-
+                param.getHit = true;
             }
         }
 
@@ -78,10 +49,10 @@ namespace Project
             currentState.SetUp(param.hp);
         }
 
-        
-        
+
+
         /// <summary>
-        /// find the player position 
+        /// find the player position
         /// </summary>
         /// <param name="Target"></param>
         public void Flip(Transform Target)
@@ -107,10 +78,7 @@ namespace Project
                 param.target = other.transform;
                 param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
             }
-
         }
-
-       
 
         private void OnTriggerExit2D(Collider2D other)
         {
