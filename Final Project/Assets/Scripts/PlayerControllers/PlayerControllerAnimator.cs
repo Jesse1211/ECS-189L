@@ -12,9 +12,6 @@ namespace Project
     /// </summary>
     public class PlayerControllerAnimator : PlayerControllerData
     {
-        private Rigidbody2D PlayerRigid;
-        private Animator animator;
-        public bool facingRight;
         // run animation
         public float currentSpeed = 5.0f;
         private float acceleration = 0.03f;
@@ -38,9 +35,7 @@ namespace Project
         public float attackRange;
         public Transform attackPoint;
         public LayerMask enemyLayer;
-        public GameObject blood;
         
-
         void Start()
         {
             PlayerRigid = GetComponent<Rigidbody2D>();
@@ -56,11 +51,10 @@ namespace Project
             if (isTouchingDeathSwamp)
             {
                 TakeDamage(1);
-                //HP.GetComponent<Slider>().value -= 0.001f;
             }
 
 
-            if (health > 0)
+            if (HP.GetComponent<Slider>().value > 0)
             {
                 moving();
                 jump();
@@ -232,34 +226,6 @@ namespace Project
                 }
 
                 nextAttackTime = Time.time + timeBetweenAttacks;
-            }
-        }
-
-
-        public void TakeDamage(int damage)
-        {
-            Debug.Log("taken Dmg");
-            if (HP.GetComponent<Slider>().value > 0)
-            {
-                HP.GetComponent<Slider>().value -= damage;
-                if (HP.GetComponent<Slider>().value <= 0.1f)
-                {
-                    animator.SetTrigger("die");
-                    PlayerRigid.velocity = Vector2.zero;
-                }
-                else
-                {
-                    animator.SetTrigger("isHit");
-                    if (facingRight)
-                    {
-                        PlayerRigid.velocity = new Vector3(-2f, 2f, 0f);
-                    }
-                    else
-                    {
-                        PlayerRigid.velocity = new Vector3(2f, 2f, 0f);
-                    }
-                }
-                Instantiate(blood, transform.position, Quaternion.identity);
             }
         }
 

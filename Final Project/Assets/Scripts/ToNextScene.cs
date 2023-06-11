@@ -19,6 +19,8 @@ namespace Project
             {
                 if (player.GetComponent<PlayerControllerAnimator>().score >= 5)
                 {
+                    this.GetComponent<NPC>().enabled = false;
+
                     Debug.Log("switch scene");
 
                     if (SceneManager.GetActiveScene().buildIndex == 0)

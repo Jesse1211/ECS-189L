@@ -54,9 +54,9 @@ namespace Project
             {
                 // funtion 可以加血的
                 if (item.prefab.name == "GreenApplePickup")
-                    player.GetComponent<PlayerControllerAnimator>().health += 10;
+                    player.GetComponent<PlayerControllerAnimator>().HP.GetComponent<Slider>().value += 10;
                 if (item.prefab.name == "ApplePickup")
-                    player.GetComponent<PlayerControllerAnimator>().health += 1;
+                    player.GetComponent<PlayerControllerAnimator>().HP.GetComponent<Slider>().value += 1;
                 Destroy(item.prefab);
             }
             else
