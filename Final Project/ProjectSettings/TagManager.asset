@@ -20,23 +20,24 @@ TagManager:
   - BloodTreeDead
   - ClimbableWall
   - PickUp1
-  - ItemSlot  
+  - ItemSlot
   - MainWater
+  - Fanboy
+  - MasterWeapon
+  - Deer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
   - Water
+  - Water
   - UI
-  - Players
   - Player
   - attackArea
   - Background
   - InteractableBuildings
   - Ground
   - Enemy
-  - 
-  - 
   - 
   - 
   - 

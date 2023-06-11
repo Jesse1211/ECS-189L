@@ -35,9 +35,9 @@ namespace Project
             {
                 collision.GetComponent<Enemy>().TakeDamage(damage);
             }
-            if (collision.tag == "Enemy")
+            if (collision.tag == "Fanboy")
             {
-                collision.GetComponent<FSM>().param.hp.GetComponent<Slider>().value -=10f;
+                collision.GetComponent<FSM>().param.hp.GetComponent<Slider>().value -= damage;
                 collision.GetComponent<FSM>().param.getHit = true;
             }
             Destroy(gameObject);

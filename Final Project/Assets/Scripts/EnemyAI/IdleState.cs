@@ -348,7 +348,7 @@ namespace Project {
             {
                 manger.TransitionState(StateType.Death);
             }
-            if (slider.value > 0 && slider.value <= 30) 
+            if (slider.value >= 10 && slider.value <= 30) 
             {
                 manger.TransitionState(StateType.teleport);
             }
@@ -391,7 +391,7 @@ namespace Project {
         }
         public void OnUpdate()
         {
-            
+            Debug.Log("acinima");
         }
         public void OnExit()
         {

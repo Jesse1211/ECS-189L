@@ -39,6 +39,10 @@ namespace Project
         private Istate currentState;
         private Dictionary<StateType, Istate> Enemystates = new Dictionary<StateType, Istate>();
         
+        ~FSM(){
+
+        }
+
         void Start()
         {
             Enemystates.Add(StateType.Idle, new IdleState(this));
@@ -56,8 +60,13 @@ namespace Project
         // Update is called once per frame
         void Update()
         {
-            currentState.OnUpdate();
-            
+            if(param.hp.GetComponent<Slider>().value > 0 )
+                currentState.OnUpdate();
+            else
+            {
+                Enemystates[StateType.Death].OnEnter();
+
+            }
         }
 
         public void TransitionState(StateType type)

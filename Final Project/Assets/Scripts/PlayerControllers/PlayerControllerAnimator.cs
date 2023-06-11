@@ -289,6 +289,12 @@ namespace Project
                 weaponObject.AddComponent<Bolt>();
                 weaponObject.GetComponent<Bolt>().speed = 8;
                 weaponObject.GetComponent<Bolt>().damage = 1;
+
+                if(weaponObject.tag == "MasterWeapon"){
+                    weaponObject.GetComponent<Bolt>().damage = 50;
+                    weaponObject.GetComponent<Bolt>().speed = 3;
+                }
+
                 weaponObject.GetComponent<Bolt>().lifeTime = 3;
                 weaponObject.GetComponent<Bolt>().boltHit = GameObject.Find("BoltHit");
 
