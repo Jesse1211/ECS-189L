@@ -25,6 +25,7 @@ TagManager:
   - Fanboy
   - MasterWeapon
   - Deer
+  - Secret
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,6 @@ namespace Project
     public class PlayerControllerData : MonoBehaviour
     {
         public int score;
-        public bool collected;
         public GameObject bag;
         public GameObject HP;
         public GameObject blood;
@@ -30,7 +29,6 @@ namespace Project
         void Awake()
         {
             isTouchingDeathSwamp = false;
-            collected = false;
             bagManager = bag.GetComponent<BagManager>();
             HPscript = HP.GetComponent<CharacterHP>();
            
@@ -74,6 +72,12 @@ namespace Project
             {
                 Destroy(collision.gameObject);
                 score++;
+            }
+
+            if (collision.collider.tag == "Secret")
+            {
+                Destroy(collision.gameObject);
+                score += 5;
             }
 
             if (collision.collider.tag == "RedOrbs")

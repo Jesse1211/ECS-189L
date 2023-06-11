@@ -30,9 +30,8 @@ namespace Project
 
         void Update()
         {
-            if (playerControllerData.collected)
+            if (playerControllerData.score > 0)
             {
-                Debug.Log("CHange!");
                 fire = false;
                 dead = true;
             }

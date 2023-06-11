@@ -9,9 +9,8 @@ namespace Project
     {
         public Animator transition;
         public GameObject player;
-        public float transitionTime = 1f;
-        private bool beenToFirstscene = false;
-
+        public int sceneIndex;
+        private float transitionTime = 1f;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -19,21 +18,13 @@ namespace Project
             {
                 if (player.GetComponent<PlayerControllerAnimator>().score >= 5)
                 {
-                    this.GetComponent<NPC>().enabled = false;
-
                     Debug.Log("switch scene");
 
                     if (SceneManager.GetActiveScene().buildIndex == 0)
                     {
-                        if (!beenToFirstscene)
-                        {
-                            StartCoroutine(SwitchScene(1));
-                            beenToFirstscene = true;
-                        }
-                        else
-                        {
-                            StartCoroutine(SwitchScene(2));
-                        }
+                        this.GetComponent<NPC>().enabled = false;
+
+                        StartCoroutine(SwitchScene(sceneIndex));
                     }
                     else if (SceneManager.GetActiveScene().buildIndex == 1)
                     {
