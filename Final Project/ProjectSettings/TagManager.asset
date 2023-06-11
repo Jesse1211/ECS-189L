@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - Food
   - Weapon
   - WhiteOrbs
@@ -21,47 +20,21 @@ TagManager:
   - BloodTreeDead
   - ClimbableWall
   - PickUp1
-=======
-  - ground
-  - BloodTreeFire
-  - BloodTreeDead
-  - RedOrbs
-  - WhiteOrbs
-  - Enemy
-  - ItemSlot
-  - WeaponSlot
-  - PickUp
-  - DieImmediately
-  - DieSlowly
-  - PickUp1
-  - ClimbableWall
-  - Wall
-  - Bolt1
-  - Weapon
-  - Food
+  - ItemSlot  
   - MainWater
->>>>>>> c2aab3eb098cff8cd3f12d71d27a65abb413fe3e
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-<<<<<<< HEAD
-  - 
   - Water
   - UI
   - Players
   - Player
   - attackArea
-  - 
-=======
   - Background
-  - Water
-  - UI
   - InteractableBuildings
-  - Players
   - Ground
   - Enemy
->>>>>>> c2aab3eb098cff8cd3f12d71d27a65abb413fe3e
   - 
   - 
   - 
@@ -85,8 +58,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-<<<<<<< HEAD
-=======
   - name: Background
     uniqueID: 469080045
     locked: 0
@@ -96,7 +67,6 @@ TagManager:
   - name: Players
     uniqueID: 2242598109
     locked: 0
->>>>>>> c2aab3eb098cff8cd3f12d71d27a65abb413fe3e
   - name: Default
     uniqueID: 0
     locked: 0
