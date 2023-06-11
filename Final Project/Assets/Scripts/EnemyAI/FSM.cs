@@ -38,6 +38,7 @@ namespace Project
         public Parameter param;
         private Istate currentState;
         private Dictionary<StateType, Istate> Enemystates = new Dictionary<StateType, Istate>();
+        
         void Start()
         {
             Enemystates.Add(StateType.Idle, new IdleState(this));
@@ -59,7 +60,6 @@ namespace Project
             if (Input.GetKeyDown(KeyCode.K))
             {
                 param.getHit = true;
-
             }
         }
 
@@ -103,20 +103,19 @@ namespace Project
             {
                 param.target = other.transform;
                 param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
-                
             }
         }
 
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            Debug.Log("OnCollisionEnter2D = " + collision.gameObject.tag);
-            if (collision.gameObject.tag == "Player")
-            {
-                param.target = collision.transform;
-                param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
+        //private void OnCollisionExit2D(Collision2D collision)
+        //{
+        //    Debug.Log("OnCollisionEnter2D = " + collision.gameObject.tag);
+        //    if (collision.gameObject.tag == "Player")
+        //    {
+        //        param.target = collision.transform;
+        //        param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
 
-            }
-        }
+        //    }
+        //}
 
         private void OnTriggerExit2D(Collider2D other)
         {
