@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,16 +30,30 @@ namespace Project {
                 manger.TransitionState(StateType.IsHit);
 
             }
-            if (param.target != null && param.target.position.x >= param.chasePoints[0].position.x
-                && param.target.position.x <= param.chasePoints[1].position.x)
+            if (!param.firstTele)
             {
+                if (param.target != null && param.target.position.x >= param.chasePoints[0].position.x
+                && param.target.position.x <= param.chasePoints[1].position.x)
+                {
 
-                manger.TransitionState(StateType.React);
+                    manger.TransitionState(StateType.React);
+                }
             }
+            if (param.firstTele)
+            {
+                 if (param.target != null && param.target.position.x >= param.chasePoints[2].position.x
+                 && param.target.position.x <= param.chasePoints[3].position.x)
+                 {
+
+                     manger.TransitionState(StateType.React);
+                 }
+            }
+
             if (timer >= param.idleTime)
             {
-                manger.TransitionState(StateType.Patrol);
+                     manger.TransitionState(StateType.Patrol);
             }
+            
         }
         public void OnExit()
         {
@@ -61,6 +76,7 @@ namespace Project {
         private FSM manger;
         private Parameter param;
         private int patrolPosition;
+        private bool telePort = false;
         public PatrolState(FSM manger)
         {
             this.manger = manger;
@@ -74,6 +90,18 @@ namespace Project {
         }
         public void OnUpdate()
         {
+            if (param.initTele)
+            {
+                param.initTele = false;
+                if (param.firstTele)
+                {
+                    patrolPosition = 2;
+                }
+                else
+                {
+                    patrolPosition = 0;
+                }
+            }
             manger.Flip(param.patrolPoints[patrolPosition]);
             manger.transform.position = Vector2.MoveTowards(manger.transform.position, param.patrolPoints[patrolPosition].position, param.moveSpeed * Time.deltaTime);
 
@@ -83,9 +111,14 @@ namespace Project {
 
             }
 
-
             if (param.target != null && param.target.position.x >= param.chasePoints[0].position.x
-                && param.target.position.x <= param.chasePoints[1].position.x)
+                && param.target.position.x <= param.chasePoints[1].position.x && !param.firstTele)
+            {
+
+                manger.TransitionState(StateType.React);
+            }
+            if (param.target != null && param.target.position.x >= param.chasePoints[1].position.x
+               && param.target.position.x <= param.chasePoints[2].position.x && param.firstTele)
             {
 
                 manger.TransitionState(StateType.React);
@@ -98,11 +131,23 @@ namespace Project {
         }
         public void OnExit()
         {
-            patrolPosition++;
 
-            if (patrolPosition >= param.patrolPoints.Length)
+            if (!param.firstTele)
             {
-                patrolPosition = 0;
+                patrolPosition++;
+                if (patrolPosition >= 2)
+                {
+                    patrolPosition = 0;
+                }
+            }
+
+            else 
+            {
+                patrolPosition++;
+                if (patrolPosition >= 4)
+                {
+                    patrolPosition = 2;
+                }
             }
         }
         public GameObject GetHp()
@@ -140,14 +185,24 @@ namespace Project {
                 manger.TransitionState(StateType.IsHit);
 
             }
-
             if (param.target)
             {
                 manger.transform.position = Vector2.MoveTowards(manger.transform.position, param.target.position, param.chaseSpeed * Time.deltaTime);
             }
-            if (param.target == null || manger.transform.position.x < param.chasePoints[0].position.x || manger.transform.position.x > param.chasePoints[1].position.x)
+            if (!param.firstTele)
             {
-                manger.TransitionState(StateType.Idle);
+                if (param.target == null || manger.transform.position.x < param.chasePoints[0].position.x || manger.transform.position.x > param.chasePoints[1].position.x)
+                {
+                    manger.TransitionState(StateType.Idle);
+                }
+            }
+            if (param.firstTele)
+            {
+
+                if (param.target == null || manger.transform.position.x < param.chasePoints[2].position.x || manger.transform.position.x > param.chasePoints[3].position.x)
+                {
+                    manger.TransitionState(StateType.Idle);
+                }
             }
             if (Physics2D.OverlapCircle(param.attackPoint.position, param.attackArea, param.targetLayer))
             {
@@ -278,9 +333,12 @@ namespace Project {
         public void OnEnter()
         {
             param.animator.SetBool("isHit", true);
-            slider.value-=0.8f;
-            
+            if (param.getHit)
+            {
+                slider.value -= 10f;
+            }
 
+            
         }
         public void OnUpdate()
         {
@@ -290,14 +348,13 @@ namespace Project {
             {
                 manger.TransitionState(StateType.Death);
             }
-            if (slider.value <= 0.3) 
+            if (slider.value > 0 && slider.value <= 30) 
             {
                 manger.TransitionState(StateType.teleport);
-
             }
             else
             {
-                param.target = GameObject.FindWithTag("Players").transform;
+                //param.target = GameObject.FindWithTag("Players").transform;
                 manger.TransitionState(StateType.Chase);
             }
         }
@@ -363,20 +420,40 @@ namespace Project {
         {
             this.manger = manger;
             this.param = manger.param;
+            this.slider = param.hp.GetComponentInChildren<Slider>();
         }
 
         public void OnEnter()
         {
             param.animator.SetBool("teleVanish", true);
+            slider.value += 20;
             
         }
         public void OnUpdate()
         {
             info = param.animator.GetCurrentAnimatorStateInfo(0);
-          
-            if (info.normalizedTime >= .95f)
+
+            if (param.firstTele)
             {
-                manger.transform.position = new Vector2(param.telePoints[0].transform.position.x, param.telePoints[0].transform.position.y);
+                if (info.normalizedTime >= .95f)
+                {
+                    manger.transform.position = new Vector2(param.telePoints[0].transform.position.x, param.telePoints[0].transform.position.y);
+                    manger.TransitionState(StateType.Idle);
+                    param.firstTele = false;
+                    param.initTele = true;
+
+                }
+            }
+            else 
+            {
+                if (info.normalizedTime >= .95f)
+                {
+                    manger.transform.position = new Vector2(param.telePoints[1].transform.position.x, param.telePoints[1].transform.position.y);
+                    manger.TransitionState(StateType.Idle);
+                    param.firstTele = true;
+                    param.initTele = true;
+                }
+                
             }
         }
         public void OnExit()

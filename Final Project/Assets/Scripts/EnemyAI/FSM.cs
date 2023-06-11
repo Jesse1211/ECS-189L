@@ -28,6 +28,10 @@ namespace Project
         public Transform attackPoint;
         public float attackArea;
         public bool getHit;
+        public bool firstTele = false;
+        public bool initTele = false;
+    
+
     }
     public class FSM : MonoBehaviour
     {
@@ -97,7 +101,8 @@ namespace Project
             if (other.CompareTag("Player"))
             {
                 param.target = other.transform;
-                Debug.Log("abcs");
+                param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
+                
             }
         }
 

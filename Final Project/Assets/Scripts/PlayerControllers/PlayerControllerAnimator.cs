@@ -39,12 +39,14 @@ namespace Project
         public Transform attackPoint;
         public LayerMask enemyLayer;
         public GameObject blood;
+        
 
         void Start()
         {
             PlayerRigid = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             facingRight = true;
+            
         }
 
         void Update()
@@ -53,7 +55,7 @@ namespace Project
             //animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x / 5.0f));
             if (isTouchingDeathSwamp)
             {
-                health -= 0.001f;
+                HP.GetComponent<Slider>().value -= 0.001f;
             }
 
 
@@ -236,10 +238,10 @@ namespace Project
 
         public void TakeDamage(int damage)
         {
-            if (health > 0)
+            if (HP.GetComponent<Slider>().value > 0)
             {
-                health -= damage;
-                if (health <= 0.1f)
+                HP.GetComponent<Slider>().value -= damage;
+                if (HP.GetComponent<Slider>().value <= 0.1f)
                 {
                     animator.SetTrigger("die");
                     PlayerRigid.velocity = Vector2.zero;
