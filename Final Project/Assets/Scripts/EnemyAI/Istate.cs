@@ -6,5 +6,5 @@ public interface Istate
     void OnUpdate();
     void OnExit();
     GameObject GetHp();
-    void SetHp(GameObject hp);
+    void SetUp(GameObject hp);
 }

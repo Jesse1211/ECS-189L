@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project
-{
+namespace Project {
     public class IdleState : Istate
     {
+        // Start is called before the first frame update
         private FSM manger;
         private Parameter param;
         private float timer;
-
         public IdleState(FSM manger)
         {
             this.manger = manger;
@@ -22,39 +22,49 @@ namespace Project
             param.animator.SetTrigger("idle");
 
         }
-
         public void OnUpdate()
         {
-            //UnityEngine.Debug.Log(111);
             timer += Time.deltaTime;
+            if (param.getHit)
+            {
+                manger.TransitionState(StateType.IsHit);
 
-            if (param.target != null && param.target.position.x >= param.chasePoints[0].position.x
-                && param.target.position.x <= param.chasePoints[1].position.x && param.isFirstPosition)
-            {
-                manger.TransitionState(StateType.React);
             }
-            else if (param.target != null && param.target.position.x >= param.chasePoints[2].position.x
-                && param.target.position.x <= param.chasePoints[3].position.x && !(param.isFirstPosition))
+            if (!param.firstTele)
             {
-                manger.TransitionState(StateType.React);
+                if (param.target != null && param.target.position.x >= param.chasePoints[0].position.x
+                && param.target.position.x <= param.chasePoints[1].position.x)
+                {
+
+                    manger.TransitionState(StateType.React);
+                }
             }
+            if (param.firstTele)
+            {
+                 if (param.target != null && param.target.position.x >= param.chasePoints[2].position.x
+                 && param.target.position.x <= param.chasePoints[3].position.x)
+                 {
+
+                     manger.TransitionState(StateType.React);
+                 }
+            }
+
             if (timer >= param.idleTime)
             {
-                manger.TransitionState(StateType.Patrol);
+                     manger.TransitionState(StateType.Patrol);
             }
-        }
 
+        }
         public void OnExit()
         {
             timer = 0f;
         }
-
         public GameObject GetHp()
         {
             return param.hp;
         }
 
-        public void SetHp(GameObject hp)
+        public void SetUp(GameObject hp)
         {
             param.hp = hp;
         }
@@ -62,14 +72,15 @@ namespace Project
 
     public class PatrolState : Istate
     {
+        // Start is called before the first frame update
         private FSM manger;
         private Parameter param;
         private int patrolPosition;
+        private bool telePort = false;
         public PatrolState(FSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
-            patrolPosition = 0;
         }
 
         public void OnEnter()
@@ -77,65 +88,74 @@ namespace Project
             param.animator.SetTrigger("isRun");
 
         }
-
         public void OnUpdate()
         {
-            UnityEngine.Debug.Log("PatrolState");
-            Debug.Log(param.target != null);
+            if (param.initTele)
+            {
+                param.initTele = false;
+                if (param.firstTele)
+                {
+                    patrolPosition = 2;
+                }
+                else
+                {
+                    patrolPosition = 0;
+                }
+            }
             manger.Flip(param.patrolPoints[patrolPosition]);
             manger.transform.position = Vector2.MoveTowards(manger.transform.position, param.patrolPoints[patrolPosition].position, param.moveSpeed * Time.deltaTime);
 
-            if (param.target != null && param.target.position.x >= param.chasePoints[0].position.x
-                && param.target.position.x <= param.chasePoints[1].position.x && param.isFirstPosition)
+            if (param.getHit)
             {
-                manger.TransitionState(StateType.React);
-            }
-            else if (param.target != null && param.target.position.x >= param.chasePoints[2].position.x
-                && param.target.position.x <= param.chasePoints[3].position.x && !param.isFirstPosition)
-            {
-                manger.TransitionState(StateType.React);
+                manger.TransitionState(StateType.IsHit);
+
             }
 
+            if (param.target != null && param.target.position.x >= param.chasePoints[0].position.x
+                && param.target.position.x <= param.chasePoints[1].position.x && !param.firstTele)
+            {
+
+                manger.TransitionState(StateType.React);
+            }
+            if (param.target != null && param.target.position.x >= param.chasePoints[1].position.x
+               && param.target.position.x <= param.chasePoints[2].position.x && param.firstTele)
+            {
+
+                manger.TransitionState(StateType.React);
+            }
 
             if (Vector2.Distance(manger.transform.position, param.patrolPoints[patrolPosition].position) < 1f)
             {
                 manger.TransitionState(StateType.Patrol);
             }
         }
-
         public void OnExit()
         {
-            if (param.initiate)
+
+            if (!param.firstTele)
             {
-                param.initiate = false;
-                if (param.isFirstPosition)
+                patrolPosition++;
+                if (patrolPosition >= 2)
                 {
                     patrolPosition = 0;
                 }
-                else
+            }
+
+            else
+            {
+                patrolPosition++;
+                if (patrolPosition >= 4)
                 {
                     patrolPosition = 2;
                 }
             }
-            else
-            {
-                if (param.isFirstPosition)
-                {
-                    patrolPosition = (patrolPosition + 1) % 2;
-                }
-                else
-                {
-                    patrolPosition = (patrolPosition + 1) % 2 + 2;
-                }
-            }
         }
-
         public GameObject GetHp()
         {
             return param.hp;
         }
 
-        public void SetHp(GameObject hp)
+        public void SetUp(GameObject hp)
         {
             param.hp = hp;
         }
@@ -143,9 +163,9 @@ namespace Project
 
     public class ChaseState : Istate
     {
+        // Start is called before the first frame update
         private FSM manger;
         private Parameter param;
-
         public ChaseState(FSM manger)
         {
             this.manger = manger;
@@ -156,59 +176,60 @@ namespace Project
         {
             param.animator.SetTrigger("isRun");
         }
-
         public void OnUpdate()
         {
-            UnityEngine.Debug.Log("ChaseState");
             manger.Flip(param.target);
 
+            if (param.getHit)
+            {
+                manger.TransitionState(StateType.IsHit);
+
+            }
             if (param.target)
             {
                 manger.transform.position = Vector2.MoveTowards(manger.transform.position, param.target.position, param.chaseSpeed * Time.deltaTime);
             }
-            if ((param.target == null || manger.transform.position.x < param.chasePoints[0].position.x || manger.transform.position.x > param.chasePoints[1].position.x) && param.isFirstPosition)
+            if (!param.firstTele)
             {
-                manger.TransitionState(StateType.Idle);
+                if (param.target == null || manger.transform.position.x < param.chasePoints[0].position.x || manger.transform.position.x > param.chasePoints[1].position.x)
+                {
+                    manger.TransitionState(StateType.Idle);
+                }
             }
-            if ((param.target == null || manger.transform.position.x < param.chasePoints[2].position.x || manger.transform.position.x > param.chasePoints[3].position.x) && !param.isFirstPosition)
+            if (param.firstTele)
             {
-                manger.TransitionState(StateType.Idle);
+
+                if (param.target == null || manger.transform.position.x < param.chasePoints[2].position.x || manger.transform.position.x > param.chasePoints[3].position.x)
+                {
+                    manger.TransitionState(StateType.Idle);
+                }
             }
             if (Physics2D.OverlapCircle(param.attackPoint.position, param.attackArea, param.targetLayer))
             {
                 manger.TransitionState(StateType.Attack);
             }
-            if (Input.GetKeyDown(KeyCode.J) && Physics2D.OverlapCircle(param.target.GetComponent<PlayerControllerAnimator>().attackPoint.position, 
-                                                                       param.target.GetComponent<PlayerControllerAnimator>().attackRange, 
-                                                                       param.selfLayer))
-            {
-                manger.TransitionState(StateType.Hit);
-            }
 
         }
-
         public void OnExit()
         {
 
         }
-
         public GameObject GetHp()
         {
             return param.hp;
         }
 
-        public void SetHp(GameObject hp)
+        public void SetUp(GameObject hp)
         {
             param.hp = hp;
         }
     }
-
     public class ReactState : Istate
     {
+        // Start is called before the first frame update
         private FSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
-
         public ReactState(FSM manger)
         {
             this.manger = manger;
@@ -220,37 +241,31 @@ namespace Project
             param.animator.SetTrigger("isRun");
 
         }
-
         public void OnUpdate()
         {
-            UnityEngine.Debug.Log("ReactState");
             info = param.animator.GetCurrentAnimatorStateInfo(0);
+
+            if (param.getHit)
+            {
+                manger.TransitionState(StateType.IsHit);
+
+            }
 
             if (info.normalizedTime >= .95f)
             {
                 manger.TransitionState(StateType.Chase);
             }
-
-            if (Input.GetKeyDown(KeyCode.J) && Physics2D.OverlapCircle(param.target.GetComponent<PlayerControllerAnimator>().attackPoint.position, 
-                                                                       param.target.GetComponent<PlayerControllerAnimator>().attackRange, 
-                                                                       param.selfLayer))
-            {
-                manger.TransitionState(StateType.Hit);
-            }
-            
         }
-
         public void OnExit()
         {
 
         }
-
         public GameObject GetHp()
         {
             return param.hp;
         }
 
-        public void SetHp(GameObject hp)
+        public void SetUp(GameObject hp)
         {
             param.hp = hp;
         }
@@ -258,10 +273,10 @@ namespace Project
 
     public class AttackState : Istate
     {
+        // Start is called before the first frame update
         private FSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
-
         public AttackState(FSM manger)
         {
             this.manger = manger;
@@ -270,225 +285,89 @@ namespace Project
 
         public void OnEnter()
         {
-            param.animator.SetTrigger("pistolWhip");
+            param.animator.SetTrigger("gunAttack");
         }
-
         public void OnUpdate()
         {
-            UnityEngine.Debug.Log("AttackState");
             info = param.animator.GetCurrentAnimatorStateInfo(0);
+            if (param.getHit)
+            {
+                manger.TransitionState(StateType.IsHit);
 
-            if (info.normalizedTime >= 1.0f)
+            }
+            if (info.normalizedTime >= .95f)
             {
                 manger.TransitionState(StateType.Chase);
             }
-
-            if (Input.GetKeyDown(KeyCode.J) && Physics2D.OverlapCircle(param.target.GetComponent<PlayerControllerAnimator>().attackPoint.position, 
-                                                                       param.target.GetComponent<PlayerControllerAnimator>().attackRange, 
-                                                                       param.selfLayer))
-            {
-                manger.TransitionState(StateType.Hit);
-            }
         }
-
         public void OnExit()
         {
 
         }
-
         public GameObject GetHp()
         {
             return param.hp;
         }
 
-        public void SetHp(GameObject hp)
+        public void SetUp(GameObject hp)
         {
             param.hp = hp;
         }
     }
-
-    public class HitState : Istate
+    public  class HitState : Istate
     {
         // Start is called before the first frame update
         private FSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
-        // private Slider slider;
-        // private int previousHp;
+        private Slider slider;
+
 
         public HitState(FSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
-            // this.slider = param.hp.GetComponentInChildren<Slider>();
+            this.slider = param.hp.GetComponentInChildren<Slider>();
         }
 
         public void OnEnter()
         {
-            param.animator.SetTrigger("isHit");
-        }
+            param.animator.SetBool("isHit", true);
+            if (param.getHit)
+            {
+                slider.value -= 10f;
+            }
 
+
+        }
         public void OnUpdate()
         {
-            Debug.Log("HitState");
-
-            // slider.value = slider.value - 10.0f;
-
             info = param.animator.GetCurrentAnimatorStateInfo(0);
 
-            if (info.normalizedTime >= 1.5f)
+            if (slider.value <= 0)
             {
+                manger.TransitionState(StateType.Death);
+            }
+            if (slider.value > 0 && slider.value <= 30)
+            {
+                manger.TransitionState(StateType.teleport);
+            }
+            else
+            {
+                //param.target = GameObject.FindWithTag("Players").transform;
                 manger.TransitionState(StateType.Chase);
             }
-            // Debug.Log(1);
-            // if (hpValue >= 0)
-            // {
-            //     Debug.Log(2);
-            //     hpValue -= 10.0f;
-            //     //  Debug.Log("Enemy's health: " + hpValue);
-            //     // //if (hpValue <= 0.1f)
-            //     // //{
-            //     // //    param.animator.SetTrigger("die");
-            //     // //    Destory(manger, 1f);
-                    
-            //     // //    return;
-            //     // //}
-            //     // param.animator.SetTrigger("isHit");
-            //     if (hpValue <= 30)
-            //     {
-            //         manger.TransitionState(StateType.Teleport);
-            //     }
-            //     manger.TransitionState(StateType.Chase);
-            // }
-            // Debug.Log(3);
         }
-
         public void OnExit()
         {
-
+            param.getHit = false;
         }
-
         public GameObject GetHp()
         {
             return param.hp;
         }
 
-        public void SetHp(GameObject hp)
-        {
-            param.hp = hp;
-        }
-    }
-
-    public class TeleportState : Istate
-    {
-        // Start is called before the first frame update
-        private FSM manger;
-        private Parameter param;
-        private AnimatorStateInfo info;
-
-        public TeleportState(FSM manger)
-        {
-            this.manger = manger;
-            this.param = manger.param;
-        }
-
-        public void OnEnter()
-        {
-            param.animator.SetTrigger("smokeVanish");
-        }
-
-        public void OnUpdate()
-        {
-            Debug.Log("TeleportState");
-            info = param.animator.GetCurrentAnimatorStateInfo(0);
-
-            if (isFirstPosition)
-            {
-                isFirstPosition = false;
-            }
-            else
-            {
-                isFirstPosition = true;
-            }
-
-            if (info.normalizedTime >= .95f)
-            {
-                manger.transform.position = new Vector2(0, 0); // Teleport position
-                manger.TransitionState(StateType.Healing);
-            }
-
-            if (Input.GetKeyDown(KeyCode.J) && Physics2D.OverlapCircle(param.target.GetComponent<PlayerControllerAnimator>().attackPoint.position, 
-                                                                       param.target.GetComponent<PlayerControllerAnimator>().attackRange, 
-                                                                       param.selfLayer))
-            {
-                manger.TransitionState(StateType.Hit);
-            }
-        }
-
-        public void OnExit()
-        {
-            param.initiate = true;
-        }
-
-        public GameObject GetHp()
-        {
-            return param.hp;
-        }
-
-        public void SetHp(GameObject hp)
-        {
-            param.hp = hp;
-        }
-    }
-
-    public class HealingState : Istate
-    {
-        // Start is called before the first frame update
-        private FSM manger;
-        private Parameter param;
-        private AnimatorStateInfo info;
-        private float previousHp;
-
-        public HealingState(FSM manger)
-        {
-            this.manger = manger;
-            this.param = manger.param;
-        }
-
-        public void OnEnter()
-        {
-            param.animator.SetTrigger("idle");
-            previousHp = param.hp.GetComponentInChildren<Slider>().value;
-        }
-
-        public void OnUpdate()
-        {
-            Debug.Log("Healing State");
-            // If not been attacked, will heal until hp full
-            var hpValue = param.hp.GetComponentInChildren<Slider>().value;
-
-            if (previousHp >= hpValue) // attack signal
-            {
-                hpValue += 1;
-            }
-            else
-            {
-                manger.TransitionState(StateType.Idle);
-            }
-            previousHp = hpValue;
-        }
-
-        public void OnExit()
-        {
-
-        }
-
-        public GameObject GetHp()
-        {
-            return param.hp;
-        }
-
-        public void SetHp(GameObject hp)
+        public void SetUp(GameObject hp)
         {
             param.hp = hp;
         }
@@ -500,8 +379,6 @@ namespace Project
         private FSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
-        private int previousHp;
-
         public DeathState(FSM manger)
         {
             this.manger = manger;
@@ -510,35 +387,90 @@ namespace Project
 
         public void OnEnter()
         {
-            param.animator.SetTrigger("hit");
+            param.animator.SetBool("die", true);
         }
-
         public void OnUpdate()
         {
-            Debug.Log("DeathState");
-            var hpValue = param.hp.GetComponentInChildren<Slider>().value;
-            if (hpValue <= 0.1f)
-            {
-                param.animator.SetTrigger("die");
-                //Destory(manger, 1f);
-            }
-        }
 
+        }
         public void OnExit()
         {
 
         }
-
         public GameObject GetHp()
         {
             return param.hp;
         }
 
-        public void SetHp(GameObject hp)
+        public void SetUp(GameObject hp)
         {
             param.hp = hp;
         }
     }
+
+    public class TeleState : Istate
+    {
+        // Start is called before the first frame update
+        private FSM manger;
+        private Parameter param;
+        private AnimatorStateInfo info;
+        private Slider slider;
+
+        public TeleState(FSM manger)
+        {
+            this.manger = manger;
+            this.param = manger.param;
+            this.slider = param.hp.GetComponentInChildren<Slider>();
+        }
+
+        public void OnEnter()
+        {
+            param.animator.SetTrigger("smokeVanish");
+            slider.value += 20;
+        }
+        public void OnUpdate()
+        {
+            info = param.animator.GetCurrentAnimatorStateInfo(0);
+
+            if (param.firstTele)
+            {
+                if (info.normalizedTime >= .95f)
+                {
+                    manger.transform.position = new Vector2(param.telePoints[0].transform.position.x, param.telePoints[0].transform.position.y);
+                    manger.TransitionState(StateType.Idle);
+                    param.firstTele = false;
+                    param.initTele = true;
+
+                }
+            }
+            else
+            {
+                if (info.normalizedTime >= .95f)
+                {
+                    manger.transform.position = new Vector2(param.telePoints[1].transform.position.x, param.telePoints[1].transform.position.y);
+                    manger.TransitionState(StateType.Idle);
+                    param.firstTele = true;
+                    param.initTele = true;
+                }
+
+            }
+        }
+        public void OnExit()
+        {
+
+        }
+        public GameObject GetHp()
+        {
+            return param.hp;
+        }
+
+        public void SetUp(GameObject hp)
+        {
+            param.hp = hp;
+        }
+    }
+
+
 
 
 }

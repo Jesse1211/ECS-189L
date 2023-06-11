@@ -1,14 +1,15 @@
 using System;
-using System.Collections;   
+using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEditor.Tilemaps;
 using UnityEngine;
-
+using UnityEngine.UI;
 namespace Project
 {
     public enum StateType
     {
-        Idle, Patrol, Chase, React, Attack, Death, Hit, Teleport, Healing
+        Idle, Patrol, Chase, React, Attack, Death, IsHit, teleport
     }
 
     [Serializable]
@@ -20,27 +21,23 @@ namespace Project
         public float idleTime;
         public Transform[] patrolPoints;
         public Transform[] chasePoints;
+        public Transform[] telePoints;
         public Animator animator;
         public Transform target;
         public LayerMask targetLayer;
-        public LayerMask selfLayer;
         public Transform attackPoint;
         public float attackArea;
-        public bool isFirstPosition;
-        public bool initiate;
-        public Transform[] teleportSpots;
-    }
+        public bool getHit;
+        public bool firstTele = false;
+        public bool initTele = false;
 
-    public class FSM : MonoBehaviour
+
+    }
+    public class GunSlingerFSM : MonoBehaviour
     {
         public Parameter param;
         private Istate currentState;
         private Dictionary<StateType, Istate> Enemystates = new Dictionary<StateType, Istate>();
-
-        ~FSM()
-        {
-            Debug.Log("DONE");
-        }
 
         void Start()
         {
@@ -49,18 +46,21 @@ namespace Project
             Enemystates.Add(StateType.Chase, new ChaseState(this));
             Enemystates.Add(StateType.React, new ReactState(this));
             Enemystates.Add(StateType.Attack, new AttackState(this));
-            Enemystates.Add(StateType.Teleport, new TeleportState(this));
-            Enemystates.Add(StateType.Healing, new HealingState(this));
-            Enemystates.Add(StateType.Hit, new HitState(this));
+            Enemystates.Add(StateType.IsHit, new HitState(this));
             Enemystates.Add(StateType.Death, new DeathState(this));
-
+            Enemystates.Add(StateType.teleport, new TeleState(this));
             TransitionState(StateType.Idle);
             param.animator = GetComponent<Animator>();
         }
 
+        // Update is called once per frame
         void Update()
         {
             currentState.OnUpdate();
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                param.getHit = true;
+            }
         }
 
         public void TransitionState(StateType type)
@@ -72,11 +72,13 @@ namespace Project
             }
             currentState = Enemystates[type];
             currentState.OnEnter();
-            currentState.SetHp(param.hp);
+            currentState.SetUp(param.hp);
         }
 
+
+
         /// <summary>
-        /// find the player position 
+        /// find the player position
         /// </summary>
         /// <param name="Target"></param>
         public void Flip(Transform Target)
@@ -96,23 +98,25 @@ namespace Project
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            // if (other.CompareTag("Player"))
-            // {
-            //     param.target = other.transform;
-            //     Debug.Log("abcs");
-            // }
+            Debug.Log("TAG = " + other.tag);
+            if (other.CompareTag("Player"))
+            {
+                param.target = other.transform;
+                param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            // if (other.CompareTag("Player"))
-            // {
-            //     param.target = null;
-            // }
+            if (other.CompareTag("Player"))
+            {
+                param.target = null;
+            }
         }
         private void OnDrawGizmos()
         {
             Gizmos.DrawWireSphere(param.attackPoint.position, param.attackArea);
         }
+
     }
 }
