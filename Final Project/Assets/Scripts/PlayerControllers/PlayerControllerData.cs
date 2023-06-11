@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 namespace Project
 {
     /// <summary>
@@ -20,6 +20,7 @@ namespace Project
         [NonSerialized] public BagManager bagManager;
         private CharacterHP HPscript;
         public bool isTouchingDeathSwamp;
+        
 
         void Awake()
         {
@@ -28,6 +29,7 @@ namespace Project
             collected = false;
             bagManager = bag.GetComponent<BagManager>();
             HPscript = HP.GetComponent<CharacterHP>();
+           
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -58,7 +60,7 @@ namespace Project
             // In battle scene:
             if (collision.gameObject.tag == "DieImmediately")
             {
-                health = 0;
+                HP.GetComponent<Slider>().value = 0;
             }
             if (collision.gameObject.tag == "DieSlowly")
             {
