@@ -1,38 +1,13 @@
 using System;
-using System.Collections;   
+using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UI;
+
 namespace Project
 {
-    public enum StateType
-    {
-        Idle, Patrol, Chase, React, Attack, Death, IsHit, teleport
-    }
-
-    [Serializable]
-    public class Parameter
-    {
-        public GameObject hp;
-        public float moveSpeed;
-        public float chaseSpeed;
-        public float idleTime;
-        public Transform[] patrolPoints;
-        public Transform[] chasePoints;
-        public Transform[] telePoints;
-        public Animator animator;
-        public Transform target;
-        public LayerMask targetLayer;
-        public Transform attackPoint;
-        public float attackArea;
-        public bool getHit;
-        public bool firstTele = false;
-        public bool initTele = false;
-    
-
-    }
     public class FSM : MonoBehaviour
     {
         public Parameter param;
@@ -42,6 +17,8 @@ namespace Project
 
         void Start()
         {
+            param = new Parameter();
+
             Enemystates.Add(StateType.Idle, new IdleState(this));
             Enemystates.Add(StateType.Patrol, new PatrolState(this));
             Enemystates.Add(StateType.Chase, new ChaseState(this));
@@ -57,7 +34,7 @@ namespace Project
         // Update is called once per frame
         void Update()
         {
-            if(param.hp.GetComponent<Slider>().value > 0 )
+            if (param.hp.GetComponent<Slider>().value > 0)
                 currentState.OnUpdate();
             else
             {
@@ -78,8 +55,8 @@ namespace Project
             currentState.SetUp(param.hp);
         }
 
-        
-        
+
+
         /// <summary>
         /// find the player position 
         /// </summary>
@@ -110,7 +87,7 @@ namespace Project
 
         }
 
-       
+
 
         private void OnTriggerExit2D(Collider2D other)
         {

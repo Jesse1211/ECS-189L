@@ -15,14 +15,16 @@ namespace Project
 
         void Start()
         {
-            Enemystates.Add(StateType.Idle, new IdleState(this));
-            Enemystates.Add(StateType.Patrol, new PatrolState(this));
-            Enemystates.Add(StateType.Chase, new ChaseState(this));
-            Enemystates.Add(StateType.React, new ReactState(this));
-            Enemystates.Add(StateType.Attack, new AttackState(this));
-            Enemystates.Add(StateType.IsHit, new HitState(this));
-            Enemystates.Add(StateType.Death, new DeathState(this));
-            Enemystates.Add(StateType.teleport, new TeleState(this));
+            param = new Parameter();
+
+            Enemystates.Add(StateType.Idle, new GunDlingerIdleState(this));
+            Enemystates.Add(StateType.Patrol, new GunDlingerPatrolState(this));
+            Enemystates.Add(StateType.Chase, new GunDlingerChaseState(this));
+            Enemystates.Add(StateType.React, new GunDlingerReactState(this));
+            Enemystates.Add(StateType.Attack, new GunDlingerAttackState(this));
+            Enemystates.Add(StateType.IsHit, new GunDlingerHitState(this));
+            Enemystates.Add(StateType.Death, new GunDlingerDeathState(this));
+            Enemystates.Add(StateType.teleport, new GunDlingerTeleState(this));
             TransitionState(StateType.Idle);
             param.animator = GetComponent<Animator>();
         }

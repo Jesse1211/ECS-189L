@@ -4,15 +4,14 @@ using System.Runtime.ExceptionServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project
-{
-    public class IdleState : Istate
+namespace Project {
+    public class GunDlingerIdleState : Istate
     {
         // Start is called before the first frame update
-        private FSM manger;
+        private GunSlingerFSM manger;
         private Parameter param;
         private float timer;
-        public IdleState(FSM manger)
+        public GunDlingerIdleState(GunSlingerFSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
@@ -71,14 +70,14 @@ namespace Project
         }
     }
 
-    public class PatrolState : Istate
+    public class GunDlingerPatrolState : Istate
     {
         // Start is called before the first frame update
-        private FSM manger;
+        private GunSlingerFSM manger;
         private Parameter param;
         private int patrolPosition;
         private bool telePort = false;
-        public PatrolState(FSM manger)
+        public GunDlingerPatrolState(GunSlingerFSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
@@ -162,12 +161,12 @@ namespace Project
         }
     }
 
-    public class ChaseState : Istate
+    public class GunDlingerChaseState : Istate
     {
         // Start is called before the first frame update
-        private FSM manger;
+        private GunSlingerFSM manger;
         private Parameter param;
-        public ChaseState(FSM manger)
+        public GunDlingerChaseState(GunSlingerFSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
@@ -225,13 +224,13 @@ namespace Project
             param.hp = hp;
         }
     }
-    public class ReactState : Istate
+    public class GunDlingerReactState : Istate
     {
         // Start is called before the first frame update
-        private FSM manger;
+        private GunSlingerFSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
-        public ReactState(FSM manger)
+        public GunDlingerReactState(GunSlingerFSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
@@ -272,13 +271,13 @@ namespace Project
         }
     }
 
-    public class AttackState : Istate
+    public class GunDlingerAttackState : Istate
     {
         // Start is called before the first frame update
-        private FSM manger;
+        private GunSlingerFSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
-        public AttackState(FSM manger)
+        public GunDlingerAttackState(GunSlingerFSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
@@ -315,16 +314,16 @@ namespace Project
             param.hp = hp;
         }
     }
-    public  class HitState : Istate
+    public  class GunDlingerHitState : Istate
     {
         // Start is called before the first frame update
-        private FSM manger;
+        private GunSlingerFSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
         private Slider slider;
 
 
-        public HitState(FSM manger)
+        public GunDlingerHitState(GunSlingerFSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
@@ -374,13 +373,13 @@ namespace Project
         }
     }
 
-    public class DeathState : Istate
+    public class GunDlingerDeathState : Istate
     {
         // Start is called before the first frame update
-        private FSM manger;
+        private GunSlingerFSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
-        public DeathState(FSM manger)
+        public GunDlingerDeathState(GunSlingerFSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
@@ -409,15 +408,15 @@ namespace Project
         }
     }
 
-    public class TeleState : Istate
+    public class GunDlingerTeleState : Istate
     {
         // Start is called before the first frame update
-        private FSM manger;
+        private GunSlingerFSM manger;
         private Parameter param;
         private AnimatorStateInfo info;
         private Slider slider;
         
-        public TeleState(FSM manger)
+        public GunDlingerTeleState(GunSlingerFSM manger)
         {
             this.manger = manger;
             this.param = manger.param;
