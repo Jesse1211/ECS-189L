@@ -57,10 +57,7 @@ namespace Project
         void Update()
         {
             currentState.OnUpdate();
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                param.getHit = true;
-            }
+            
         }
 
         public void TransitionState(StateType type)
@@ -104,18 +101,10 @@ namespace Project
                 param.target = other.transform;
                 param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
             }
+
         }
 
-        //private void OnCollisionExit2D(Collision2D collision)
-        //{
-        //    Debug.Log("OnCollisionEnter2D = " + collision.gameObject.tag);
-        //    if (collision.gameObject.tag == "Player")
-        //    {
-        //        param.target = collision.transform;
-        //        param.target.GetComponent<PlayerControllerAnimator>().TakeDamage(10);
-
-        //    }
-        //}
+       
 
         private void OnTriggerExit2D(Collider2D other)
         {
