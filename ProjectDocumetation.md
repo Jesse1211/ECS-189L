@@ -33,7 +33,7 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
 - GitHub: 
   - I decided to use GitHub because [Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues), [Branch & Merging](https://www.varonis.com/blog/git-branching), [Project](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) are very robust features as an environment to keep track of progress and deployment. 
   - I pushed all important files into this Repo, such as `ProgressReport`, `Proposal`, and `README`. `README` is to provide teammates basic knowledge of Github. 
-  - I created over 50 issues by dividing each goal into small tasks. I open branches if the task takes a long time to implement to ensure the progress works in multi-thread. 
+  - I created over 50 issues by dividing each goal into small tasks. And opened & merged 26 branches, branches are used if the task takes a long time to implement to ensure the progress works in multi-thread. 
   - I created a [Project](https://github.com/users/Jesse1211/projects/1) in Github, which connects to the current repository. It provides Overall tasks, tasks sorted by Assignee in Table layout, and progress status view in Board layout. Since the project connects to the repository, we could put `Todo`, `In Progress`, and `Completed` statuses on each issue to provide issue status visually and positive feedback when completed.
   - The tricky point is Merging because Unity scenes are not reading-friendly. I tried to assign each branch works on different scenes, but the problem was inevitable. Therefore, I need the assignees accompany when merging the branching to avoid losing anything important. If something is wrong, we will look commitment history and get the old version of the scene, and update the references by hand. 
 
@@ -41,21 +41,37 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
   - We split the project into three stages for 5 weeks. 1: draw scene by using `Tilemap`, add some prefabs. 2: Add script to prefabs to make it responsive, and implement the bag feature; 3: connect scenes, and implement enemy AI feature. 
   - Since most of the team members have no experience in Unity. A leader needs to catch up on Unity before everyone does. I have to figure out how to deploy the ideas into programming logic to increase working efficiency before assigning tasks. Then I can teach them coding or use Unity.
   - I believe tasks are not set only for specific assignees; they are always first come, first served by anyone. Since I am using divide & counter strategy, tasks are a small part of the stage. Anyone can finish them within a couple of hours. I provide my personal Zoom meeting link to anyone. Since I have learned how to implement it, I helped them complete most tasks efficiently. If they were not in the zone or stressed, I helped them to calm down and sort the logic by writing pseudocode.
-    - Helped XuanZhen Lao and Zuge Li build scenes using `TileMap`. Using `TileMap` is not difficult, but drawing requires innovation. We did not know the final version of the map, but our innovation pumps out when brushing on the background. I set the different categories in the map because of component differences. Also, encapsulation is very convenient for future modification and maintenance. 
-    - Helped Zuge Li to develop interactable prefabs, such as movable boat and elevator, and death zone which makes damage to player. etc.
-    - Since [Bag feature](https://github.com/Jesse1211/ECS-189L/tree/main/Final%20Project/Assets/Scripts/Bag) is too difficult, I designed and implemented it. This was challenging because I had to implement it most generically. Otherwise, it will be harder to deploy the feature into the project.
-      - Implementation details:
-        - `BagManager`: provides `useItem()` when the user clicks the item. `useItem()` determines to destroy or swap the item to another weapon list
-        - `BagItemSlot`: tracks if the player right-clicks the item, it executes `BagManager.useItem()`
-        - `BagDataLoader`: store two lists and provides 4 APIs to `BagManager.useItem()`
-        - The `PlayerCOntrollerData` has access to `BagManager` to store the collided item in the bag
-    - Since the player is able to interact with every object in unity, it is better to split the controller into data and animator, implementation details:
-      - `PlayerControllerData` handles the logic when the player collides with some game objects, and provides `TakeDamange(int damage)` to modify HP and `blood` animation.
-      - `PlayerControllerAnimator` inherits `PlayerControllerData` handles setting triggers in the animator, and the logic to attack by instantiating prefabs
-    - Taught teammates about making animation and animator controllers for characters and the API methods to switch scenes. Animation needs to be done rigorously. We modified some animations a couple of times later because we could see minor lagging in character.
-    - Developed the structure of dialogue with typing effect in UI. This is a tricky feature because the UI only triggers when the player collides with certain prefabs. Also, typing effect happens in multi-thread. If the player moves away and hits the prefabs again, the typing thread cannot restart. we want to keep the player's experience, so we decided to "freeze" player movement until finished reading it. This is not the generic way to solve; it is the future task. 
-    - Used `Mask`, `Fill` to display the number of orbs collected. And `MeterScript` which sets the value of `Slider` with gradient color
 
+- Completed tasks:
+
+  Before implementing any features, I recommend everyone do it most generically. Because this is a big project, obeying encapsulation is convenient for future modification and maintenance. 
+
+  - Build Scenes: 
+    - Helped XuanZhen Lao and Zuge Li build scenes using `TileMap`. Using `TileMap` is not difficult, but drawing requires innovation, and we need to set different categories according to the use of components. We set `Ground` as the plane player stands on, `Props` contains all prefabs with scripts, and `Background` has the tilemap renderer to display. We did not know the final version of the map, but our innovation pumps out when brushing on the background. 
+  - Develop interactable prefabs: 
+    - Helped Zuge Li to develop interactable prefabs, such as a movable boat and elevator, and death zone, which caused damage to the player. etc. Writing scripts seemed complicated, but we handled it pretty well.  for prefabs to automatically move, we build 2 empty game objects representing 2 endpoints where prefabs can move from one to another. For prefabs that deduct the player's HP value, we put a specific tag to the prefabs, which changes the player's HP when it collides.
+  - Develop [Bag feature](https://github.com/Jesse1211/ECS-189L/tree/main/Final%20Project/Assets/Scripts/Bag): 
+
+    The player collects items that have already been instantiated, so I decided not to destroy and re-instantiate it from map to bag because destroy and instantiate are expensive. Therefore, I modify the items' positions and hierarchy and store the prefab data in one of 2 lists: activated weapon list and collected item list. When the player uses bag items, we determine if the item should be destroyed or swapped to another list. Prefabs inside the activated weapon list will be launched by pressing `1`, `2`, `3`, `4` keys. 
+    - Since this task may require more time and be challenging because I had to implement it most generically. Otherwise, it will be harder to deploy the feature into the project.
+    - Implementation details:
+        - `BagManager`: provides `useItem()` when the user clicks the item. `useItem()` determines to destroy or swap the item to another weapon list
+      - `BagItemSlot`: tracks if the player right-clicks the item, it executes `BagManager.useItem()`. (Helped by LiangHang Wu)
+      - `BagDataLoader`: store two lists and provides 4 APIs to `BagManager.useItem()`
+      - The `PlayerCOntrollerData` has access to `BagManager` to store the collided item in the bag
+  - Player Controller: 
+
+    Since the player is able to interact with every object in unity, it is better to split the controller into data and animator, implementation details:
+    - `PlayerControllerData` handles the logic when the player collides with some game objects, and provides `TakeDamange(int damage)` to modify HP and `blood` animation.
+    - `PlayerControllerAnimator` inherits `PlayerControllerData` handles setting triggers in the animator, and the logic to attack by instantiating prefabs.
+  
+  - Taught teammates about making animation and animator controllers for characters and the API methods to switch scenes. Animation needs to be done rigorously. We modified some animations a couple of times later because we could see minor lagging in character.
+  
+  - Dialogue: 
+    
+    Developed the structure of dialogue with typing effect in UI. This is a tricky feature because the UI only triggers when the player collides with certain prefabs. Also, typing effect happens in multi-thread. If the player moves away and hits the prefabs again, the typing thread cannot restart. we want to keep the player's experience, so we decided to "freeze" player movement until finished reading it. This is not the generic way to solve; it is the future task. 
+
+  - Used `Mask`, `Fill` to display the number of orbs collected. And `MeterScript` which sets the value of `Slider` with gradient color.
 
 ## User Interface - Xuanzhen Lao
 - Built the basic outlook style of `BattleScene` by using TileMap. [issue] (https://github.com/Jesse1211/ECS-189L/issues/17).
@@ -83,21 +99,27 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
 
 ## Gameplay Programmer - Jianfeng Lin
 - Camera Follow:
+  
 	The implementation of the camera controller is similar to the Exercise2 PositionFollowCamera.cs. But it has a little bit different. The boundary of the camera can be set manually so that the player won’t see the unrelated scene in the game. This is simply implemented by using the Lerp function and Clamp function
   
 - Death Scene:
+  
 	When the player succumbs in the game, they are transported to the death scene. By interacting with any part of this death scene, they can navigate back to the last scene. The mechanism is simply implemented by a script “BackToFight”, which is attached to the button.
 
 - Health Bar
+  
 	The functionality of the player's health bars is facilitated through a UI slider, composed of two distinct images. One is called the background, which indicates the background color of the health bar. The second is called “Fill area”, which indicates the current HP of the player. They are attached under the canvas. It is controlled by the script “CharacterHP.” However, this script is only invoked when the player's character dies, prompting the transition to the death scene. The health bar updates by assessing the value from “PlayerControllerAnimator.” The value of the health bar changes under various conditions, such as when the player stumbles into traps or when the player is attacked by the enemy.
 
 - Enemy Health bar:
-The Enemy health bar is implemented in the same way as the player health bar. However, these bars are linked to two game bosses, namely Fanboy and Gunslinger. Their health bars are displayed above their heads and have the capability to track the bosses' movements. The value of the health bar is updated by the script called “IdleState” and “GunSlinderIdleState”. In these two scripts, they have a common state, which is “IsHit.” It can be accessed when the Bosses are hit by the player. 
+  
+  The Enemy health bar is implemented in the same way as the player health bar. However, these bars are linked to two game bosses, namely Fanboy and Gunslinger. Their health bars are displayed above their heads and have the capability to track the bosses' movements. The value of the health bar is updated by the script called “IdleState” and “GunSlinderIdleState”. In these two scripts, they have a common state, which is “IsHit.” It can be accessed when the Bosses are hit by the player. 
 
 - ThunderBolt：
+  
 	Before the player can confront the Boss in the battle scene, they must first engage in conversation with the Non-Player Character (NPC). Once the dialogue with the NPC concludes, a thunder-created battle zone materializes. The player is restricted from leaving this zone until they have successfully defeated the Boss. This battle zone is implemented by the script called “thunderTrigger.” After 
 
 - Enemy AI: 
+  
 	The Fanboy AI and Gunslinger AI are implemented by using the finite state machine. The scripts are under the file called EnemyAI. "Model" holds the fundamental data. "IdleState" includes eight states, namely Idle, Patrol, Chase, React, Attack, IsHit, Death, and Teleport.  They are able to transition between states under the condition. These states allow the AI to do some simple decisions. For instance, if the AI's HP falls below 30, it has the ability to teleport to a different location for HP recovery. Moreover, AI can chase and attack the player in a given area. “FSM” is an executor, which provides some helper functions such as TransitionState, Flip, and OnTriggerEnter2D to help transition the states. 
 	
 
@@ -129,6 +151,8 @@ Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-serie
 ## Gameplay Testing
 ### Jesse Liu
 - Only used `Debug.Log()` to make sure the functionality
+- After teammates finish scripts, I need to deploy them to various prefabs to combine three scenes. I need to pay attention to layer & tag settings, such as the enemy cannot attack the player. Also, scenes do not have the same unit scale, I need to modify the main character's size & vertical jump & movement speed. 
+  
 
 ## Narrative Design
 ### Xinhe Wang
