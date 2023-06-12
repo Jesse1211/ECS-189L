@@ -18,7 +18,8 @@ namespace Project
         public GameObject blood;
         [NonSerialized] public Rigidbody2D PlayerRigid;
         [NonSerialized] public Animator animator;
-        [NonSerialized] public bool onGround = true;
+        [NonSerialized] public bool onGround = false;
+        [NonSerialized] public bool onRoof = false;
         [NonSerialized] public bool isTouchingWall;
         [NonSerialized] public BagManager bagManager;
         [NonSerialized] public bool facingRight;
@@ -66,6 +67,11 @@ namespace Project
             if (collision.collider.tag == "ground" || collision.collider.tag == "paltform" || collision.collider.tag == "DieSlowly")
             {
                 onGround = true;
+            }
+
+            if (collision.collider.tag == "Roof")
+            {
+                onRoof = true;
             }
 
             if (collision.collider.tag == "PickUp")
@@ -127,6 +133,12 @@ namespace Project
             {
                 onGround = false;
             }
+
+            if (collision.collider.tag == "Roof")
+            {
+                onRoof = false;
+            }
+
 
             if (collision.collider.tag == "Wall")
             {

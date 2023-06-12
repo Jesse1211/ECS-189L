@@ -17,21 +17,19 @@ namespace Project
         private void Start()
         {
             playerController = prefab.GetComponent<PlayerControllerData>();
-            SetMaxHealth(10); //sets your meter's fill to maximum from the start
+            SetMaxHealth(5);
         }
 
         void FixedUpdate()
         {
-            SetHealth(playerController.score); //links your variable to the meter's fill
+            SetHealth(playerController.score);
         }
 
         public void SetMaxHealth(float health)
         {
             slider.maxValue = health;
             slider.value = health;
-
             fill.color = gradient.Evaluate(1f);
-
         }
 
         public void SetHealth(float health)

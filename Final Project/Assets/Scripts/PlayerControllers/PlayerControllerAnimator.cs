@@ -22,8 +22,8 @@ namespace Project
         public Transform frontcheck;
         private float wallSlidingSpeed = 5;
         private bool wallJumping;
-        private float xWallForce = 15f;
-        private float yWallForce = 30f;
+        private float xWallForce = 10f;
+        private float yWallForce = 10f;
         private float wallJumpTime = 0.05f;
 
         // attack
@@ -61,7 +61,7 @@ namespace Project
                 Attack();
                 updateAnimator();
 
-                isWallSliding = ((isTouchingWall is true) && (!onGround) && Input.GetAxisRaw("Horizontal") != 0) ? true : false;
+                isWallSliding = ((isTouchingWall is true) && (!onGround) && (!onRoof) && Input.GetAxisRaw("Horizontal") != 0) ? true : false;
 
                 if (isWallSliding)
                 {
@@ -85,7 +85,7 @@ namespace Project
         {
             if (Input.GetKey(KeyCode.Space) && onGround)
             {
-                PlayerRigid.velocity = Vector2.up * 15f;
+                PlayerRigid.velocity = Vector2.up * 9f;
             }
 
             if (PlayerRigid.velocity.y > 0 && !onGround)

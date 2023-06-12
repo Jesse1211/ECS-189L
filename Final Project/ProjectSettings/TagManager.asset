@@ -27,6 +27,7 @@ TagManager:
   - Deer
   - Secret
   - GunSlinger
+  - Roof
   layers:
   - Default
   - TransparentFX

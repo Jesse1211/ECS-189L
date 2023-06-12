@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 8779417814151435666}
   player: {fileID: 1448317203}
-  sceneIndex: 0
+  sceneIndex: 2
 --- !u!61 &7724551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8656,7 +8656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 55de55d3d386dbd42b807acedaf164aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f2e5610db5cda34da687e66843a29e8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -41262,6 +41262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b35db3e1aaf39499948e610cf14485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &1348156074
 GameObject:
   m_ObjectHideFlags: 0
@@ -44798,7 +44799,7 @@ GameObject:
   - component: {fileID: 1608625334}
   - component: {fileID: 1608625333}
   m_Layer: 5
-  m_Name: Health
+  m_Name: Collection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44916,7 +44917,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 8
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:

@@ -22,7 +22,11 @@ namespace Project
 
                     if (SceneManager.GetActiveScene().buildIndex == 0)
                     {
-                        this.GetComponent<NPC>().enabled = false;
+
+                        if (this.name == "Crow")
+                        {
+                            this.GetComponent<NPC>().enabled = false;
+                        }
 
                         StartCoroutine(SwitchScene(sceneIndex));
                     }
