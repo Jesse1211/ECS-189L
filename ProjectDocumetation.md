@@ -14,6 +14,7 @@ A little girl and her parents are trapped in a unknown island. To find and rescu
   - Player can collect fruits to bump the HP
   - Open the bag, left panel shows the activated weapon. To active them, right click the collected weapon in the right panel. To launch the weapon, click `1`, `2`, `3`, `4`.
   
+
 There are three scenes in this game:
 - Main scene: 
   - The player can browse and look for Ms. Deer for more instructions. 
@@ -88,14 +89,24 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
   - Use interface to provide `OnEnter()`, `OnUpdate()`, `OnExit()`, `GetHp()`, `SetUp()` to each state.
 
 ## Movement/physics - LiangHang Wu
-- Designed & Implemented `FloatingIslandScene` with prefabs which made by `TileMap`
-- Worked with Jesse (Producer):
-    - Implemented UI for bag with responsive actions by using `Canvas`, many game objects for slots inside the bag
-    - Used many game objects as slots of `active weapon` and `collected items`.
+- Developed the `FloatingIslandScene` in the game. 
 - Finalized Animator & Animation for main character, depolyed it to `FloatingIslandScene`. [issue](https://github.com/Jesse1211/ECS-189L/issues/18)
 - Implemented animator `Fanboy`, `Gunslinger`. [issue](https://github.com/Jesse1211/ECS-189L/issues/43)
-- Simple Enemy NPC:
-  - Impletement NPCs' attack, run animation from `Enemy`
+- Implemented animators and animations for various enemy types, including Demon, Skeleton, Goblin, Mushroom, and FlyEye. 
+- 
+  Implemented essential features for enemies within the `Enemy.cs` script:
+  - Developed a patrol mechanism allowing enemies to navigate and walk between designated points on the map, ensuring they maintain movement within a specific area.
+  - Implemented functionality for enemies to scan the area in front of them, detecting the presence of the main character. Once the main character is detected, enemies initiate the attack behavior.
+  - Incorporated damage detection for enemies, enabling them to receive damage when attacked by the main character. Additionally, implemented blood particle effects to enhance the visual feedback of enemy damage.
+- 
+  Implemented key features for the main character within the `GirlController.cs` script:
+  - Developed fundamental movement mechanics and corresponding animation reactions, including running, jumping, attacking, dodging, and other skills.
+  - Implemented a ranged attack functionality for the main character, enabling her to shoot a blue bolt projectile during attacks.
+  - Integrated damage detection for the main character, allowing her to receive damage when attacked by enemies. Additionally, incorporated blood particle effects to enhance the visual representation of the main character's injuries.
+- Created the 'bolt' prefab in game. When the main character performs a ranged attack, the prefab is instantiated and remains active for a certain duration. It disappears either upon colliding with an object or reaching its lifetime limit.
+- Collaborated with Jesse(Producer), to implement the user interface for the player's bag:
+  - Utilized the `Canvas` and creating multiple game objects to serve as slots within the bag. 
+  - Implemented interactive functionality to ensure responsive actions when interacting with the bag UI.
 
 ## Gameplay Programmer - Jianfeng Lin
 - Camera Follow:
@@ -168,4 +179,5 @@ Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-serie
 
 ## Game Feel
 ### LiangHang Wu
-- **Document what you added to and how you tweaked your game to improve its game feel.**
+- Implemented visual effects in the game to enhance the combat experience. Added blood particles that appear when the main character or enemy is attacked, creating a realistic depiction of the impact. Additionally, incorporated dynamic animations to provide reactive movements when characters are hit, further immersing players in the game's action.
+- Developed various enemy types. These additions enhanced the visual appeal and brought the enemies to life within the game.
