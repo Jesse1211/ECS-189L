@@ -27,7 +27,7 @@ There are three scenes in this game:
   - Gunslinger can only be killed by using master weapon.
 
 # Main Roles #
-## Producer - Jesse Liu - github: Jesse1211
+## Producer - Jesse Liu - GitHub: Jesse1211
 
 Since our game is implemented from scratch, I have to ensure everyone knows the game type, storyline, essential features, current development progress, and expectation of the achievement. I have to keep active and communicative; I provided 1-1 meetings with everyone to make sure they know what to do and how to do it; I used [whentomeet](https://www.when2meet.com/?19949103-hDTso) to find the perfect time for weekly meetings to make sure the communication between teammates. Also, I added guidance about using GitHub to ensure everyone contributes conveniently.
 - GitHub: 
@@ -148,11 +148,14 @@ Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-serie
 - Original audio developer
 - **Document the sound style.** 
 
-## Gameplay Testing
-### Jesse Liu
-- Only used `Debug.Log()` to make sure the functionality
+## Gameplay Testing - Jesse Liu - GitHub: Jesse1211
+
 - After teammates finish scripts, I need to deploy them to various prefabs to combine three scenes. I need to pay attention to layer & tag settings, such as the enemy cannot attack the player. Also, scenes do not have the same unit scale, I need to modify the main character's size & vertical jump & movement speed. 
-  
+- Conduct comprehensive testing: 
+  - After making these modifications, I tested the combined scenes to ensure the functionality and adjustments worked as expected. I considered running the game and manually interacting with the main character and enemies to verify that the changes had been applied correctly. Use `Debug.Log()` statements strategically to output relevant information to the console and confirm the desired behavior.
+  - Test the game thoroughly to identify any bugs, glitches, or issues that may arise during gameplay. Test all possible scenarios and edge cases to ensure that the game behaves as expected. I modified `TileMap` since the player should only climb in specific walls. 
+  - Evaluate the user interface for usability, clarity, and responsiveness. I specifies the frame rate at which Unity tries to render the game. And the size of bag feature was little too small, and the position is not in the middle of screen. This is caused by inproper setting of canvas' Rect Transfrom position. 
+
 
 ## Narrative Design
 ### Xinhe Wang
