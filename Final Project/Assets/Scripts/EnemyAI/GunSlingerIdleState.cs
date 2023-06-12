@@ -425,7 +425,7 @@ namespace Project {
 
         public void OnEnter()
         {
-            param.animator.SetTrigger("teleVanish");
+            param.animator.SetTrigger("smokeVanish");
             slider.value += 20;
             
         }

@@ -40,9 +40,13 @@ namespace Project
                 collision.GetComponent<FSM>().param.hp.GetComponent<Slider>().value -= damage;
                 collision.GetComponent<FSM>().param.getHit = true;
             }
-            Destroy(gameObject);
+            if (collision.tag == "GunSlinger")
+            {
+                collision.GetComponent<GunSlingerFSM>().param.hp.GetComponent<Slider>().value -= damage;
+                collision.GetComponent<GunSlingerFSM>().param.getHit = true;
+            }
 
-            if (boltHit != null)
+                if (boltHit != null)
             {
                 Instantiate(boltHit, transform.position, transform.rotation);
             }

@@ -26,6 +26,7 @@ TagManager:
   - MasterWeapon
   - Deer
   - Secret
+  - GunSlinger
   layers:
   - Default
   - TransparentFX

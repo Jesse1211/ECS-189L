@@ -31,10 +31,15 @@ namespace Project
         // Update is called once per frame
         void Update()
         {
-            currentState.OnUpdate();
-            if (Input.GetKeyDown(KeyCode.K))
+            if (param.hp.GetComponent<Slider>().value > 0)
             {
-                param.getHit = true;
+                currentState.OnUpdate();
+            }
+            else
+            {
+                this.GetComponent<CapsuleCollider2D>().enabled = false;
+                currentState = Enemystates[StateType.Death];
+                currentState.OnEnter();
             }
         }
 
