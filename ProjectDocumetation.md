@@ -71,9 +71,31 @@ You should replay any **bold text** with your relevant information. Liberally us
 - Implemented animation states for most models including `elk`, `fox`, `crow`, `rats`, `Fanboy`, `Gunslinger`. [issue](https://github.com/Jesse1211/ECS-189L/issues/26).
 ### Zuge Li & Jesse Liu
 - Secondary drafted animator controller for main character
-### Xinhe Wang & Jesse Liu
-- First Drafted animator controller for main character
 ### Xinhe Wang
+- After downloaded the character and background related prefabs and assets from Unity Store, create illustrations using Procreate, Adobe illustrator, and Adobe Photoshop which later used in game. Digital Illustrations including UI related dialog box, Deer Patron Saint, Player Character K.K., Game UI Prototype, and Game Trailer Illustration.
+Dialog Box:
+![WeChat Image_20230611225340](https://github.com/Jesse1211/ECS-189L/assets/115097655/3cac2166-3cfe-4a67-8f49-f06f041384ad) 
+
+Deer Patron Saint:
+![WeChat Image_20230611225425](https://github.com/Jesse1211/ECS-189L/assets/115097655/8118a3fa-c8ad-4479-b627-8952a94a6040)
+
+Player Character K.K.:
+![WeChat Image_20230611225458](https://github.com/Jesse1211/ECS-189L/assets/115097655/d1e5ab6d-5bf6-4417-8f89-444374f59d2f)
+
+Game UI Prototype:
+![WeChat Image_20230611225512](https://github.com/Jesse1211/ECS-189L/assets/115097655/d4eb3831-3c45-41d5-836f-16417ea3f78a)
+
+Game Trailer Illustration 1.0:
+![WeChat Image_20230611225850](https://github.com/Jesse1211/ECS-189L/assets/115097655/3c763e61-dc68-429f-ac41-2adde8ed2a73)
+
+Game Trailer Illustration 2.0:
+![WeChat Image_20230611225913](https://github.com/Jesse1211/ECS-189L/assets/115097655/802c8264-93e1-4bb7-9768-c4c02d2eb843)
+
+Final Game Trailer Illustration 2.1:
+![784467850292513190](https://github.com/Jesse1211/ECS-189L/assets/115097655/00dfffe7-2850-4b81-a83b-4441055cb1e6)
+
+### Xinhe Wang & Jesse Liu
+- Create first draft of [Player Animation Controller] (https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/Scripts/PlayerControllers/PlayerControllerAnimator.cs#LL1C24-L1C24). Specified and planned the button, trigger requirments and simple logics of different Player character animations. ### Xinhe Wang
 - Illustration
 
 ## Game Logic
@@ -101,7 +123,8 @@ You should replay any **bold text** with your relevant information. Liberally us
 - Depoly audio into game
 - **Describe the implementation of your audio system.**
 ### Xinhe Wang
-- Original audio developer
+- Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music used in Main scene, Battle scene and Floating island scene. 
+
 - **Document the sound style.** 
 
 ## Gameplay Testing
