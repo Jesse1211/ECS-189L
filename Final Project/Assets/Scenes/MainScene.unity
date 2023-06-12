@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 8779417814151435666}
   player: {fileID: 1448317203}
-  transitionTime: 1
+  sceneIndex: 0
 --- !u!61 &7724551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38275,7 +38275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 8779417814151435666}
   player: {fileID: 1448317203}
-  transitionTime: 1
+  sceneIndex: 1
 --- !u!61 &1180259726
 BoxCollider2D:
   m_ObjectHideFlags: 0
