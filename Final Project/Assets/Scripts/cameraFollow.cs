@@ -13,7 +13,6 @@ public class cameraFollow : MonoBehaviour
     private void Awake()
     {
         mangedCamera = gameObject.GetComponent<Camera>();
-    //    mangedCamera.transform.position = Target.transform.position;
        
     }
     void Start()
@@ -32,8 +31,7 @@ public class cameraFollow : MonoBehaviour
         var targetPosition = this.Target.transform.position;
         var cameraPosition = mangedCamera.transform.position;
         cameraPosition = new Vector3 (targetPosition.x, targetPosition.y, -90); 
-        // cameraPosition = new Vector3(targetPosition.x, targetPosition.y, cameraPosition.z);
-        // mangedCamera.transform.position = cameraPosition;   
+        
        
         if (targetPosition != cameraPosition)
         {
