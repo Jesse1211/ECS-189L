@@ -77,7 +77,6 @@ namespace Project
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("TAG = " + other.tag);
             if (other.CompareTag("Player"))
             {
                 param.target = other.transform;
