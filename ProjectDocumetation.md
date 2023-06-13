@@ -147,10 +147,30 @@ Collect meter: https://assetstore.unity.com/packages/2d/gui/icons/elemental-mete
 Bag items: https://assetstore.unity.com/packages/2d/gui/icons/pixel-art-icon-pack-rpg-158343
 Main scene: https://assetstore.unity.com/packages/2d/environments/2d-enchanted-forest-tileset-pack-199589
 Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-series-animals-trees-221401, https://assetstore.unity.com/packages/2d/environments/sci-fi-platformer-starter-pack-tileset-3-enemies-216694
-## Animation and Visuals - Xinhe Wang & Jesse Liu
-- First Drafted animator controller for main character
+
 ## Animation and Visuals - Xinhe Wang
-- Illustration
+- Create the first draft of [Player Animation Controller] (https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/Scripts/PlayerControllers/PlayerControllerAnimator.cs#LL1C24-L1C24). Specified and planned the button, trigger requirements and simple logics of different Player character animations.
+- After downloading the character and background-related prefabs and assets from Unity Store, create illustrations using Procreate, Adobe Illustrator, and Adobe Photoshop which were later used in the game. Digital Illustrations include UI-related dialog box, Deer Patron Saint, Player Character K.K., Game UI Prototype, and Game Trailer Illustration.
+Dialog Box:
+![WeChat Image_20230611225340](https://github.com/Jesse1211/ECS-189L/assets/115097655/3cac2166-3cfe-4a67-8f49-f06f041384ad) 
+
+Deer Patron Saint:
+![WeChat Image_20230611225425](https://github.com/Jesse1211/ECS-189L/assets/115097655/8118a3fa-c8ad-4479-b627-8952a94a6040)
+
+Player Character K.K.:
+![WeChat Image_20230611225458](https://github.com/Jesse1211/ECS-189L/assets/115097655/d1e5ab6d-5bf6-4417-8f89-444374f59d2f)
+
+Game UI Prototype:
+![WeChat Image_20230611225512](https://github.com/Jesse1211/ECS-189L/assets/115097655/d4eb3831-3c45-41d5-836f-16417ea3f78a)
+
+Game Trailer Illustration 1.0:
+![WeChat Image_20230611225850](https://github.com/Jesse1211/ECS-189L/assets/115097655/3c763e61-dc68-429f-ac41-2adde8ed2a73)
+
+Game Trailer Illustration 2.0:
+![WeChat Image_20230611225913](https://github.com/Jesse1211/ECS-189L/assets/115097655/802c8264-93e1-4bb7-9768-c4c02d2eb843)
+
+Final Game Trailer Illustration 2.1:
+![784467850292513190](https://github.com/Jesse1211/ECS-189L/assets/115097655/00dfffe7-2850-4b81-a83b-4441055cb1e6)
 
 # Sub-Roles
 
@@ -160,7 +180,7 @@ Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-serie
 - Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM.
 
 ### Xinhe Wang
-- Original audio developer
+- - Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene.
 - **Document the sound style.** 
 
 ## Gameplay Testing - Jesse Liu - GitHub: Jesse1211
@@ -169,7 +189,7 @@ Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-serie
 - Conduct comprehensive testing: 
   - After making these modifications, I tested the combined scenes to ensure the functionality and adjustments worked as expected. I considered running the game and manually interacting with the main character and enemies to verify that the changes had been applied correctly. Use `Debug.Log()` statements strategically to output relevant information to the console and confirm the desired behavior.
   - Test the game thoroughly to identify any bugs, glitches, or issues that may arise during gameplay. Test all possible scenarios and edge cases to ensure that the game behaves as expected. I modified `TileMap` since the player should only climb in specific walls. 
-  - Evaluate the user interface for usability, clarity, and responsiveness. I specifies the frame rate at which Unity tries to render the game. And the size of bag feature was little too small, and the position is not in the middle of screen. This is caused by inproper setting of canvas' Rect Transfrom position. 
+  - Evaluate the user interface for usability, clarity, and responsiveness. I specify the frame rate at which Unity tries to render the game. And the size of the bag feature was a little too small, and the position is not in the middle of the screen. This is caused by inproper setting of the canvas' Rect Transfrom position. 
 
 
 ## Narrative Design
@@ -177,7 +197,7 @@ Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-serie
 - **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
 ## Press Kit and Trailer
-### Xinhe Wang
+### 
 **Include links to your presskit materials and trailer.**
 **Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
 
