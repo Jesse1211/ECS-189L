@@ -186,8 +186,8 @@ Final Game Trailer Illustration 2.1:
 - Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM.
 
 ### Xinhe Wang
-- - Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene.
-- **Document the sound style.** 
+- Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene. Export format was m4a however it is unable to use in unity. Finalized with wav format.  
+
 
 ## Gameplay Testing - Jesse Liu - GitHub: Jesse1211
 
@@ -202,7 +202,6 @@ Final Game Trailer Illustration 2.1:
 ### Xinhe Wang
 - [Narrative #1 - Scene1 draft with edited dialog and simple storyline.](https://github.com/Jesse1211/ECS-189L/files/11730698/Narrative.1.-.Scene1.draft.with.edited.pdf) 
 - [Final Narrative](https://github.com/Jesse1211/ECS-189L/files/11730702/ecef02a2f6c10abae31a05652bd4753e.pdf) with story line dialogs, steps, need of NPC and Assets. 
-- **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
 ## Press Kit and Trailer
 ### 
