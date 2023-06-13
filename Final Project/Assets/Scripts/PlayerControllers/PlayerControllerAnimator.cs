@@ -50,7 +50,7 @@ namespace Project
             //animator.SetFloat("Velocity", Mathf.Abs(this.gameObject.GetComponent<Rigidbody2D>().velocity.x / 5.0f));
             if (isTouchingDeathSwamp)
             {
-                TakeDamage(1);
+                TakeDamage(0.1f);
             }
 
 

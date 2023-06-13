@@ -36,7 +36,7 @@ namespace Project
         }
 
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(float damage)
         {
             if (HP.GetComponent<Slider>().value > 0)
             {

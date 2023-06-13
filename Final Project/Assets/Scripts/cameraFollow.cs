@@ -35,7 +35,6 @@ public class cameraFollow : MonoBehaviour
        
         if (targetPosition != cameraPosition)
         {
-            Debug.Log("here");
             targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
             targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
             cameraPosition = Vector3.Lerp(cameraPosition, targetPosition, smoothing);
