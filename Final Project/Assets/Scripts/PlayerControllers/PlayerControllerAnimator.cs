@@ -29,7 +29,7 @@ namespace Project
         // attack
         public GameObject bolt;
         public int damage;
-        public float timeBetweenAttacks;
+        public float timeBetweenAttacks = 1f;
         public Transform shotPoint;
         private float nextAttackTime = 0;
         public float attackRange;
@@ -172,7 +172,7 @@ namespace Project
                     Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
                     foreach (Collider2D col in enemiesToDamage)
                     {
-                        col.GetComponent<Enemy>().TakeDamage(damage);
+                        col.GetComponent<Enemy>().TakeDamage(25);
                     }
                     animator.SetTrigger("stab");
                     nextAttackTime = Time.time + timeBetweenAttacks;
