@@ -111,7 +111,7 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
   - Utilized the `Canvas` and creating multiple game objects to serve as slots within the bag. 
   - Implemented interactive functionality to ensure responsive actions when interacting with the bag UI.
 
-## Gameplay Programmer - Jianfeng Lin
+## Gameplay Programmer - Jianfeng Lin -Github: kyriezm1115@gmail.com
 - Camera Follow:
   
 	The implementation of the camera controller is similar to the Exercise2 PositionFollowCamera.cs. But it has a little bit different. The boundary of the camera can be set manually so that the player won’t see the unrelated scene in the game. This is simply implemented by using the Lerp function and Clamp function
@@ -156,8 +156,9 @@ Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-serie
 
 ## Audio
 ### Jianfeng Lin & Huge Lin
-- Depoly audio into game
-- **Describe the implementation of your audio system.**
+- Depoly audio into game. 
+- Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM.
+
 ### Xinhe Wang
 - Original audio developer
 - **Document the sound style.** 
