@@ -1,8 +1,7 @@
 # Game Basic Information #
 
 ## Summary ##
-
-A little girl and her parents are trapped in a unknown island. To find and rescue her parents, she needs to follow Ms. Deer's instruction to collect unique items by fighting against monsters, gunslinger, and fanboy. She has to move soon, otherwise her parents will be eaten by the monsters.
+K.K., the daughter of all Patron Saints and the earth, hears the call of the Deer Patron Saints. Pollution has ravaged the earth, spawning evil creatures. Exhausted and powerless, the other Patron Saints await K.K.'s swift action. Guided by the Deer Patron Saints, she needs to fight monsters, gunslingers, and the fanboy to collect unique items. Her mission: save the other Patron Saints and restore harmony. Time is running out as the earth's fate hangs in the balance.
 
 ## Gameplay Explanation ##
 
