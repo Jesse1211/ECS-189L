@@ -200,6 +200,8 @@ Final Game Trailer Illustration 2.1:
 
 ## Narrative Design
 ### Xinhe Wang
+- [Narrative #1 - Scene1 draft with edited dialog and simple storyline.](https://github.com/Jesse1211/ECS-189L/files/11730698/Narrative.1.-.Scene1.draft.with.edited.pdf) 
+- [Final Narrative](https://github.com/Jesse1211/ECS-189L/files/11730702/ecef02a2f6c10abae31a05652bd4753e.pdf) with story line dialogs, steps, need of NPC and Assets. 
 - **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
 ## Press Kit and Trailer
