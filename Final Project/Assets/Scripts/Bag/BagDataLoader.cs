@@ -70,7 +70,6 @@ namespace Project
         {
             if (weapons.Count() > 0) 
             {
-                Debug.Log(weapons.Count());
                 weapons.Remove(weapons.Where(x => x.Id == item.Id).First());
                 AddBagItems(item);
             }

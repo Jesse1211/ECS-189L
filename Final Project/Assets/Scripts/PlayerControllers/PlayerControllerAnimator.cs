@@ -31,7 +31,7 @@ namespace Project
         public int damage;
         public float timeBetweenAttacks;
         public Transform shotPoint;
-        private float nextAttackTime;
+        private float nextAttackTime = 0;
         public float attackRange;
         public Transform attackPoint;
         public LayerMask enemyLayer;
@@ -170,12 +170,12 @@ namespace Project
                 if (Input.GetKeyDown(KeyCode.J))
                 {
                     Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
-                    // foreach (Collider2D col in enemiesToDamage)
-                    // {
-                    //     col.GetComponent<Enemy>().TakeDamage(damage);
-                    // }
-
+                    foreach (Collider2D col in enemiesToDamage)
+                    {
+                        col.GetComponent<Enemy>().TakeDamage(damage);
+                    }
                     animator.SetTrigger("stab");
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
                 else if (Input.GetKeyDown(KeyCode.K))
                 {
@@ -186,6 +186,7 @@ namespace Project
                         boltRotation = Quaternion.Euler(0f, 180f, 0f);
                     }
                     Instantiate(bolt, shotPoint.position, boltRotation);
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
                 else if (Input.GetKeyDown(KeyCode.L))
                 {
@@ -198,34 +199,39 @@ namespace Project
                     {
                         transform.position = new Vector3(transform.position.x - 2f, transform.position.y, transform.position.z);
                     }
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
                 else if (Input.GetKeyDown(KeyCode.U))
                 {
                     animator.SetTrigger("transition");
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
                 else if (Input.GetKeyDown(KeyCode.I))
                 {
                     animator.SetTrigger("spectialJump");
                     PlayerRigid.velocity = Vector2.up * 1.15f * 11;
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha1))
                 {
                     shootWeapon(0);
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha2))
                 {
                     shootWeapon(1);
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha3))
                 {
                     shootWeapon(2);
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha4))
                 {
                     shootWeapon(3);
+                    nextAttackTime = Time.time + timeBetweenAttacks;
                 }
-
-                nextAttackTime = Time.time + timeBetweenAttacks;
             }
         }
 
