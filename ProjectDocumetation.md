@@ -75,8 +75,11 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
   - Used `Mask`, `Fill` to display the number of orbs collected. And `MeterScript` which sets the value of `Slider` with gradient color.
 
 ## User Interface - Xuanzhen Lao
-- Built the basic outlook style of `BattleScene` by using TileMap. [issue] (https://github.com/Jesse1211/ECS-189L/issues/17).
-- Also built `MainScene` from collected model. [issue](https://github.com/Jesse1211/ECS-189L/issues/10)
+- Build the first version of `BattleScene` using the TileMap design. The model provides the basic style. In the initial phase, construct the prior version of the BattleScene utilizing TileMap design techniques. The supplied model directly informs the foundational aesthetic. Leveraging TileMap's capabilities allows for the transformation of the basic look. It enhances the overall visual appeal of BattleScene's second iteration. Any concerns or issues arising during this process can be found documented here.
+
+- Built the basic outlook style of `BattleScene` by using TileMap. [issue] (https://github.com/Jesse1211/ECS-189L/issues/17). In addition to the BattleScene, the project also involves the assembly of the 'MainScene.' This task is accomplished using models collected throughout the development process. The process was not without its hurdles; various issues encountered during the creation of the 'MainScene' are detailed here.
+
+-  Built `MainScene` from the collected model. [issue](https://github.com/Jesse1211/ECS-189L/issues/10). The ongoing evolution and refinement of the BattleScene and 'MainScene' are key components of the project's progression. As the scenes continue to evolve, they are expected to deliver increasingly immersive and interactive experiences for users.
 
 ## Interface Designer - Zuge Li
 - Enhenced the `BattleScene` by expanding the range of grid using `TileMap`
