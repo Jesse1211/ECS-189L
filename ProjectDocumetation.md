@@ -111,7 +111,7 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
   - Utilized the `Canvas` and creating multiple game objects to serve as slots within the bag. 
   - Implemented interactive functionality to ensure responsive actions when interacting with the bag UI.
 
-## Gameplay Programmer - Jianfeng Lin -Github: kyriezm1115
+## Gameplay Programmer - Jianfeng Lin -Github: Kkyyy1115 
 - Camera Follow:
   
 	The implementation of the camera controller is similar to the Exercise2 PositionFollowCamera.cs. But it has a little bit different. The boundary of the camera can be set manually so that the player won’t see the unrelated scene in the game. This is simply implemented by using the Lerp function and Clamp function
