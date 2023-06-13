@@ -12,11 +12,13 @@ public class cameraFollow : MonoBehaviour
     [SerializeField] public float smoothing;
     private void Awake()
     {
-       mangedCamera = gameObject.GetComponent<Camera>();
+        mangedCamera = gameObject.GetComponent<Camera>();
+    //    mangedCamera.transform.position = Target.transform.position;
+       
     }
     void Start()
     {
-  
+        
     }
     
     // Update is called once per frame
@@ -29,10 +31,13 @@ public class cameraFollow : MonoBehaviour
     {
         var targetPosition = this.Target.transform.position;
         var cameraPosition = mangedCamera.transform.position;
-        cameraPosition = new Vector3 (targetPosition.x, targetPosition.y, -90);    
+        cameraPosition = new Vector3 (targetPosition.x, targetPosition.y, -90); 
+        // cameraPosition = new Vector3(targetPosition.x, targetPosition.y, cameraPosition.z);
+        // mangedCamera.transform.position = cameraPosition;   
        
         if (targetPosition != cameraPosition)
         {
+            Debug.Log("here");
             targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
             targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
             cameraPosition = Vector3.Lerp(cameraPosition, targetPosition, smoothing);

@@ -5793,7 +5793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6321289626721810805, guid: e653704f8a17c4e9ab643232da72f52f, type: 3}
       propertyPath: minPosition.x
-      value: -10
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 6321289626721810805, guid: e653704f8a17c4e9ab643232da72f52f, type: 3}
       propertyPath: minPosition.y
@@ -5805,7 +5805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8107023796649699574, guid: e653704f8a17c4e9ab643232da72f52f, type: 3}
       propertyPath: orthographic size
-      value: 17.381054
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
