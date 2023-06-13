@@ -16,7 +16,7 @@ K.K., the daughter of all Patron Saints and the earth, hears the call of the Dee
 
 There are three scenes in this game:
 - Main scene: 
-  - The player can browse and look for Ms. Deer for more instructions. 
+  - The player can browse and look for Deer Patron Saint for more instructions. 
   - There are two game objects which trigger other scenes
 - Scene1:
   - The player needs to adventure the map, find the Fanboy and kill him to get the secret item. Then the player needs to return to the start position to switch back to the main scene.
