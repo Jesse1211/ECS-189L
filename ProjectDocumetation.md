@@ -227,8 +227,20 @@ Note: The specified button and trigger requirements are utilized to control and 
 
 ## Narrative Design
 ### Xinhe Wang
-- [Narrative #1 - Scene1 draft with edited dialog and simple storyline.](https://github.com/Jesse1211/ECS-189L/files/11730698/Narrative.1.-.Scene1.draft.with.edited.pdf) 
-- [Final Narrative](https://github.com/Jesse1211/ECS-189L/files/11730702/ecef02a2f6c10abae31a05652bd4753e.pdf) with story line dialogs, steps, need of NPC and Assets. 
+- After the group meeting with other team members, where we collectively decided to create a 2D RPG, I took the initiative to generate game story ideas utilizing our current accessible assets, prefabs, and resources. Additionally, I worked on creating compelling dialogs between non-playable characters (NPCs) and the main characters. Simultaneously, I set the requirements and triggers necessary to propel the game and story forward.
+- Characters:
+  - Player: K.K. the purple hair little girl
+  - Main NPC: Deer Patron Saint
+  - In-game NPC: Ram Patron Saint, Fox Patron Saint, Fanboy Boss, Gunglinger Boss
+- Storyline:
+  - In the game, the deer assumes the role of a messenger, conveying a critical message to the player regarding the peril faced by the earth and other Patron Saints due to human-caused pollution. The player is tasked with collecting five orbs, which are essential for opening a teleportation gate to a different location where they can rescue the endangered Patron Saints. Each scene presents the player with multiple pathways to reach the boss, who guards and blocks the Patron Saint in need of rescue. Upon successfully saving the Patron Saint and obtaining the final orb, the scene undergoes a transformative shift, becoming more challenging as additional monsters appear. To progress, the player must navigate back to the teleport gate or a designated tree to return to the Deer Patron Saint, completing the ongoing mission and receiving a new one.
+- Idea and message behind the game:
+  - I strongly believe that a good game goes beyond mere entertainment value or visual appeal; it should also strive to impart lessons or convey meaningful messages to its players or audience. In light of recent reports, such as CNN's article on [Global Warming: World on track to breach a critical warming threshold in the next five years](https://www.cnn.com/2023/05/17/world/global-warming-breach-wmo-climate-intl/index.html) , it is evident that pollution and global warming remain pressing issues that demand urgent attention. We aspire to leverage our game as a medium to effectively deliver this message to the players, raising awareness and fostering a sense of responsibility towards environmental conservation.
+- Narrative Documents and materials
+  - First narrative draft with basic storylines and beginning scene's dialog:
+    - [Narrative #1 - Scene1 draft with edited dialog and simple storyline.](https://github.com/Jesse1211/ECS-189L/files/11730698/Narrative.1.-.Scene1.draft.with.edited.pdf) 
+  - Final narrative with the storyline, all scene's dialog, how to push the game forward, and the need for NPC and Assets:
+    - [Final Narrative](https://github.com/Jesse1211/ECS-189L/files/11730702/ecef02a2f6c10abae31a05652bd4753e.pdf)  
 
 ## Game Feel
 ### LiangHang Wu
