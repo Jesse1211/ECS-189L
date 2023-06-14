@@ -158,11 +158,11 @@ Main scene: https://assetstore.unity.com/packages/2d/environments/2d-enchanted-f
 Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-series-animals-trees-221401, https://assetstore.unity.com/packages/2d/environments/sci-fi-platformer-starter-pack-tileset-3-enemies-216694
 
 ## Animation and Visuals - Xinhe Wang
-- Implement character animations and create initial PlayerControllerData draft with specified button and trigger requirements, and basic logic for player character animations.
+- Implement character animations and create initial `PlayerControllerAnimator` draft with specified button and trigger requirements, and basic logic for player character animations.
   - Button and Trigger Requirements for Character Animations: Left: A, left arrow; Right: D, right arrow; Jump: Space, up arrow; Dodge: S; Stab: N; Gunattack: B
   - Character Animation Descriptions:
     - Idle1: Walking animation in the main scene (attack disabled)
-    - Fall: Character's y-direction movement decreases, character is off the ground
+    - Fall: The character's y-direction movement decreases, the character is off the ground
     - Run: Activated when speed is greater than a constant number
     - Transition: Triggered when collecting items (clicking M)
     - Dodge: Detected using the trigger in the animator
@@ -213,7 +213,7 @@ Note: The specified button and trigger requirements are utilized to control and 
 - Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM.
 
 ### Xinhe Wang
-- Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene. Export format was m4a however it is unable to use in unity. Finalized with wav format.  
+- Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene. The export format was m4a however it is unable to use in Unity. Finalized with wav format.  
 
 
 ## Gameplay Testing - Jesse Liu - GitHub: Jesse1211
@@ -229,11 +229,6 @@ Note: The specified button and trigger requirements are utilized to control and 
 ### Xinhe Wang
 - [Narrative #1 - Scene1 draft with edited dialog and simple storyline.](https://github.com/Jesse1211/ECS-189L/files/11730698/Narrative.1.-.Scene1.draft.with.edited.pdf) 
 - [Final Narrative](https://github.com/Jesse1211/ECS-189L/files/11730702/ecef02a2f6c10abae31a05652bd4753e.pdf) with story line dialogs, steps, need of NPC and Assets. 
-
-## Press Kit and Trailer
-### 
-**Include links to your presskit materials and trailer.**
-**Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
 
 ## Game Feel
 ### LiangHang Wu
