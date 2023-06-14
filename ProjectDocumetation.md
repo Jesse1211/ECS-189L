@@ -158,8 +158,8 @@ Main scene: https://assetstore.unity.com/packages/2d/environments/2d-enchanted-f
 Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-series-animals-trees-221401, https://assetstore.unity.com/packages/2d/environments/sci-fi-platformer-starter-pack-tileset-3-enemies-216694
 
 ## Animation and Visuals - Xinhe Wang
-- Implement character animations and create initial `PlayerControllerAnimator` draft with specified button and trigger requirements, and basic logic for player character animations.
-  - Button and Trigger Requirements for Character Animations: Left: A, left arrow; Right: D, right arrow; Jump: Space, up arrow; Dodge: S; Stab: N; Gunattack: B
+- Implement character animations and create initial [PlayerControllerAnimator](https://github.com/Jesse1211/ECS-189L/blob/c1e7eccd371f3cd57e46d9f20a3301bb32541086/Final%20Project/Assets/Scripts/PlayerControllers/PlayerControllerAnimator.cs#L1) draft with specified button and trigger requirements, and basic logic for player character animations.
+  - Button and Trigger Requirements for Character Animations: Left: `A`, `left arrow`; Right: `D`, `right arrow`; Jump: `Space`, `up arrow`; Dodge: `S`; Stab: `N`; Gunattack: `B`
   - Character Animation Descriptions:
     - Idle1: Walking animation in the main scene (attack disabled)
     - Fall: The character's y-direction movement decreases, the character is off the ground
