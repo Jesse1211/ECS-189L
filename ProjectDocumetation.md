@@ -158,33 +158,51 @@ Main scene: https://assetstore.unity.com/packages/2d/environments/2d-enchanted-f
 Battle scene: https://assetstore.unity.com/packages/2d/characters/the-dark-series-animals-trees-221401, https://assetstore.unity.com/packages/2d/environments/sci-fi-platformer-starter-pack-tileset-3-enemies-216694
 
 ## Animation and Visuals - Xinhe Wang
-- Create the first draft of [Player Animation Controller] (https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/Scripts/PlayerControllers/PlayerControllerAnimator.cs#LL1C24-L1C24). Specified and planned the button, trigger requirements and simple logics of different Player character animations.
+- Implement character animations and create initial PlayerControllerData draft with specified button and trigger requirements, and basic logic for player character animations.
+  - Button and Trigger Requirements for Character Animations: Left: A, left arrow; Right: D, right arrow; Jump: Space, up arrow; Dodge: S; Stab: N; Gunattack: B
+  - Character Animation Descriptions:
+    - Idle1: Walking animation in the main scene (attack disabled)
+    - Fall: Character's y-direction movement decreases, character is off the ground
+    - Run: Activated when speed is greater than a constant number
+    - Transition: Triggered when collecting items (clicking M)
+    - Dodge: Detected using the trigger in the animator
+    - Stab: Detected using the trigger in the animator
+    - Gunattack: Detected using the trigger in the animator
+    - Idle2: Walking animation in the battle scene
+    - Hit: Activated when the enemy hits the player
+    - Death: Activated when the player's HP drops to 0 or below
+  - Future Add-ons:
+    - BrawlFall: Distinguished from Fall animation
+    - BackDodge: Distinguished from Dodge animation
+    - SpecialJump: Distinguished from Jump animation (may be developed into ultimate ability)
+Note: The specified button and trigger requirements are utilized to control and trigger the respective character animations.
+
 - After downloading the character and background-related prefabs and assets from Unity Store, create illustrations using Procreate, Adobe Illustrator, and Adobe Photoshop which were later used in the game. Digital Illustrations include UI-related dialog box, Patron Saints, Player Character K.K., Game UI Prototype, and Game Trailer Illustration.
-Dialog Box:
+  - Dialog Box:
 ![WeChat Photo Editor_20230612211303](https://github.com/Jesse1211/ECS-189L/assets/115097655/67a2ff58-27af-4b57-9df3-4f297b84971e)
 
-Deer Patron Saint:
+  - Deer Patron Saint:
 ![WeChat Photo Editor_20230612211508](https://github.com/Jesse1211/ECS-189L/assets/115097655/2d4c0e1a-14bf-4cd8-9be6-22ca3d7eff7e)
 
-Ram Patron Saint:
+  - Ram Patron Saint:
 ![WeChat Photo Editor_20230612211644](https://github.com/Jesse1211/ECS-189L/assets/115097655/455b4825-d645-4c14-b902-e88b4e161e79)
 
-Fox Patron Saint:
+  - Fox Patron Saint:
 ![WeChat Photo Editor_20230612211747](https://github.com/Jesse1211/ECS-189L/assets/115097655/b799d6bc-a758-4d78-97ff-492a1b1bdf63)
 
-Player Character K.K.:
+  - Player Character K.K.:
 ![WeChat Photo Editor_20230612211412](https://github.com/Jesse1211/ECS-189L/assets/115097655/3f00a607-09bd-40cd-8c1f-28fb1caa6a5b)
 
-Game UI Prototype:
+  - Game UI Prototype:
 ![WeChat Image_20230611225512](https://github.com/Jesse1211/ECS-189L/assets/115097655/d4eb3831-3c45-41d5-836f-16417ea3f78a)
 
-Game Trailer Illustration 1.0:
+  - Game Trailer Illustration 1.0:
 ![WeChat Image_20230611225850](https://github.com/Jesse1211/ECS-189L/assets/115097655/3c763e61-dc68-429f-ac41-2adde8ed2a73)
 
-Game Trailer Illustration 2.0:
+  - Game Trailer Illustration 2.0:
 ![WeChat Image_20230611225913](https://github.com/Jesse1211/ECS-189L/assets/115097655/802c8264-93e1-4bb7-9768-c4c02d2eb843)
 
-Final Game Trailer Illustration 2.1:
+  - Final Game Trailer Illustration 2.1:
 ![784467850292513190](https://github.com/Jesse1211/ECS-189L/assets/115097655/00dfffe7-2850-4b81-a83b-4441055cb1e6)
 
 # Sub-Roles
