@@ -22,8 +22,38 @@ namespace Project
 
         private void Start()
         {
+            if (this.gameObject.name == "Boss1")
+            {
+                dialog = new string[] {
+                    "Who is this little girl? You can't go further no more!!!"
+                };
+            }
 
-            if (this.gameObject.name == "Deer")
+            else if (this.gameObject.name == "Boss2")
+            {
+                dialog = new string[] {
+                    "You can't go behind this point. To think of how much effort you put... towards the inevitable goal... of digging your OWN GRAVE!"
+                };
+            }
+
+            else if (this.gameObject.name == "FinalEnding")
+            {
+                dialog = new string[] {
+                    "Oh! It's our dear daughter K.K. Are you here to save me?", 
+                    "How sweet. I'm too tired right now, would you please take me back to our home, I need to take a rest and restore some energy."
+                };
+            }
+
+            else if (this.gameObject.name == "Elk")
+            {
+                dialog = new string[] {
+                    "Thank you K.K. our daughter. Would you please take it back to our home, I need to rest a little bit more.",
+                    "Now you need to go back and find Fox Patron Saint from the eastern island and bring her back.",
+                    "Good luck, may you remain safe throughout. Don't forget to grab 5 orbs."
+                };
+            }
+
+            else if (this.gameObject.name == "Deer")
             {
                 dialog = new string[] {
                     "Our noble daughter, the embodiment of Earth, the guardian of all patron Saints. " +
@@ -39,7 +69,8 @@ namespace Project
             else if (this.gameObject.name == "Crow")
             {
                 dialog = new string[] {
-                    "You need to collect 5 orbs to start the fight"
+                    "You need to collect 5 orbs to start the fight\n" +
+                    "A: left, D: right, Space: jump, J&K: attack."
                     
                 };
             }
@@ -108,9 +139,21 @@ namespace Project
 
                 playerIsClose = true;
 
-                if ((collision.gameObject.GetComponent<PlayerControllerAnimator>().score < 5) && Time.time - lastTimeAccess >= 5)
+                if ((collision.gameObject.GetComponent<PlayerControllerAnimator>().score < 5) && Time.time - lastTimeAccess >= 5 && this.gameObject.name == "Deer")
                 {
                     first_time_in = true;
+                }
+                else
+                {
+                    if (this.gameObject.name == "Deer")
+                    {
+                        dialog = new string[] {
+                            "Now, you are fully prepared for your journey. Go find the Crow it will teleport you to the place that need your help.",
+                            "After you find the other Patron Saints, bring them back please.",
+                            "May luck be your constant companion, and may you remain safe throughout, our courageous daughter. Take care."
+                        };
+                        first_time_in = true;
+                    }
                 }
 
                 lastTimeAccess = Time.time;

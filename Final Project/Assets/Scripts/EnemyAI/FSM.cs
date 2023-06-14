@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
-using UnityEditor.Tilemaps;
+// using Unity.PlasticSCM.Editor.WebApi;
+// using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -77,7 +77,6 @@ namespace Project
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("TAG = " + other.tag);
             if (other.CompareTag("Player"))
             {
                 param.target = other.transform;

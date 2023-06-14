@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.Progress;
+// using static UnityEditor.Progress;
 using UnityEngine.UI;
 using System.Reflection;
 
@@ -70,7 +70,6 @@ namespace Project
         {
             if (weapons.Count() > 0) 
             {
-                Debug.Log(weapons.Count());
                 weapons.Remove(weapons.Where(x => x.Id == item.Id).First());
                 AddBagItems(item);
             }
