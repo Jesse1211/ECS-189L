@@ -139,7 +139,7 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
 
 - ThunderBolt：
   
-	Before the player can confront the Boss in the battle scene, they must first engage in conversation with the Non-Player Character (NPC). Once the dialogue with the NPC concludes, a thunder-created battle zone materializes. The player is restricted from leaving this zone until they have successfully defeated the Boss. This battle zone is implemented by the script called “thunderTrigger.” After 
+	Before the player can confront the Boss in the battle scene, they must first engage in conversation with the Non-Player Character (NPC). Once the dialogue with the NPC concludes, a thunder-created battle zone materializes. The player is restricted from leaving this zone until they have successfully defeated the Boss. This battle zone is implemented by the script called “thunderTrigger.” I attach the trigger script to the NPC, specifically the deer character.
 
 - Enemy AI: 
   
