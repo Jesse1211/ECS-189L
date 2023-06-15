@@ -212,7 +212,9 @@ Note: The specified button and trigger requirements are utilized to control and 
 ## Audio
 ### Jianfeng Lin & Huge Lin
 - Depoly audio into game. 
-- Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM.
+### Jianfeng Lin - GitHub: Kkyyy1115
+- Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM. In addition, I added the death scene and implemented it for every scenes when player die. I also added the background music for the death scene. 
+- In addition, I assist in debugging the game by verifying if there are any inconsistencies between layers and colliders. If such mismatches are detected, I make the necessary adjustments to ensure that our game's mechanics function properly.
 
 ## Cross Platform - Hugo Lin
 - modified some codes in order to build the game for MacOS and WebGL
@@ -228,7 +230,7 @@ Note: The specified button and trigger requirements are utilized to control and 
   - After making these modifications, I tested the combined scenes to ensure the functionality and adjustments worked as expected. I considered running the game and manually interacting with the main character and enemies to verify that the changes had been applied correctly. Use `Debug.Log()` statements strategically to output relevant information to the console and confirm the desired behavior.
   - Test the game thoroughly to identify any bugs, glitches, or issues that may arise during gameplay. Test all possible scenarios and edge cases to ensure that the game behaves as expected. I modified `TileMap` since the player should only climb in specific walls. 
   - Evaluate the user interface for usability, clarity, and responsiveness. I specify the frame rate at which Unity tries to render the game. And the size of the bag feature was a little too small, and the position is not in the middle of the screen. This is caused by inproper setting of the canvas' Rect Transfrom position. 
-
+  - 
 
 ## Narrative Design
 ### Xinhe Wang
