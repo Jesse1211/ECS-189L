@@ -123,10 +123,10 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
 ## Gameplay Programmer - Jianfeng Lin -Github: Kkyyy1115 
 - Camera Follow:
   
-	The implementation of the camera controller is similar to the Exercise2 ``PositionFollowCamera.cs`. But it has a little bit different. The boundary of the camera can be set manually so that the player won’t see the unrelated scene in the game. This is simply implemented by using the Lerp function and Clamp function
+	The implementation of the camera controller is similar to the Exercise2 `PositionFollowCamera.cs`. But it has a little bit different. The boundary of the camera can be set manually so that the player won’t see the unrelated scene in the game. This is simply implemented by using the Lerp function and Clamp function
   
 - Death Scene:
-	When the player succumbs in the game, they are transported to the death scene. By interacting with any part of this death scene, they can navigate back to the last scene. The mechanism is simply implemented by a script `BackToFight`, which is attached to the button.
+	When the player succumbs in the game, they are transported to the death scene. By interacting with any part of this death scene, they can navigate back to the last scene. The mechanism is simply implemented by a script `BackToFight`, which is attached to the button. The UI and animations were originally made for from previous game. I have incorporated them into this game to enhance the level of human interaction.
 
 - Health Bar
   
