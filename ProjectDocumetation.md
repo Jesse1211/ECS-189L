@@ -123,27 +123,26 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
 ## Gameplay Programmer - Jianfeng Lin -Github: Kkyyy1115 
 - Camera Follow:
   
-	The implementation of the camera controller is similar to the Exercise2 PositionFollowCamera.cs. But it has a little bit different. The boundary of the camera can be set manually so that the player won’t see the unrelated scene in the game. This is simply implemented by using the Lerp function and Clamp function
+	The implementation of the camera controller is similar to the Exercise2 ``PositionFollowCamera.cs`. But it has a little bit different. The boundary of the camera can be set manually so that the player won’t see the unrelated scene in the game. This is simply implemented by using the Lerp function and Clamp function
   
 - Death Scene:
-  
-	When the player succumbs in the game, they are transported to the death scene. By interacting with any part of this death scene, they can navigate back to the last scene. The mechanism is simply implemented by a script “BackToFight”, which is attached to the button.
+	When the player succumbs in the game, they are transported to the death scene. By interacting with any part of this death scene, they can navigate back to the last scene. The mechanism is simply implemented by a script `BackToFight`, which is attached to the button.
 
 - Health Bar
   
-	The functionality of the player's health bars is facilitated through a UI slider, composed of two distinct images. One is called the background, which indicates the background color of the health bar. The second is called “Fill area”, which indicates the current HP of the player. They are attached under the canvas. It is controlled by the script “CharacterHP.” However, this script is only invoked when the player's character dies, prompting the transition to the death scene. The health bar updates by assessing the value from “PlayerControllerAnimator.” The value of the health bar changes under various conditions, such as when the player stumbles into traps or when the player is attacked by the enemy.
+	The functionality of the player's health bars is facilitated through a UI slider, composed of two distinct images. One is called the background, which indicates the background color of the health bar. The second is called `Fill area`, which indicates the current HP of the player. They are attached under the canvas. It is controlled by the script `CharacterHP`. However, this script is only invoked when the player's character dies, prompting the transition to the death scene. The health bar updates by assessing the value from `PlayerControllerAnimator`. The value of the health bar changes under various conditions, such as when the player stumbles into traps or when the player is attacked by the enemy.
 
 - Enemy Health bar:
   
-  The Enemy health bar is implemented in the same way as the player health bar. However, these bars are linked to two game bosses, namely Fanboy and Gunslinger. Their health bars are displayed above their heads and have the capability to track the bosses' movements. The value of the health bar is updated by the script called “IdleState” and “GunSlinderIdleState”. In these two scripts, they have a common state, which is “IsHit.” It can be accessed when the Bosses are hit by the player. 
+  The Enemy health bar is implemented in the same way as the player health bar. However, these bars are linked to two game bosses, namely Fanboy and Gunslinger. Their health bars are displayed above their heads and have the capability to track the bosses' movements. The value of the health bar is updated by the script called `IdleState` and `GunSlinderIdleState`. In these two scripts, they have a common state, which is `IsHit`. It can be accessed when the Bosses are hit by the player. 
 
 - ThunderBolt：
   
-	Before the player can confront the Boss in the battle scene, they must first engage in conversation with the Non-Player Character (NPC). Once the dialogue with the NPC concludes, a thunder-created battle zone materializes. The player is restricted from leaving this zone until they have successfully defeated the Boss. This battle zone is implemented by the script called “thunderTrigger.” I attach the trigger script to the NPC, specifically the deer character.
+	Before the player can confront the Boss in the battle scene, they must first engage in conversation with the Non-Player Character (NPC). Once the dialogue with the NPC concludes, a thunder-created battle zone materializes. The player is restricted from leaving this zone until they have successfully defeated the Boss. This battle zone is implemented by the script called `thunderTrigger`. I attach the trigger script to the NPC, specifically the deer character.
 
 - Enemy AI: 
   
-	The Fanboy AI and Gunslinger AI are implemented by using the finite state machine. The scripts are under the file called EnemyAI. "Model" holds the fundamental data. "IdleState" includes eight states, namely Idle, Patrol, Chase, React, Attack, IsHit, Death, and Teleport.  They are able to transition between states under the condition. These states allow the AI to do some simple decisions. For instance, if the AI's HP falls below 30, it has the ability to teleport to a different location for HP recovery. Moreover, AI can chase and attack the player in a given area. “FSM” is an executor, which provides some helper functions such as TransitionState, Flip, and OnTriggerEnter2D to help transition the states. 
+	The Fanboy AI and Gunslinger AI are implemented by using the finite state machine. The scripts are under the file called EnemyAI. "Model" holds the fundamental data. `IdleState` includes eight states, namely `Idle`, `Patrol`, `Chase`, `React`, `Attack`, `IsHit`, `Death`, and `Teleport`.  They are able to transition between states under the condition. These states allow the AI to do some simple decisions. For instance, if the AI's HP falls below 30, it has the ability to teleport to a different location for HP recovery. Moreover, AI can chase and attack the player in a given area. `FSM` is an executor, which provides some helper functions such as TransitionState, Flip, and OnTriggerEnter2D to help transition the states. 
 	
 
 
