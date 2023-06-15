@@ -147,8 +147,10 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
 	
 
 
-## Visuals/Input - Hugo Lin
+## Visuals - Hugo Lin
 - Used `Canvas` and implemented an animation & animator for scene switching event with `ToNextScene`
+	When the player have a collision on an object or certain conditions are met, the game will switch to a different scent using SceneManager
+- Add more detail to the main scene
 
 ## Animation and Visuals
 Assets: 
@@ -211,6 +213,9 @@ Note: The specified button and trigger requirements are utilized to control and 
 ### Jianfeng Lin & Huge Lin
 - Depoly audio into game. 
 - Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM.
+
+## Cross Platform - Hugo Lin
+- modified some codes in order to build the game for MacOS and WebGL
 
 ### Xinhe Wang
 - Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene. The export format was m4a however it is unable to use in Unity. Finalized with wav format.  
