@@ -8,10 +8,10 @@ K.K., the daughter of all Patron Saints and the earth, hears the call of the Dee
 - Move left by pressing `A` or `left arrow` key; move right with `D` or `right arrow` key; jump using either `W` or `space bar`; dodge by pressing `L`.
 - Click `K` for launch the default weapon. 
 - Click `J` to hit the NPC without a weapon. 
-- Press `B` or `Left-click` to open & close the bag and check the items / activated weapons you have.
+- `Left-click` to open & close the bag and check the items / activated weapons you have.
   - Player will find other weapons while adventuring, they will be collected in the bag by touching them. 
   - Player can collect fruits to bump the HP
-  - Open the bag, left panel shows the activated weapon. To active them, right click the collected weapon in the right panel. To launch the weapon, click `1`, `2`, `3`, `4`.
+  - Open the bag, the left panel shows the activated weapon. To activate them, right-click the collected weapon in the right panel. To launch the weapon, click `1`, `2`, `3`, `4`.
   
 
 There are three scenes in this game:
@@ -20,7 +20,7 @@ There are three scenes in this game:
   - There are two game objects which trigger other scenes
 - Scene1:
   - The player needs to adventure the map, find the Fanboy and kill him to get the secret item. Then the player needs to return to the start position to switch back to the main scene.
-  - The Fanboy cannot be killed by using default weapon, player has to find the master weapon, active and use it to kill the Fanboy.
+  - The Fanboy cannot be killed by using the default weapon. The player has to find the master weapon, active it, and use it to kill the Fanboy.
 - Scene2:
   - The player starts from left and need to reach the right most point in the map to fight against Gunslinger. 
   - There are NPCs in the path and very easy to kill.
@@ -38,7 +38,7 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
   - The tricky point is Merging because Unity scenes are not reading-friendly. I tried to assign each branch works on different scenes, but the problem was inevitable. Therefore, I need the assignees accompany when merging the branching to avoid losing anything important. If something is wrong, we will look commitment history and get the old version of the scene, and update the references by hand. 
 
 - Progress:
-  - We split the project into three stages for 5 weeks. 1: draw scene by using `Tilemap`, add some prefabs. 2: Add script to prefabs to make it responsive, and implement the bag feature; 3: connect scenes, and implement enemy AI feature. 
+  - We split the project into three stages for 5 weeks. 1: draw scenes using `Tilemap`, and add some prefabs. 2: Add script to prefabs to make it responsive and implement the bag feature; 3: connect scenes and implement enemy AI feature. 
   - Since most of the team members have no experience in Unity. A leader needs to catch up on Unity before everyone does. I have to figure out how to deploy the ideas into programming logic to increase working efficiency before assigning tasks. Then I can teach them coding or use Unity.
   - I believe tasks are not set only for specific assignees; they are always first come, first served by anyone. Since I am using divide & counter strategy, tasks are a small part of the stage. Anyone can finish them within a couple of hours. I provide my personal Zoom meeting link to anyone. Since I have learned how to implement it, I helped them complete most tasks efficiently. If they were not in the zone or stressed, I helped them to calm down and sort the logic by writing pseudocode.
 
@@ -53,17 +53,17 @@ Since our game is implemented from scratch, I have to ensure everyone knows the 
   - Develop [Bag feature](https://github.com/Jesse1211/ECS-189L/tree/main/Final%20Project/Assets/Scripts/Bag): 
 
     The player collects items that have already been instantiated, so I decided not to destroy and re-instantiate it from map to bag because destroy and instantiate are expensive. Therefore, I modify the items' positions and hierarchy and store the prefab data in one of 2 lists: activated weapon list and collected item list. When the player uses bag items, we determine if the item should be destroyed or swapped to another list. Prefabs inside the activated weapon list will be launched by pressing `1`, `2`, `3`, `4` keys. 
-    - Since this task may require more time and be challenging because I had to implement it most generically. Otherwise, it will be harder to deploy the feature into the project.
+    - This task may require more time and be challenging because I had to implement it most generically. Otherwise, it will be harder to deploy the feature into the project.
     - Implementation details:
         - `BagManager`: provides `useItem()` when the user clicks the item. `useItem()` determines to destroy or swap the item to another weapon list
-      - `BagItemSlot`: tracks if the player right-clicks the item, it executes `BagManager.useItem()`. (Helped by LiangHang Wu)
+      - `BagItemSlot`: If the player right-clicks the item, it executes `BagManager.useItem()`. (Helped by LiangHang Wu)
       - `BagDataLoader`: store two lists and provides 4 APIs to `BagManager.useItem()`
       - The `PlayerCOntrollerData` has access to `BagManager` to store the collided item in the bag
   - Player Controller: 
 
-    Since the player is able to interact with every object in unity, it is better to split the controller into data and animator, implementation details:
-    - `PlayerControllerData` handles the logic when the player collides with some game objects, and provides `TakeDamange(int damage)` to modify HP and `blood` animation.
-    - `PlayerControllerAnimator` inherits `PlayerControllerData` handles setting triggers in the animator, and the logic to attack by instantiating prefabs.
+    Since the player can interact with every object in unity, it is better to split the controller into data and animator. Implementation details:
+    - `PlayerControllerData` handles the logic when the player collides with some game objects and provides `TakeDamange(int damage)` to modify HP and `blood` animation.
+    - `PlayerControllerAnimator` inherits `PlayerControllerData` and handles setting triggers in the animator and the logic to attack by instantiating prefabs.
   
   - Taught teammates about making animation and animator controllers for characters and the API methods to switch scenes. Animation needs to be done rigorously. We modified some animations a couple of times later because we could see minor lagging in character.
   
@@ -228,8 +228,10 @@ Note: The specified button and trigger requirements are utilized to control and 
 - Conduct comprehensive testing: 
   - After making these modifications, I tested the combined scenes to ensure the functionality and adjustments worked as expected. I considered running the game and manually interacting with the main character and enemies to verify that the changes had been applied correctly. Use `Debug.Log()` statements strategically to output relevant information to the console and confirm the desired behavior.
   - Test the game thoroughly to identify any bugs, glitches, or issues that may arise during gameplay. Test all possible scenarios and edge cases to ensure that the game behaves as expected. I modified `TileMap` since the player should only climb in specific walls. 
-  - Evaluate the user interface for usability, clarity, and responsiveness. I specify the frame rate at which Unity tries to render the game. And the size of the bag feature was a little too small, and the position is not in the middle of the screen. This is caused by inproper setting of the canvas' Rect Transfrom position. 
-  - 
+  - Evaluate the user interface for usability, clarity, and responsiveness. I specify the frame rate at which Unity tries to render the game. And the size of the bag feature was a little too small, and the position is not in the middle of the screen. This is caused by the improper setting of the canvas' Rect Transform position. 
+  - Sometimes a player can cross the tilemap collider that goes inside the ground or some objects. Therefore, we added two animations: press 'I' for super-jump which has zero limitations, the player can jump anywhere; press 'L' for 'flash' which causes to blink a short distance. When the player model stuck somewhere unexpected, 'I' and 'L' become very handy.
+  - Regular jump is determined by if the player collides with 'ground' tag. However, we drew the entire scene (except the background) with 'ground' tag. It causes the player can even jump when they touch the roofs or climb any walls. Therefore, I reorganized the grid hierarchy, roofs and walls are not having 'ground' tag. Since we have developed some climbable walls, some walls will be tagged with 'climmableWalls'
+  - In the program for executing input keys, it has a float variable that limits the frequency of the player's input. Such that the player can only shoot once every 2 seconds. I set the time interval to zero just to give a faster experience to users because this is an RPG game, the storyline is supposed to be more important, and the NPCs or enemies are not that easy to kill. I want to point out that PlayerControllers are built dynamically; every animation can be modified by changing one variable. 
 
 ## Narrative Design
 ### Xinhe Wang
