@@ -210,16 +210,15 @@ Note: The specified button and trigger requirements are utilized to control and 
 
 ## Audio
 ### Jianfeng Lin & Huge Lin
-- Depoly audio into game. 
+- Depoly audio into game.
+### Xinhe Wang
+- Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene. The export format was m4a however it is unable to use in Unity. Finalized with wav format.  
 ### Jianfeng Lin - GitHub: Kkyyy1115
 - Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM. In addition, I added the death scene and implemented it for every scenes when player die. I also added the background music for the death scene. 
 - In addition, I assist in debugging the game by verifying if there are any inconsistencies between layers and colliders. If such mismatches are detected, I make the necessary adjustments to ensure that our game's mechanics function properly.
 
 ## Cross Platform - Hugo Lin
 - modified some codes in order to build the game for MacOS and WebGL
-
-### Xinhe Wang
-- Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene. The export format was m4a however it is unable to use in Unity. Finalized with wav format.  
 
 
 ## Gameplay Testing - Jesse Liu - GitHub: Jesse1211
