@@ -214,9 +214,17 @@ Note: The specified button and trigger requirements are utilized to control and 
 ### Xinhe Wang
 - Create [original music](https://github.com/Jesse1211/ECS-189L/blob/ae76b1a3c031e01f98945e5c46cf6965f82c1301/Final%20Project/Assets/BGM/%E6%88%91%E7%9A%84%E4%B9%90%E6%9B%B2%205.wav) with Garage Band. Music is used in the Main scene, Battle scene, and Floating island scene. The export format was m4a however it is unable to use in Unity. Finalized with wav format.  
 ### Jianfeng Lin - GitHub: Kkyyy1115
-- Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM. In addition, I added the death scene and implemented it for every scenes when player die. I also added the background music for the death scene. 
-- In addition, I assist in debugging the game by verifying if there are any inconsistencies between layers and colliders. If such mismatches are detected, I make the necessary adjustments to ensure that our game's mechanics function properly.
 
+- I write the project proposal to explain our game and the major systems it is composed of in terms of other games and genres in the preparation step.
+  
+- Adding the background music to each scene. The background music is produced by Xinhe Wang. The music can be found under the file called BGM. In addition, I added the death scene and implemented it for every scene when the player dies. I also added the background music for the death scene.
+
+- I have addressed the sizing issue in our game by fixing the characters' size. While the character animations function properly, there were some problems observed when the characters were in motion. Specifically, they would appear smaller as they moved. To resolve this, I have made adjustments to the pixel size, ensuring that it no longer affects the characters' proportions during movement.
+  
+- I assist in debugging the game by verifying if there are any inconsistencies between layers and colliders. If such mismatches are detected, I make the necessary adjustments to ensure that our game's mechanics function properly. It happens a lot when there are new scripts and settings added to the game. For example, in our enemyAI script, we design a mechanism that the bosses will `teleport` to a given place when their HP is lower than a specific number. However, the animation is not finished. I fix that issue.
+  
+- Testing the game to identify that our items and functionality work properly. In the beginning, we have a lot of layers and tags which lead to some problems corresponding to the `collider`. To fix the issues I test whether the `instantiate objects` can hit the target or cross the target. For example, I test if the player's `bullet` can successfully hit and reduce the enemy's HP. In addition, I modify the enemy data values, such as enemy speed, enemy HP, and enemy attack damage, to give the player the best play experience.
+- 
 ## Cross Platform - Hugo Lin
 - modified some codes in order to build the game for MacOS and WebGL
 
